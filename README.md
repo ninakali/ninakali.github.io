@@ -1,1 +1,0 @@
-# ninakali.github.io
