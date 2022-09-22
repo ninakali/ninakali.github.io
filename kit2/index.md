@@ -10,7 +10,7 @@ My first attempt at building an emergency kit was, I have to admit, pathetic. I 
 
 This emergency kit is highly personal and is meant as a measure against threats that I either faced in the past or consider a possibility in the nearest future. If you think I am missing something important, please let me know.
 
-The kit has two parts. The red bag is meant to be carried with me at all times. Except when I go outside the flat to throw out the rubbish. The grey bag is bulkier and heavier, and it's for day trips or situations when I need to leave my flat quickly with my cat under my shoulder.
+The kit has two parts. The red bag is meant to be carried with me at all times. Except when I go outside the flat to throw out the rubbish. The grey bag is bulkier and heavier, and it's for day trips or situations when I need to leave my flat quickly with my cat in my arms.
 
 
 A 13" laptop, an SD card and a ruler for scale.
