@@ -1,2 +1,3 @@
-![](chipped.webp)
+![](chipped.jpg)
+
 Download: [ZIP](Chipped_soul.zip)
