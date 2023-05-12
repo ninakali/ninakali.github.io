@@ -4,6 +4,7 @@ Here are a few things that help me keep things healthy in hard conversations amo
 We all want the freedom of speech and the freedom to discuss anything openly, without fears of being ostracised, ridiculed or attacked. It seems that the only way to do so is by upkeeping the high standard of moderation (and self-moderation): views that discriminate against people, including those asserting someone's inherent superiority, must not be tolerated.
 
 Q: "But Nina, what about facts? It is clear to me as day that people with good eyesight have superior vision compared to people with poor eyesight!"
+
 A: While actual scientific facts are acceptable in a serious discussion, jumping to conclusions is not. Assuming that people with poor sight are unsuitable for specific tasks or jobs, or even less likely to be successful because of their condition (without data proving this) would be an example of jumping to conclusions.
 
 Keep in mind that tolerance to intolerance is different among different people. For some, a masked attack on a group of people doesn't seem to raise any red flags. For others, especially those on the receiving end of perpetual attacks, an insensitive question might cause an immediate fight or flight response.
@@ -17,6 +18,7 @@ One example of an unconscious bias is presuming that the intelligence of people 
 Let's say we did our best to keep all the angry nazi mob outside of our community, we only talk to people who are well-meaning citizens, and we do our best at identifying our biases and countering them. Even so, situations, where conflicting opinions will arise, are inevitable. In those times, we all need to remember that we are human beings, not only rational but also emotional. Training at my previous job explained that conflicts arise where strong emotions and high stakes are involved. There is no moving forward until the discussion space is safe and mutual respect is established. The discussion space is not safe when there are real or perceived threats to our existence or our core values.
 
 Q: "And what do I do if there are strong emotions ablaze?"
+
 A: I don't know; whatever works for you to calm down? Sit down, do a breathing exercise, reflect, take a break. Help the others to calm down, too; don't tell them "Hey, calm down", it's not very helpful.
 
 ## Keep an open mind, and listen to diverse voices.
