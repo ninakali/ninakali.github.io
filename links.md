@@ -27,7 +27,7 @@
 * [Toy laptops thread + Sumikko Gurashi updates](https://tech.lgbt/@nina_kali_nina/109746740893308161)
 * [Sumikko Gurashi JTAG spoiler](https://tech.lgbt/@nina_kali_nina/109707165052560413)
 * [Teardown of Sumikko Gurashi - Japanese toy PC](https://tech.lgbt/@nina_kali_nina/109700724534323810)
-* [Exploring the Dora - from Twi](notes/dora/text.md)
+* [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive tech
 * ["Pottery is when you fire some clay" - half fail](https://tech.lgbt/@nina_kali_nina/110623630590238745)
