@@ -30,6 +30,7 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive tech
+* [Glass from sand? Semi-fail](https://tech.lgbt/@nina_kali_nina/110695516411078133)
 * [Wheat blueberry cookie](https://tech.lgbt/@nina_kali_nina/110679592274690381)
 * ["Pottery is when you fire some clay" - half fail](https://tech.lgbt/@nina_kali_nina/110623630590238745)
 * ["bread is a baked mixture of ground grains and water" - success](https://tech.lgbt/@nina_kali_nina/110565299595140801)
