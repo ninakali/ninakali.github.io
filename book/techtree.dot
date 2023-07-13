@@ -1,0 +1,44 @@
+/* 
+ * The invention, discovery and technology tree for The Knowledge Book project 
+ * 
+ * Colour scheme:
+ * - cornflowerblue - naturally occuring 
+ * - gold - fully reproducible
+ * - rosybrown - some data available, but not fully reproducible yet
+ * - tomato - not reproducible yet
+ * - 
+ */
+
+digraph {
+    node [fontsize=16 width=1 shape=box style=filled]
+    
+    clay            [label="Clay" fillcolor=cornflowerblue]
+    clay->workable_clay
+    workable_clay   [label="Pottery clay" fillcolor=gold]
+    
+    firemaking      [label="Fire making" fillcolor=rosybrown]
+    
+    firemaking->primitive_kiln
+    primitive_kiln  [label="Primitive kiln" fillcolor=rosybrown]
+    
+    primitive_kiln->terracota
+    workable_clay->terracota
+    terracota       [label="Terracota pottery" fillcolor=tomato]
+    
+    grains          [label="Grains" fillcolor=cornflowerblue]
+    milling         [label="Milling" fillcolor=tomato]
+    
+    raising_agent   [label="Raising Agent" fillcolor=tomato]
+    
+    grains->flour
+    milling->flour
+    flour           [label="Flour" fillcolor=rosybrown]
+    sugar           [label="Sugar" fillcolor=tomato]
+    
+    flour->cake
+    sugar->cake
+    raising_agent->cake
+    terracota->cake /* Can't make a cake on a stick */
+    firemaking->cake
+    cake            [label="Cake" fillcolor=tomato]
+}
