@@ -4,41 +4,147 @@
  * Colour scheme:
  * - cornflowerblue - naturally occuring 
  * - gold - fully reproducible
- * - rosybrown - some data available, but not fully reproducible yet
+ * - cornsilk - some data available, but not fully reproducible yet
  * - tomato - not reproducible yet
  * - 
  */
 
 digraph {
-    node [fontsize=16 width=1 shape=box style=filled]
+    fontname="insigbyte"
+    fontsize=12
+    labelloc="t"
+    label="The Knowledge Book Project: map of experimentally-confirmed technologies"
     
-    clay            [label="Clay" fillcolor=cornflowerblue]
-    clay->workable_clay
-    workable_clay   [label="Pottery clay" fillcolor=gold]
+    node [fontsize=24 fontname="monogram" width=1 shape=box style=filled]
     
-    firemaking      [label="Fire making" fillcolor=rosybrown]
+    subgraph tech {
+        
+        clay            [label="Clay" fillcolor=cornflowerblue]
+        clay->workable_clay
+        
+        firemaking      [label="Fire making" fillcolor=cornsilk]
+        
+        firemaking->primitive_kiln
+        primitive_kiln  [label="Primitive kiln" fillcolor=cornsilk]
+        
+        primitive_kiln->terracota
+        workable_clay->terracota
+        
+        workable_clay->bricks
+        primitive_kiln->bricks
+        bricks          [label="Bricks" fillcolor=tomato]
+        
+        bricks->kiln
+        kiln            [label="Kiln" fillcolor=tomato]
+        
+        grains          [label="Grains" fillcolor=cornflowerblue]
+        milling         [label="Milling" fillcolor=tomato]
+        
+        raising_agent   [label="Raising Agent" fillcolor=tomato]
+        
+        grains->flour
+        milling->flour
+        flour           [label="Flour" fillcolor=cornsilk]
+        
+        root_vegs->sugar
+        root_vegs       [label="Root vegetables" fillcolor=cornflowerblue]
+        string->sugar
+        firemaking->sugar
+        terracota->sugar
+        sugar           [label="Sugar" fillcolor=cornsilk]
+        
+        flour->cake
+        sugar->cake
+        raising_agent->cake
+        terracota->cake /* Can't make a cake on a stick */
+        firemaking->cake
+        
+        firemaking->flatbread
+        flour->flatbread
+        
+        root_vegs->soup_porridge
+        grains->soup_porridge
+        terracota->soup_porridge
+        firemaking->soup_porridge
+        
+        soda            [label="Soda" fillcolor=tomato]
+        lime            [label="Lime" fillcolor=tomato]
+        sand            [label="Sand" fillcolor=cornflowerblue]
+        
+        soda->glass
+        lime->glass
+        sand->glass
+        kiln->glass
+        
+        
+        iron->iron_rods
+        iron_rods           [label="Iron rods" fillcolor=tomato]
+        glass->glassware
+        iron_rods->glassware
+        
+        
+        fibrous             [label="Fibre (plants etc)" fillcolor=cornflowerblue]
+        fibrous->string
+        
+        string->textile
+        
+        string->clothes
+        textile->clothes
+        needle->clothes
+        
+        drilling->needle
+        
+        drilling            [label="Drilling" fillcolor=tomato]
+        needle              [label="Needles" fillcolor=tomato]
+        clothes             [label="Clothing" fillcolor=gold]
+        
+        subgraph cluster_food {
+            style=filled;
+            color=linen;
+            
+            label = "Foods";
+            
+            flatbread       [label="Flatbread" fillcolor=gold]
+            cake            [label="Cake" fillcolor=tomato]
+            soup_porridge   [label="Soups, porridge, etc" fillcolor=gold]
+        }
+        
+        subgraph cluster_materials {
+            style=filled;
+            color=linen;
+            
+            label = "Materials";
+            
+            glass           [label="Opaque glass" fillcolor=cornsilk]
+            workable_clay   [label="Pottery clay" fillcolor=gold]
+            iron            [label="Iron" fillcolor=tomato]
+            textile         [label="Textile" fillcolor=tomato]
+            string          [label="Strings and yarns" fillcolor=tomato]
+        }
+        
+        subgraph cluster_utensil {
+            style=filled;
+            color=linen;
+            
+            label = "Tools and utensils";
+            
+            terracota       [label="Terracota pottery" fillcolor=tomato]
+            glassware       [label="Glassware" fillcolor=tomato]
+        }
+    } /* end tech subgraph */
     
-    firemaking->primitive_kiln
-    primitive_kiln  [label="Primitive kiln" fillcolor=rosybrown]
+        
+    subgraph cluster_legend {
+        label = "Legend"
+        node [fontsize=12 width=1 shape=box style=filled]
+        
+        natural         [label="Naturally occuring" fillcolor=cornflowerblue]
+        repro           [label="Fully reproducible" fillcolor=gold]
+        some        [label="Some data available" fillcolor=cornsilk]
+        notyet          [label="Not yet reproducible" fillcolor=tomato]
+        
+        natural->repro->some->notyet [style="invis"]
+
+    } /* end legend */
     
-    primitive_kiln->terracota
-    workable_clay->terracota
-    terracota       [label="Terracota pottery" fillcolor=tomato]
-    
-    grains          [label="Grains" fillcolor=cornflowerblue]
-    milling         [label="Milling" fillcolor=tomato]
-    
-    raising_agent   [label="Raising Agent" fillcolor=tomato]
-    
-    grains->flour
-    milling->flour
-    flour           [label="Flour" fillcolor=rosybrown]
-    sugar           [label="Sugar" fillcolor=tomato]
-    
-    flour->cake
-    sugar->cake
-    raising_agent->cake
-    terracota->cake /* Can't make a cake on a stick */
-    firemaking->cake
-    cake            [label="Cake" fillcolor=tomato]
 }
