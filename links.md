@@ -30,6 +30,7 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive tech
+* [Raw carrot sugar](https://tech.lgbt/@nina_kali_nina/110712420175596774)
 * [Glass from sand? Semi-fail](https://tech.lgbt/@nina_kali_nina/110695516411078133)
 * [Wheat blueberry cookie](https://tech.lgbt/@nina_kali_nina/110679592274690381)
 * ["Pottery is when you fire some clay" - half fail](https://tech.lgbt/@nina_kali_nina/110623630590238745)
