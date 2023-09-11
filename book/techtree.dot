@@ -11,13 +11,13 @@
 
 digraph {
     fontname="insigbyte"
-    fontsize=12
+    fontsize=24
     labelloc="t"
     label="The Knowledge Book Project: map of experimentally-confirmed technologies"
-    nodesep=0.3
-    ranksep=1
+    nodesep=0.6
+    ranksep=1.5
     
-    node [fontsize=24 fontname="monogram" shape=box style=filled]
+    node [fontsize=36 fontname="monogram" shape=box style=filled labelloc=t height=0.7]
     
     subgraph tech {
         
@@ -268,12 +268,12 @@ digraph {
         
     subgraph cluster_legend {
         label = "Legend"
-        node [fontsize=12 width=1 shape=box style=filled]
+        node [fontsize=24 width=1 shape=box style=filled]
         
-        natural         [label="Naturally occuring" fillcolor=cornflowerblue]
-        repro           [label="Fully reproducible" fillcolor=gold]
-        some        [label="Some data available" fillcolor=cornsilk]
-        notyet          [label="Not yet reproducible" fillcolor=tomato]
+        natural         [label=<Naturally<br/>occuring> fillcolor=cornflowerblue]
+        repro           [label=<Fully<br/>reproducible> fillcolor=gold]
+        some        [label=<Some data<br/>available> fillcolor=cornsilk]
+        notyet          [label=<Not yet<br/>reproducible> fillcolor=tomato]
         
         natural->repro->some->notyet [style="invis"]
 

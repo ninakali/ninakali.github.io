@@ -31,6 +31,7 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive tech
+* [Fire pit fried pottery at home](https://tech.lgbt/@nina_kali_nina/111043005991579076)
 * [Raw carrot sugar](https://tech.lgbt/@nina_kali_nina/110712420175596774)
 * [Glass from sand? Semi-fail](https://tech.lgbt/@nina_kali_nina/110695516411078133)
 * [Wheat blueberry cookie](https://tech.lgbt/@nina_kali_nina/110679592274690381)
