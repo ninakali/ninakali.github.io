@@ -31,6 +31,9 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
+* [DIY 5.25" floppy - failed prototype](https://tech.lgbt/@nina_kali_nina/111290481112640064)
+* [QA on DIY magnetic tape](https://tech.lgbt/@nina_kali_nina/111308288210934398)
+* [DIY tape - demo](https://tech.lgbt/@nina_kali_nina/111286617790635607)
 * [DIY magnetic 
 tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
 * [Fire pit fried pottery at home](https://tech.lgbt/@nina_kali_nina/111043005991579076)
