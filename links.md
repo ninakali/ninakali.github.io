@@ -31,6 +31,8 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
+* [DIY magnetic tape heads - discussion thread](https://tech.lgbt/@nina_kali_nina/111313893415437578)
+* [DIY 5.25" floppy - proto 2&3, better results](https://tech.lgbt/@nina_kali_nina/111319320784850635)
 * [DIY 5.25" floppy - failed prototype](https://tech.lgbt/@nina_kali_nina/111290481112640064)
 * [QA on DIY magnetic tape](https://tech.lgbt/@nina_kali_nina/111308288210934398)
 * [DIY tape - demo](https://tech.lgbt/@nina_kali_nina/111286617790635607)
