@@ -31,6 +31,8 @@
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
+* [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
+home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
 * [DIY magnetic tape heads - discussion thread](https://tech.lgbt/@nina_kali_nina/111313893415437578)
 * [DIY 5.25" floppy - proto 2&3, better results](https://tech.lgbt/@nina_kali_nina/111319320784850635)
 * [DIY 5.25" floppy - failed prototype](https://tech.lgbt/@nina_kali_nina/111290481112640064)
