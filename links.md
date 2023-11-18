@@ -11,6 +11,7 @@
 ** tl;dr Netscape Gold 2.0 was released in January 1996, comes with a home page generator that adds "Netscape Now!" 88x31 gif to pages it creates. As for why these dimensions,  my guess is: if you want a 3:1 button 32 pixels tall, and insides of the button will be 84x28, but something went wrong, and the image was incorrectly resized. You can see how blurry insides of Netscape 2.0 Now is compared to 3.0 banner.
 
 ## Screenshots and hacks
+* [Debian 0.91 BETA](https://tech.lgbt/@nina_kali_nina/111431340793521963) - Linux 0.99, X11, gcc 2 and GIMP 0.60
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 * [MS Word on Mac Classic](https://tech.lgbt/@nina_kali_nina/110481197865367127)
 * [Minix 2 for Apricot PC Xi](https://tech.lgbt/@nina_kali_nina/110245231666246838)
