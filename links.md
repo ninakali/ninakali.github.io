@@ -1,6 +1,7 @@
 # Some of my mastodon threads of interest
 
 ## Pixelart
+* [Attribute clash on MSX and ZX Spectrum, in pictures](https://tech.lgbt/@nina_kali_nina/111461558719741633)
 * [Cling film scanning technique](https://tech.lgbt/@nina_kali_nina/111456601586845563)
 * [S;G Oopa](https://tech.lgbt/@nina_kali_nina/110141825831949963)
 * [S;G octet - detailed train](https://tech.lgbt/@nina_kali_nina/110140970875960647)
