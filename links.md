@@ -1,6 +1,7 @@
 # Some of my mastodon threads of interest
 
-## Pixelart
+## Pixel?art
+* [Emoji/emoticons/smileys - where do they come from?](https://tech.lgbt/@nina_kali_nina/111485557892441676)
 * [Attribute clash on MSX and ZX Spectrum, in pictures](https://tech.lgbt/@nina_kali_nina/111461558719741633)
 * [Cling film scanning technique](https://tech.lgbt/@nina_kali_nina/111456601586845563)
 * [S;G Oopa](https://tech.lgbt/@nina_kali_nina/110141825831949963)
