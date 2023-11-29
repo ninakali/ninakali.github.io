@@ -34,6 +34,7 @@ IceWM, FVWM95
 * [Windows NT 3.51 screenshots](https://tech.lgbt/@nina_kali_nina/109774684769104178)
 
 ## Tech teardown and repair
+* [PC-9821La10 laptop to floppy cable](https://tech.lgbt/@nina_kali_nina/111496361761137430)
 * [Cambridge Z88](https://tech.lgbt/@nina_kali_nina/110180918363932974)
 * [Apricot PC/Xi](https://tech.lgbt/@nina_kali_nina/110129775727210498)
 * [Toy laptops thread + Sumikko Gurashi updates](https://tech.lgbt/@nina_kali_nina/109746740893308161)
