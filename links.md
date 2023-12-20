@@ -1,6 +1,8 @@
 # Some of my mastodon threads of interest
 
 ## Pixel?art
+* [8bitYUV - a proposal for small RAM screen
+format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 * [Emoji/emoticons/smileys - where do they come from?](https://tech.lgbt/@nina_kali_nina/111485557892441676)
 * [Attribute clash on MSX and ZX Spectrum, in pictures](https://tech.lgbt/@nina_kali_nina/111461558719741633)
 * [Cling film scanning technique](https://tech.lgbt/@nina_kali_nina/111456601586845563)
