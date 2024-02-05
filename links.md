@@ -1,5 +1,10 @@
 # Some of my mastodon threads of interest
 
+## Notes/rants
+* [Distraction-free work in attention-seeking world: phone hacks, typewriters, and old computers](https://tech.lgbt/@nina_kali_nina/111879129075499415)
+* [Glitching the images with processing them as audio](https://tech.lgbt/@nina_kali_nina/111755539584965220)
+* [Wrong VGA palette in all emulators?!](https://tech.lgbt/@nina_kali_nina/109948884515882130)
+
 ## Pixel?art
 * [8bitYUV - a proposal for small RAM screen
 format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
@@ -16,30 +21,27 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ** tl;dr Netscape Gold 2.0 was released in January 1996, comes with a home page generator that adds "Netscape Now!" 88x31 gif to pages it creates. As for why these dimensions,  my guess is: if you want a 3:1 button 32 pixels tall, and insides of the button will be 84x28, but something went wrong, and the image was incorrectly resized. You can see how blurry insides of Netscape 2.0 Now is compared to 3.0 banner.
 
 ## Screenshots and hacks
-* [Japanese operating system EOSystem 3 for 
-PC98](https://tech.lgbt/@nina_kali_nina/111857591075529606)
-* [Glitching the images with processing them as 
-audio](https://tech.lgbt/@nina_kali_nina/111755539584965220)
+
+### Rare/unusual stuff
+* [Japanese operating system EOSystem 3 for PC98](https://tech.lgbt/@nina_kali_nina/111857591075529606)
 * [Chinese operating system UCDOS and shell UCShell - Windows 3 simulacrum](https://tech.lgbt/@nina_kali_nina/111712240596652866)
 * [Soviet operating shell MASTER/МАСТЕР, plus Lexicon and Word&Deed text editors](https://tech.lgbt/@nina_kali_nina/111670752278950938)
-* [GEOS/NewDeal Office on 
-80286](https://tech.lgbt/@nina_kali_nina/111649676644003594)
+* [GEOS/NewDeal Office on 80286](https://tech.lgbt/@nina_kali_nina/111649676644003594)
 * [Kyocera Keitai 2, an imported Japanese flip phone running 
 Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [PC98 various editors, DOSShell, Win3, Win95](https://tech.lgbt/@nina_kali_nina/111477652893732154)
-* [Debian 2 and Debian 
-3](https://tech.lgbt/@nina_kali_nina/111437725968501402) - XFree86 
-setup, Gnome 1.4, Gimp 1.x, some KDE 2.2 apps, Mozilla 1.0, WindowMaker, 
+* [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
+
+### Old stuff
+* [Debian 2 and Debian 3](https://tech.lgbt/@nina_kali_nina/111437725968501402) - XFree86 setup, Gnome 1.4, Gimp 1.x, some KDE 2.2 apps, Mozilla 1.0, WindowMaker, 
 IceWM, FVWM95
 * [Debian 0.91 BETA](https://tech.lgbt/@nina_kali_nina/111431340793521963) - Linux 0.99, X11, gcc 2 and GIMP 0.60
-* [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 * [MS Word on Mac Classic](https://tech.lgbt/@nina_kali_nina/110481197865367127)
 * [Minix 2 for Apricot PC Xi](https://tech.lgbt/@nina_kali_nina/110245231666246838)
 * [Trying to figure out how win100.bin created](https://tech.lgbt/@nina_kali_nina/110243450178036790)
 * [Windows 1.03 for Apricot PC/Xi](https://tech.lgbt/@nina_kali_nina/110239764254981391)
 * [Norton Commander patch for Apricot Xi - broken](https://tech.lgbt/@nina_kali_nina/110182578911013884)
 * [OS/2 Warp 3 screenshots](https://tech.lgbt/@nina_kali_nina/110040615338760226) 
-* [Wrong VGA palette in all emulators?!](https://tech.lgbt/@nina_kali_nina/109948884515882130)
 * [Internet Explorer 5 and Windows 95 installer using CGA driver. Bonus: EGA Win95](https://tech.lgbt/@nina_kali_nina/109922004533411583)
 * [Windows NT 3.51 screenshots](https://tech.lgbt/@nina_kali_nina/109774684769104178)
 
@@ -53,6 +55,7 @@ IceWM, FVWM95
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
+### DIY tapes and floppies
 * [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
 home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
 * [DIY magnetic tape heads - discussion thread](https://tech.lgbt/@nina_kali_nina/111313893415437578)
@@ -62,6 +65,8 @@ home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
 * [DIY tape - demo](https://tech.lgbt/@nina_kali_nina/111286617790635607)
 * [DIY magnetic 
 tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
+
+### Are simple things as simple as they seem?
 * [Fire pit fried pottery at home](https://tech.lgbt/@nina_kali_nina/111043005991579076)
 * [Raw carrot sugar](https://tech.lgbt/@nina_kali_nina/110712420175596774)
 * [Glass from sand? Semi-fail](https://tech.lgbt/@nina_kali_nina/110695516411078133)
