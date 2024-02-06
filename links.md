@@ -23,6 +23,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [Japanese operating system B-right/V version 4.5 running Chokanji system - BTRON implementation](https://tech.lgbt/@nina_kali_nina/111884924714760101)
 * [Japanese operating system EOSystem 3 for PC98](https://tech.lgbt/@nina_kali_nina/111857591075529606)
 * [Chinese operating system UCDOS and shell UCShell - Windows 3 simulacrum](https://tech.lgbt/@nina_kali_nina/111712240596652866)
 * [Soviet operating shell MASTER/МАСТЕР, plus Lexicon and Word&Deed text editors](https://tech.lgbt/@nina_kali_nina/111670752278950938)
