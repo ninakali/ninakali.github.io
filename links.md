@@ -1,6 +1,8 @@
 # Some of my mastodon threads of interest
 
 ## Notes/rants
+* [80 column rule and the arm span of 
+papermakers](https://tech.lgbt/@nina_kali_nina/111953604072020696)
 * [Distraction-free work in attention-seeking world: phone hacks, typewriters, and old computers](https://tech.lgbt/@nina_kali_nina/111879129075499415)
 * [Glitching the images with processing them as audio](https://tech.lgbt/@nina_kali_nina/111755539584965220)
 * [Wrong VGA palette in all emulators?!](https://tech.lgbt/@nina_kali_nina/109948884515882130)
