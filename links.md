@@ -77,3 +77,6 @@ tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
 * ["Pottery is when you fire some clay" - half fail](https://tech.lgbt/@nina_kali_nina/110623630590238745)
 * ["bread is a baked mixture of ground grains and water" - success](https://tech.lgbt/@nina_kali_nina/110565299595140801)
 * [Corn bread and sunflower oil - fail but fun](https://tech.lgbt/@nina_kali_nina/110560604360620622)
+
+### Random experiments
+* [PET bottles into wicker, beads and tubes](https://tech.lgbt/@nina_kali_nina/112489996752486107)
