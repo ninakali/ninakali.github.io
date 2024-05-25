@@ -8,6 +8,10 @@ papermakers](https://tech.lgbt/@nina_kali_nina/111953604072020696)
 * [Wrong VGA palette in all emulators?!](https://tech.lgbt/@nina_kali_nina/109948884515882130)
 
 ## Pixel?art
+### Orihime Project
+* [Announcement](https://tech.lgbt/@nina_kali_nina/112502777181113864)
+
+### Misc
 * [8bitYUV - a proposal for small RAM screen
 format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 * [Emoji/emoticons/smileys - where do they come from?](https://tech.lgbt/@nina_kali_nina/111485557892441676)
