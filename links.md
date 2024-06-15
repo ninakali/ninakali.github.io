@@ -54,6 +54,7 @@ IceWM, FVWM95
 * [Windows NT 3.51 screenshots](https://tech.lgbt/@nina_kali_nina/109774684769104178)
 
 ## Tech teardown and repair
+* [vtech Media Desktop and its unusual low-tech mouse](https://tech.lgbt/@nina_kali_nina/112619659322799292)
 * [PC-9821La10 laptop to floppy cable](https://tech.lgbt/@nina_kali_nina/111496361761137430)
 * [Cambridge Z88](https://tech.lgbt/@nina_kali_nina/110180918363932974)
 * [Apricot PC/Xi](https://tech.lgbt/@nina_kali_nina/110129775727210498)
@@ -63,6 +64,9 @@ IceWM, FVWM95
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
+### RAM
+* [Let's make RAM at home, part 1](https://tech.lgbt/@nina_kali_nina/112620174104886147)
+
 ### DIY tapes and floppies
 * [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
 home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
