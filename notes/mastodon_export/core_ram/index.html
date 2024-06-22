@@ -1,17 +1,30 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>
 img { width: 360px; margin: 2px; align: center;}
-body {max-width:800px; margin:40px;}
-#content {background: lightgrey; padding: 20px;}
+body {max-width:800px; margin:40px; font-family: Arial, Helvetica, sans-serif;}
+p {padding: 0px;}
+h1 {padding: 0px 10px 0px 10px;}
+#content {
+	background: lightgrey; margin: 5px; padding: 5px;
+	border-radius: 5px;
+}
+.post {border: 1px; border-style: solid; border-color: #888;
+	margin: 5px; padding: 0px 10px 0px 10px;
+	border-radius: 5px; background-color: #EEE;
+
+}
 </style>
 </head><body>
 <div id="content">
 <h1>Let's make RAM at home, thread #1</h1>
+<div class="post">
 <p>In this thread: successful experiment with factory-made ferrite core memory (1 bit for now!), a brief
 explanation of the experiment, and failed attempts at making a core (so you wouldn't have to try it)</p>
 <a href="https://tech.lgbt/@nina_kali_nina/112620174104886147">Original thread</a>
 <p>🧵 go~</p>
 <p><img src="index_files/050cf7ca293cb0f9.jpg" alt="A single ferrite core with two wires going through it"></p>
+</div>
+<div class="post">
 <p>If you didn't know, magnetic-core memory used to be the most commonly
  used previous generation of memory before SRAM and DRAM integrated 
 circuits stole its market share, with a promise of cheap and dense 
@@ -27,6 +40,8 @@ direction, it will magnetize the core in a different way.</p>
 you get yourself RAM, or computer memory.</p>
 <p>The most advanced ferrite core memory had millions of cores!</p>
 <p><img src="index_files/b5fa69e850ca9fe1.jpg" alt="A bag of tiny ferrite cores (about 32 thousand cores in the bag, if I am to believe the labeling)  in a zip lock on top of a bread board"></p>
+</div>
+<div class="post">
 <p>This specific type of core can be magnetized when a current of 0.3-0.5A passes through it. Ohm's
 law says that if the voltage we supply is 5V, we need our circuit to have the resistance of 10 Ohms to
 reach this current.</p>
@@ -42,6 +57,8 @@ handle this much emitter-base voltage, and dies.</p>
 <p><img src="index_files/5b8b66cf534e903f.png" alt="An electronic circuit: the switch on the left is opening the transistor  through a 1K resistor (in the center), so the current is going through the 10 Ohm load (upper right corner) is 421.1 mA.">
 <img src="index_files/a4c85b4990a83795.png" alt="The same circuit. The switch is off, the transistor's base is connected to the ground through a 20K resistor and therefore is 0V. Transistor is locked, so there is virtually no current flowing through the load (10.2 pA, which is basically nothing in this case)">
 <img src="index_files/4dbae0222620ea51.jpg" alt="The current source on a transistor switch assembled on a breadboard. Some jump wires connect small electronic components"></p>
+</div>
+<div class="post">
 <p>I bring out Arduino as the easiest thing I can use to supply 5V (and send short impulses). Now the
 circuit has two power sources: 5V for the transistor switching, and 12V for the core operations.</p>
 <p>Now I can send the current through the core and magnetize/demagnetize it. Recording bits into memory has
@@ -59,6 +76,8 @@ patterns, depending on how the core was magnetized!</p>
 <img src="index_files/b0445757585deb77.jpg" alt="The oscilloscope chart of the pulse - there's a 500ns spike of 80 milli-volts of voltage, followed by slow decay at around 40mV">
 <img src="index_files/96b6426173952b58.jpg" alt="The oscilloscope chart of a bit transition. After a voltage spike, there is a 20mV dip lasting for 1000 nanoseconds or so, indicating that the core was magnetized in the opposite direction.">
 <img src="index_files/94f4feef6519d640.jpg" alt="The oscilloscope chart of a bit transition. After a voltage spike, there is a 20mV &quot;hill&quot; lasting for 1000 nanoseconds or so, indicating that the core was magnetized in the opposite direction."></p>
+</div>
+<div class="post">
 <p>And so we have it. A tiny bit of magnetic material storing a single bit of data, we can record the
 data by passing the current in different directions, and we can read the data back by passing the known
 current through the core and seeing if there are any dips/hills in the voltage indicating that the core
@@ -81,6 +100,8 @@ microsecond.</p>
 are a bit irrelevant here, but the patents for these say something awesome:</p>
 <p>"Wrap a magnetic tape around a wire, and you'll get yourself a ferrite core."</p>
 <p><img src="index_files/2b0dbc60abcdd804.jpg" alt="A hand made clay-iron oxide ring that has some magnetic properties - it is surrounded by wires and plugged into the circuit"></p>
+</div>
+<div class="post">
 <p>Before you get your hopes high, I will tell you: it didn't work as a drop-in replacement for the
 cores I have. It has SOME ferromagnetic properties, but it requires further experiments with figuring
 out the magnetic properties of the "cores", and I need a completely different experiment rig for that.</p>
@@ -97,5 +118,6 @@ around the write and sense wires directly. No dice.</p>
 <p><img src="index_files/d558662430e71b78.jpg" alt="A ring of steel with magnetic tape wound around it, and two wires - red and white - passing through it.">
 <img src="index_files/1fbd6a5896d8eeea.jpg" alt="A ring of nickel? with magnetic tape wound around it, and two wires - red and white - passing through it.">
 <img src="index_files/ee7c5589a5236171.jpg" alt="Magnetic tape (casette tape) wound around two wires - white and orange"></p>
+</div>
 </div>
 </body></html>
