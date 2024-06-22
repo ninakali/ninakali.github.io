@@ -66,6 +66,7 @@ IceWM, FVWM95
 ## Primitive? tech
 ### RAM
 * [Let's make RAM at home, part 1](https://tech.lgbt/@nina_kali_nina/112620174104886147)
+* [Let's make RAM at home, part 2](https://tech.lgbt/@nina_kali_nina/112662504475703389)
 
 ### DIY tapes and floppies
 * [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
