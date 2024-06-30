@@ -54,6 +54,7 @@ IceWM, FVWM95
 * [Windows NT 3.51 screenshots](https://tech.lgbt/@nina_kali_nina/109774684769104178)
 
 ## Tech teardown and repair
+* [Amstrad ALT 386SX repair](https://tech.lgbt/@nina_kali_nina/112702553682807069)
 * [vtech Media Desktop and its unusual low-tech mouse](https://tech.lgbt/@nina_kali_nina/112619659322799292)
 * [PC-9821La10 laptop to floppy cable](https://tech.lgbt/@nina_kali_nina/111496361761137430)
 * [Cambridge Z88](https://tech.lgbt/@nina_kali_nina/110180918363932974)
