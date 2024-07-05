@@ -71,6 +71,7 @@ IceWM, FVWM95
 * [Let's make RAM at home, part 2](https://tech.lgbt/@nina_kali_nina/112662504475703389)
 
 ### DIY tapes and floppies
+* [DIY magnetic tape head Mk 1 - what went wrong](https://tech.lgbt/@nina_kali_nina/112735560937595812)
 * [DIY magnetic tape head Mk 1](https://tech.lgbt/@nina_kali_nina/112730256439175081)
 * [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
 home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
