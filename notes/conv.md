@@ -29,7 +29,7 @@ If other people tell you that you are wrong, consider that they might be right. 
 You want to be right; so does everyone. But winning in argument isn't the same as being correct. To avoid echo chambers reinforcing the same inscrutable "truths", learn about different perspectives. You don't have to agree with them, but being intellectually honest in evaluating new ideas will do you good.
 
 ## Do your homework.
-Sometimes we can't accept that we are wrong because we don't recognise that we don't know enough about the topic. The Dunning-Kruger effect applies to all of us. Thus, sometimes it helps to think whether you really understand the topic you're about to discuss. 
+Sometimes we can't accept that we are wrong because we don't recognise that we don't know enough about the topic. Thus, sometimes it helps to think whether you really understand the topic you're about to discuss. 
 
 There's nothing wrong about discussing things we don't know much about; it is an opportunity to learn and educate. Doing so without sufficient preparation, however, might result in a lot of emotional pain for all participants of the conversation. Researching the topic online, asking friends for advice, and collecting links to reference materials are good ways of doing homework.
 
