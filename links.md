@@ -11,6 +11,7 @@ papermakers](https://tech.lgbt/@nina_kali_nina/111953604072020696)
 ### Orihime Project
 * [Announcement](https://tech.lgbt/@nina_kali_nina/112502777181113864)
 * [How to make nice window title bars](https://tech.lgbt/@nina_kali_nina/112518604838598161)
+* [Buttons and font](https://tech.lgbt/@nina_kali_nina/113176171043290018)
 
 ### Misc
 * [8bitYUV - a proposal for small RAM screen
