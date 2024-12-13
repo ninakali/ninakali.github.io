@@ -43,6 +43,7 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [Slackware 3.0 from 1995, XFree86, Andrew ATK and ez word processor](https://tech.lgbt/@nina_kali_nina/113645099116366832)
 * [Debian 2 and Debian 3](https://tech.lgbt/@nina_kali_nina/111437725968501402) - XFree86 setup, Gnome 1.4, Gimp 1.x, some KDE 2.2 apps, Mozilla 1.0, WindowMaker, 
 IceWM, FVWM95
 * [Debian 0.91 BETA](https://tech.lgbt/@nina_kali_nina/111431340793521963) - Linux 0.99, X11, gcc 2 and GIMP 0.60
