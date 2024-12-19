@@ -31,6 +31,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [BK-0010, soviet desktop PDP-11 clone, running all sorts of soft](https://tech.lgbt/@nina_kali_nina/113676143680346758)
 * [Windows 95 running on a monochrome 386SX VGA laptop](https://tech.lgbt/@nina_kali_nina/112713789591261897)
 * [Japanese operating system B-right/V version 4.5 running Chokanji system - BTRON implementation](https://tech.lgbt/@nina_kali_nina/111884924714760101)
 * [Japanese operating system EOSystem 3 for PC98](https://tech.lgbt/@nina_kali_nina/111857591075529606)
