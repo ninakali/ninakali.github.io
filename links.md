@@ -1,6 +1,7 @@
 # Some of my mastodon threads of interest
 
 ## Notes/rants
+* [Reminiscing about my bands and songs](https://tech.lgbt/@nina_kali_nina/113696895224129150)
 * [80 column rule and the arm span of 
 papermakers](https://tech.lgbt/@nina_kali_nina/111953604072020696)
 * [Distraction-free work in attention-seeking world: phone hacks, typewriters, and old computers](https://tech.lgbt/@nina_kali_nina/111879129075499415)
