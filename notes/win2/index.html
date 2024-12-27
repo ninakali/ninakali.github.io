@@ -1,0 +1,368 @@
+<html>
+<style>
+img { 
+	width: 640px;
+	border: 2px; border-style: solid;
+	border-color: #888;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+body { 
+	max-width: 800px; margin:40px auto; font-family: Arial, Helvetica, sans-serif;
+	background: lightgrey; padding: 5px;
+	border-radius: 5px;
+}
+
+h1, h2, h3, h4 {
+	padding: 0px 10px 0px 10px;
+}
+
+.cut {
+	border: 1px; 
+	border-style: 
+	solid; border-radius: 5px; 
+	border-color: #888; 
+	background-color: #E5E5E5; 
+	padding: 10px;
+}
+
+.post {
+	border: 1px; border-style: solid; border-color: #888;
+	margin: 5px; padding: 0px 10px 10px 10px;
+	border-radius: 5px; background-color: #EEE;
+}
+
+.imgdesc {
+	text-align: center; color: #555; font-style: italic;
+	padding:  0px 10px 10px 10px;
+}
+</style>
+<title>Windows 2: Final Fantasy of operating systems</title>
+<body><div class="post">
+<h1>Windows 2: Final Fantasy of operating systems</h1>
+<p>It is common knowledge that Final Fantasy could have been the last game in the series. It is far less known that Windows 2, released around the same time, could too have been the last. If anything, things were more certain: even Microsoft believed that Windows 2 would be the last.</p>
+<p><img src="win2live/00_iroke.png" alt=""></p>
+<p class="imgdesc">PC Paintbrush and MS Excel were some of the most successful programs for Windows 2.</p>
+<p>The miracle of overwhelming commercial success brought incredible attention to Windows. The retro community and computer historians generally seem to be interested in the legendary origins of the system (how it all began) or in its turnabout Windows 3.0 release (what did they do right?).</p>
+<p>This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.</p>
+<p>Let's start with some hands-on Windows 2 experience to tempt you to read the full story!</p>
+</div>
+<hr/><hr/><hr/>
+<div class="post">
+<h2>Living with Windows 2</h2>
+<p>Let's get a time machine, and teleport to the 27th of December 1989 or so.</p>
+<p><img src="win2live/01_xls.png" alt="win2live/01_xls.png"></p>
+<p class="imgdesc">Most people would experience Windows 2 through a version shipped with Microsoft Excel. It can calculate stonks and plot charts. What else do you need?</p>
+<h3>Standard applications</h3>
+<p>Due to a number of reasons, standard Windows 2 applications are almost exactly the same as Windows 1 applications.</p>
+<p><img src="win2live/02_executive.png" alt="win2live/02_executive.png"></p>
+<p class="imgdesc">MS-DOS Executive is sort of a file manager for Windows that is used to start programs.</p>
+<p><img src="win2live/03_notepad.png" alt="win2live/03_notepad.png"></p>
+<p class="imgdesc">Notepad is as unassuming as ever. No Copilot yet. Note how minimized applications are represented by an icon on a desktop. This used to be a common idea across many contemporary systems.</p>
+<p><img src="win2live/04_wricalc.png" alt="win2live/04_wricalc.png"></p>
+<p class="imgdesc">Calculator is very minimalistic. Write is clearly Microsoft's response to Apple's MacWrite.</p>
+<p><img src="win2live/05_paint.png" alt="win2live/05_paint.png"></p>
+<p class="imgdesc">Paint is similar to MacPaint, too. It is monochrome, and it looks exactly like Paint in Windows 1, but uses a different file format (?!).</p>
+<p><img src="win2live/06a_open.png" alt="win2live/06a_open.png"></p>
+<p class="imgdesc">There is no proper Open file dialog. It was implemented as a part of CommDlg in Windows 3.1.</p>
+<p><img src="win2live/06b_save.png" alt="win2live/06b_save.png"></p>
+<p class="imgdesc">It's Wild West of modal windows, folks! Also, I wonder what "Microsoft Word format" they mean; there were at least Word For Dos and Word For Mac at this point.</p>
+<p><img src="win2live/07_calcard.png" alt="win2live/07_calcard.png"></p>
+<p class="imgdesc">Calendar and Cardfile are more useful than they might seem.</p>
+<p><img src="win2live/08_control.png" alt="win2live/08_control.png"></p>
+<p class="imgdesc">Control panel allows to create your own Hot Dog Stand interface, if you want.</p>
+<p><img src="win2live/09_terminal.png" alt="win2live/09_terminal.png"></p>
+<p class="imgdesc">The networking tools in Windows 2.0 are basically non-existent. The terminal tool is beyond basic.</p>
+<p><img src="win2live/10_reversi.png" alt="win2live/10_reversi.png"></p>
+<p class="imgdesc">Built-in entertainment is represented by an intellectual game of reversi. You need 3.0 for Solitaire, 3.1 for Minesweeper, and WfW for Hearts.</p>
+<h3>Additional software</h3>
+<p>The list is non-exhaustive, and even misses some major pieces of software (Corel DRAW!, for example). This is more to illustrate that Windows 2 had <em>some</em> useful apps.</p>
+<p><img src="win2live/11_word.png" alt="win2live/11_word.png"></p>
+<p class="imgdesc">Back in the 80s, Microsoft's office apps were much more popular on Mac than on PC. Maybe that's because Word for DOS was really ugly. It took Microsoft years to bring graphical Word on the PC, and you're witnessing it.</p>
+<p><img src="win2live/12_msproj2.png" alt="win2live/12_msproj2.png"></p>
+<p class="imgdesc">Perhaps this is why Microsoft made Project? To release their software in time.</p>
+<p><img src="win2live/13_devtools.png" alt="win2live/13_devtools.png"></p>
+<p class="imgdesc">Windows 2 SDK is shipped with a few neat tools for software developers. It is not quite Visual C yet, but it is not not visual.</p>
+<p><img src="win2live/14_aldus.png" alt="win2live/14_aldus.png"></p>
+<p class="imgdesc">Aldus Pagemaker was one of the first programs to release for Windows. Some video cards supported screens as large as 1024x768 in 256 colours, which is pretty darn good for typesetting. Pagemaker 3 could use much more RAM than Pagemaker 1, and is actually quite usable.</p>
+<p><img src="win2live/15_ai.png" alt="win2live/15_ai.png"></p>
+<p class="imgdesc">Adobe Illustrator does not require an account just yet; there is no generative AI in it either.</p>
+<p><img src="win2live/16_ai2.png" alt="win2live/16_ai2.png"></p>
+<p class="imgdesc">It is quite basic as far as vector editors go, but it has CMYK and PostScript support.</p>
+<p><img src="win2live/17_xeroxp.png" alt="win2live/17_xeroxp.png"></p>
+<p class="imgdesc">Xerox Presents is a PowerPoint-style app. There was no PowerPoint for Windows just yet, as Microsoft has just bought the company that made it.</p>
+<p><img src="win2live/18_xeroxp2.png" alt="win2live/18_xeroxp2.png"></p>
+<p class="imgdesc">Xerox Presents comes with some nifty vector clipart, and even supports vector scalable fonts.</p>
+<p><img src="win2live/19_clearview.png" alt="win2live/19_clearview.png"></p>
+<p class="imgdesc">It is quite obvious that MS-DOS Executive is not a great way to start programs. There were many alternatives, and Clearview was one of the more advanced ones.</p>
+<p><img src="win2live/20_wam.png" alt="win2live/20_wam.png"></p>
+<p class="imgdesc">Windows Application Manager aims to solve the same problem, but cheaper.</p>
+<p><img src="win2live/21_paint_dan.png" alt="win2live/21_paint_dan.png"></p>
+<p class="imgdesc">ZSoft Paintbrush is a bit of a pain to use on Windows, because Windows only supports 8 colours in VGA mode. But it looks just like Microsoft Paintbrush from Windows 3.0.</p>
+<p><img src="win2live/22_paint_yaga.png" alt="win2live/22_paint_yaga.png"></p>
+<p class="imgdesc">That's right! Because Microsoft has licensed ZSoft Paintbrush for its MS Mouse and MS Windows. Also. you can tell that I just needed an excuse to add two screenshots of the program...</p>
+<p><img src="win2live/23_xvtdraw.png" alt="win2live/23_xvtdraw.png"></p>
+<p class="imgdesc">XVT Draw is a shareware vector editor. It feels much faster than Illustrator or DRAW!</p>
+<p><img src="win2live/24_opusmidi.png" alt="win2live/24_opusmidi.png"></p>
+<p class="imgdesc">Opus Composer, also known as WinSong, was made for Windows 1, but it is slightly more useable on Windows 2. It supposed to support MIDI.</p>
+<p><img src="win2live/25_opustape.png" alt="win2live/25_opustape.png"></p>
+<p class="imgdesc">Opus Tapedeck is a counterpart for Opus Composer that works just as a player utility.</p>
+<p><img src="win2live/26_packrat.png" alt="win2live/26_packrat.png"></p>
+<p class="imgdesc">The genre of desktop organisers seemed to be popular. This is Packrat. Another popular PIM for Windows 2 was IBM Current.</p>
+<p><img src="win2live/27_casette.png" alt="win2live/27_casette.png"></p>
+<p class="imgdesc">CaseLiner is a tool for generating liners for your mixtapes.</p>
+<p><img src="win2live/28_comm.png" alt="win2live/28_comm.png"></p>
+<p class="imgdesc">Comprog brings networking on Windows 2.0 to the next level: now you can connect to BBSes and download files.</p>
+<h3>Entertainment</h3>
+<p>There weren't many games for Windows 2, but there were some.</p>
+<p><img src="win2live/29_chessnet.png" alt="win2live/29_chessnet.png"></p>
+<p class="imgdesc">ChessNet allows you to play chess over modem. It's much faster than chess over email!</p>
+<p><img src="win2live/30_solitaire.png" alt="win2live/30_solitaire.png"></p>
+<p class="imgdesc">Remember I told you there is no Solitaire for Windows 2? Turns out, I lied! There is a shareware version that looks nothing like MS Solitaire but still as fun to play.</p>
+<p><img src="win2live/31_backg.png" alt="win2live/31_backg.png"></p>
+<p class="imgdesc">Backgammon has a case of a quirky interface. It's likely going to work just fine in Windows 1, too.</p>
+<p><img src="win2live/32_xword.png" alt="win2live/32_xword.png"></p>
+<p class="imgdesc">Crosswords are fun. Don't you like crosswords? Crosswords!</p>
+<p><img src="win2live/33_starba.png" alt="win2live/33_starba.png"></p>
+<p class="imgdesc">Starbase is probably the only example of an <em>action</em> game for Windows 2. Someone tries to bomb your star base! It is hectic and very violent.</p>
+<p><img src="win2live/34_taipei.png" alt="win2live/34_taipei.png"></p>
+<p class="imgdesc">Taipei is very pretty, and this is why I put it at the end.</p>
+</div>
+<hr/><hr/><hr/>
+<div class="post">
+<p>Now, I hope, you are ready for the history tour? I had to start <em>somewhere</em>, and The mother of all demos seemed as good place as any. Many of you might already know about some background things I am going to mention, so I hid all the things that were not directly related to Windows under the dropdowns.</p>
+</div>
+<div class="post">
+<h2>1968-12 &quot;The mother of all demos&quot;</h2>
+<p><img src="history/01_mother.png" alt=""></p>
+<details> 
+  <summary>"The mother of all demos" combines graphic displays, computer mouses, windows, and much more</summary><div class="cut">
+<p>It has been a few decades since the invention of electronic computers, but they are still so costly only some businesses can afford one. Most people cannot even begin to imagine what they would do with one. A group of scientists tries to imagine what could be done with the computers of the future and prepares a presentation of multiple technologies that will be known as &quot;The mother of all demos&quot;.</p>
+<p>Incredibly, there is a recording, but it is pretty unimpressive by modern standards: <a href="https://www.youtube.com/watch?v=yJDv-zdhzMY">https://www.youtube.com/watch?v=yJDv-zdhzMY</a></p>
+<p>Image source: &quot;The mother of all demos&quot; itself.</p>
+</div></details>
+</div>
+<div class="post">
+<h2>1973-03 Xerox Alto</h2>
+<p><img src="history/02_alto.png" alt=""></p>
+<details> 
+  <summary>The cradle of GUI innovation, Xerox PARC</summary><div class="cut">
+A research division of Xerox, Xerox PARC, releases an experimental computer "workstation" called Alto. An attempt to streamline "The mother of all demos", Alto is the first mass-produced system with a graphical user interface. The computer is made from hundreds of tiny computer chips, and the price starts at $32,000. There is very little demand for such a computer.
+<p>Image source: Xerox's Alto commercial.</p>
+</div></details>
+</div>
+<div class="post">
+<h2>1977-06 Apple II</h2>
+<p><img src="history/03_apple2.jpg" alt=""></p>
+<details> 
+  <summary>The boom of microcomputers begins</summary><div class="cut">
+Since 1970, the semiconductor and computer chip industry has kept doubling chip features while keeping the costs relatively constant. By 1977, a whole computer processor, comparable in performance to Apollo Guidance Computer's processor, would fit on a silicon crystal smaller than a fingernail and might cost about $10.
+<p>This created an opportunity to produce small, inexpensive computers for individual usage. A remarkable example of such a computer is the Apple II, released in June 1977, with a retail price of $1,298.</p>
+<p>Two other significant computers, Commodore PET and TRS-80, were released the same year, and a competitive microcomputer market started to form. There was little software available for these computers at first, and owners often had to write their own programs using built-in BASIC programming language.</p>
+</div></details>
+</div>
+<div class="post">
+<h2>1979-06 Intel 8088</h2>
+<p><img src="history/04_intel88.jpg" alt=""></p>
+<details> 
+  <summary>A word about memory models and address bus sizes.</summary><div class="cut">
+<h3>Integer number sizes</h3>
+<p>The overwhelming majority of processors in early home computers were &quot;8-bit&quot;; that is, they could operate only with integer numbers between 0 and 255. Computing bigger numbers would require the processor to perform multiple steps.</p>
+<p>If you're struggling to grasp the idea, imagine calculating a sum of 789 and 123 using only sums of single digits: start from the right-most number with 9+3, that's 2 and carry one, then 8+2+carry, that's 1 and carry one, and then 7+1+carry is 9, so the total is 912. Calculating a sum of 1234 and 5678 would require a similar procedure on an 8-bit computer.</p>
+<p>A more sophisticated and thus more expensive 16-bit processor could solve this math problem in a single operation because the biggest integer number it can handle is 65,535. A big chunk of computing deals with numbers around this range, so a 16-bit processor with the same &quot;number of operations per second&quot; as an 8-bit processor will likely be much more performant.</p>
+<h3>Address bus size</h3>
+<p>The central processor usually doesn't have much memory to store the data. Instead, it stores data in memory chips connected to the CPU through &quot;address bus&quot; and &quot;data bus&quot;. The data bus transfers the actual information back and forth, while the address bus determines where to store the data in memory.</p>
+<p>Thus, the address bus size (&quot;width&quot;) determines how much RAM the computer can use without relying on engineering tricks. The logic is the same as with the integer sizes:</p>
+<p>8-bit bus = 256 addresses,
+16-bit bus = 64K (65,536) addresses,
+20-bit bus = 1M (1,048,576) addresses,
+24-bit bus = 16M addresses,
+32-bit bus = 4G addresses</p>
+<p>When processors calculate the addresses for the address bus, they usually have to deal with the same limitations as during integer calculations. Thus, calculating a 16-bit bus address would require multiple operations on an 8-bit processor.</p>
+<p>Unfortunately, any serious computing requires at least a few kilobytes of memory. Hence, computers based on 8-bit processors usually had to have a 16-bit address bus and no choice but to regularly spend multiple operations calculating addresses in the memory.</p>
+<h3>Memory management model</h3>
+<p>The simplest way to use computer memory is sometimes called a &quot;flat model&quot;. A computer with a 16-bit address bus using flat memory can have not more than 64K of addressable memory elements. This is a problem because things like text documents, spreadsheets and photos simply do not fit in 64K.</p>
+<p>A way to bypass this limitation is to implement &quot;bank switching&quot; (or simply &quot;banking&quot;). Let's say you want 128K of memory on a system with a 16-bit data bus. A common way to implement this is to divide 128K into 8 &quot;banks&quot; of 16K each and add clever circuitry to allow you to choose how these banks are connected to the address bus &quot;on the fly&quot;.</p>
+<p>For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 16-bit system can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the &quot;address space&quot; simultaneously.</p>
+<p>Many 16-bit processors use an advanced variant of bank switching known as &quot;segmentation&quot;. With segment memory, a processor can access multiple 64K &quot;segments&quot; simultaneously. For example, x86 processors have a Code Segment, which has the program you execute now, a Data Segment to access your data, an Extra Segment to compare or copy memory between two segments and a Stack Segment to store intermediate calculation results. It is much faster than banking but still requires the programmer to use a lot of magic to avoid the limitations imposed by the 64K segment size.</p>
+<h3>Intel 8086 and Intel 8088</h3>
+<p>Both i86 and i88 are 16-bit processors with 20-bit address bus. This means that they support up to 1 megabyte of RAM. These processors use segment memory to avoid long, expensive memory address computations. Initially, the listed price was $124, but quickly dropped to just $14.</p>
+<h3>A glimpse into the future - Motorola 68000</h3>
+<p>Introduced just a few months after the Intel 8088, Motorola 68000 is a 32-bit processor with a 24-bit address bus and a convenient flat memory model. It was seen as a more expensive chip, with the price tag starting at $125. Curiously, the price decreased to about $15 in just a few years.</p>
+</div></details>
+</div>
+<div class="post">
+<h2>1979-10 VisiCorp publishes the first spreadsheet program for home computers, VisiCalc for Apple II. Dubbed &quot;the first killer app for the personal computer&quot;, it was massively popular.</h2>
+<p>1979-?? Steve Jobs strucks a deal with Xerox after seeing a demo of a graphical interface at Xerox PARC.</p>
+<blockquote>
+<p>I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong. But we didn’t know that at the time but still thought they had the germ of the idea was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
+-- Steve Jobs, interview for &quot;Triumph of the Nerds&quot;</p>
+</blockquote>
+</div>
+<div class="post">
+<h2>1980-08 IBM is mildly interested in a home computers market. They begin building IBM PC based on Intel 8088 processor, and need an operating system for it.</h2>
+</div>
+<div class="post">
+<h2>1981-04 Xerox Star released ($16,500), boasting a desktop paradigm and a high-resolution screen.</h2>
+</div>
+<div class="post">
+<h2>1981-08 IBM PC released ($1,565), shipped with an operating system developed by Microsoft, a famous compiler company back then.</h2>
+</div>
+<div class="post">
+<h2>1981-09 Rumours about Apple Lisa, upcoming Xerox Star competitor, spread around the industry.</h2>
+</div>
+<div class="post">
+<h2>1981-09 Microsoft (probably) starts working on Interface Manager.</h2>
+</div>
+<div class="post">
+<h2>1981-11 VisiCalc's developers are actively working on VisiOn to compete with not-yet-released Lisa.</h2>
+<blockquote>
+<p>In 1981, the Apps division of Microsoft (Microsoft had two primary divisions during this time - &quot;Systems&quot; and &quot;Apps&quot;, for systems software and application development respectively) began to develop a common interface library for all of the productivity applications being developed within the division at the time (mostly Word and the Multiplan spreadsheet). This went by several names, notably MUSH (Microsoft User SHell) and Interface Manager, and is an entirely text-mode UI framework signified by the &quot;session control&quot; strip with context-specific commands at the bottom of the screen. There were also brief plans for a &quot;visual shell&quot; using this UI to be shipped using DOS 2.0, but these were scrapped before the final release. Variants of the MUSH/Interface Manager interface would ship in DOS Word 1.0 and Multiplan in 1982 and 1983, after the development of the Windows product had already begun. -- Betawiki</p>
+</blockquote>
+</div>
+<div class="post">
+<h2>1982-08 Microsoft releases a spreadsheet editor Multiplan, a VisiCalc competitor. Multiplan will later be obsoleted by Excel.</h2>
+</div>
+<div class="post">
+<h2>1982-11 VisiCorp presents VisiOn on COMDEX, allegedly inspiring Bill Gates to alter the concept behind &quot;Windows&quot;.</h2>
+</div>
+<div class="post">
+<h2>1982-12 Sun Window System is being developed.</h2>
+</div>
+<div class="post">
+<h2>1983-01 Apple releases Lisa. &quot;The principle difference between the Alto and the Lisa was that the Lisa had a desktop interface.&quot; Interestinly, Star had a desktop interface and was document-oriented, too.</h2>
+<blockquote>
+<p>&quot;the most important development in computers in the last five years, easily outpacing [the IBM PC]&quot; -- BYTE, 1983-02</p>
+</blockquote>
+</div>
+<div class="post">
+<h2>1983-04 Microsoft Interface Manager is under very active development.</h2>
+</div>
+<div class="post">
+<h2>1983-05 Microsoft presents MS Mouse. It supports a Doodle graphics editor, which is one of the first graphics editors for a home computer. It can work with Notepad, and will support upcoming Word text processor.</h2>
+</div>
+<div class="post">
+<h2>1983-09 Microsoft releases Word for DOS and XENIX.</h2>
+</div>
+<div class="post">
+<h2>1983-09 Microsoft presents Interface Manager, freshly renamed to Windows, to BYTE magazine, but it is &quot;smoke and mirrors&quot;.</h2>
+</div>
+<div class="post">
+<h2>1983-11 Microsoft presents Windows at COMDEX. The system is going to have &quot;tiled&quot; windows. The demo is still &quot;vaporware&quot;, lacking actual function just yet.</h2>
+</div>
+<div class="post">
+<h2>1983-11 Sun Window System (Sunwindows) is released. Works on Sun-2 (Motorola 68010-based, $29,300). Has overlapping windows.</h2>
+</div>
+<div class="post">
+<h2>1983-12 VisiOn for IBM PC is released. It is slow, and requires a hard disk, bringing the total system cost close to 3/4 of Apple Lisa. The company has lost many key developers during the work on VisiOn due to poor management. The system was doomed.</h2>
+</div>
+<div class="post">
+<h2>1984-01 Apple releases Macintosh.</h2>
+</div>
+<div class="post">
+<h2>1984-05 Microsoft releases DR preview builds with a limited set of vendors.</h2>
+</div>
+<div class="post">
+<h2>1984-08 IBM announces a text-based windowing system called TopView.</h2>
+</div>
+<div class="post">
+<h2>1984-11 Digital Research GEM is presented at COMDEX.</h2>
+</div>
+<div class="post">
+<h2>1985-04 Commodore Amiga 1000 is released, with Intuition interface for its AmigaOS. The reviews of the interface are far from rosy. The platform got no killer app, and in the next years failed to win the market.</h2>
+</div>
+<div class="post">
+<h2>1985-07 Release of Windows Premiere Edition, a technology preview of Windows shared with a limited number of vendors.</h2>
+</div>
+<div class="post">
+<h2>1985-08 TopView doesn't work out for IBM. Microsoft and IBM agree to work together on the interface for the next big operating system, IBM OS/2.</h2>
+</div>
+<div class="post">
+<h2>1985-09 Microsoft releases a new spreadsheet software, called Excel, for Macintosh.</h2>
+</div>
+<div class="post">
+<h2>1985-11 Apple allows Microsoft to use its technology in Windows 1.0.</h2>
+</div>
+<div class="post">
+<h2>1985-11 Microsoft releases Windows 1.0 with tiling windows. Supposedly, this was done for the sake of user convenience and efficiency (though the press didn't like it).</h2>
+</div>
+<div class="post">
+<h2>1985-10 Digital Research decides to seriously strip down GEM because of a lawsuit from Apple.</h2>
+</div>
+<div class="post">
+<h2>1986-09 Most developers left Windows project to focus on OS/2 Presentation manager. &quot;Barbarians led by Bill Gates&quot; claims that only a team of three was tasked to to make a new Windows version that could run Excel. Many ex-staffers say that the actual team was much bigger. Regardless, Windows' days seemed to be numbered. &quot;This is it, after this we're not going to have any more Windows. It's all OS/2.&quot;, Ballmer said.&quot;</h2>
+</div>
+<div class="post">
+<h2>1986-09 Compaq ships DeskPro 386, the very first DOS-compatible machine based on i386.</h2>
+</div>
+<div class="post">
+<h2>1987-09 Windows/386, a first variant of Windows 2.0 released for Compaq i386. It finally features overlapping windows.</h2>
+</div>
+<div class="post">
+<h2>1987-10 A &quot;runtime&quot; version of Windows 2 is used for IBM PC Excel release.</h2>
+<p>1987-12 Windows 2.03 released, hitting the stores in early 1988.</p>
+<p>Barbarians Led by Bill Gates saying, “A couple people were left to maintain the Windows 2.0 code and fix any bugs reported, but the “glory days” of Windows, such as they were, appeared to be dead and gone. Last one out, turn off the lights.”</p>
+</div>
+<div class="post">
+<h2>1988-03 Apple files a lawsuit againt Microsoft for patent violation in Windows 2.</h2>
+</div>
+<div class="post">
+<h2>1988-08 Dave Weise's pet project to port Windows kernel to 386 gains traction inside Microsoft. It is decided to release Windows 3.0 and develop it further.</h2>
+</div>
+<div class="post">
+<h2>1988-11 OS/2 1.1 includes Presentation Manager, developed jointly by Microsoft and IBM. A graphical interface of Presentation Manager is very similar to Windows 2.0. IBM insists Microsoft should kill Windows.</h2>
+</div>
+<div class="post">
+<h2>1989-07 Apple vs Microsoft lawsuit starts to look like a losing case for Apple.</h2>
+</div>
+<div class="post">
+<h2>1990-05 Microsoft releases Windows 3.0, and it sells. This eventually results in Microsoft Word and Excel gaining significant market share due to competitors (Lotus and WordPerfect) not supporting Windows and expecting OS/2 to become a standard instead. IBM is upset and nopes out of the joint OS/2 development.</h2>
+</div>
+<h2>Microsoft Mouse</h2>
+<p>If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a &quot;mouse&quot; as a pointer device. The next year, though, is dubbed &quot;The Year of Mouse on PC&quot;. The actual year of mouse in the Lunar calendar was actually 1984, what a shame.</p>
+<blockquote>
+<p>The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.</p>
+</blockquote>
+<ul>
+<li>Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982</li>
+</ul>
+<blockquote>
+<p>This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, &quot;Micro”?)</p>
+</blockquote>
+<ul>
+<li>PC Mag, February 1983</li>
+</ul>
+<blockquote>
+<p>...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom.</p>
+</blockquote>
+<ul>
+<li>&quot;The Tale Of The Mouse&quot;, PC Mag, 02/83</li>
+</ul>
+<blockquote>
+<p>You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another...</p>
+</blockquote>
+<ul>
+<li>&quot;VisiOn, a mouse on the digital desktop&quot;, PC Mag, 02/83</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li>Photographs are sourced from Wikipedia. Screenshots are made by me, except for:<ul>
+<li>None</li>
+</ul>
+</li>
+<li>Barbarians led by Bill Gates https://archive.org/details/barbariansledbyb00edst/page/23/mode/1up?view=theater</li>
+<li>Doing Windows https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/</li>
+<li>https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows</li>
+<li>PC Magazine, various issues</li>
+<li>BYTE Magazine, various issues</li>
+<li>Infoworld Sep 1981 and May 1982<ul>
+<li>https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&amp;pg=PA1&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</li>
+<li>https://books.google.co.uk/books?id=bDAEAAAAMBAJ&amp;pg=PA10&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</li>
+</ul>
+</li>
+</ul>
