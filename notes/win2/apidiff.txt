@@ -1,0 +1,34 @@
+Biggest Windows API differences, according to comparison between Windows.h:
+
+1) Windows Meta File support in Windows 2 - PlayMetaFileRecord, EnumMetaFile
+2) Optional RC_BITMAP64 support in Windows 2
+3) SetDoubleClickTime to accompany GetDoubleClickTime
+4) SetMessageQueue
+5) SetWindowPos
+6) IsZoomed
+7) CreateDialogIndirect, DialogBoxIndirect, GetNextDlgGroupItem, GetNextDlgTabItem
+8) GetKeyState now expanded to have GetAsyncKeyState and Get/SetKeyboardState, EnableHardwareInput, GetInputState
+9) GetCapture
+10) EndMenu removed, GetMenuState, GetMenuItemID, GetMenuItemCount added.
+11) GetUpdateRgn to add to GetUpdateRect, ExcludeUpdateRgn
+12) ScrollDC (scroll a bit region), ShowScrollBar, 
+13) GetCaretPos
+14) ControlPanelInfo
+15) ExtTextOut, GetCharWidth, SetTextAlign, GetTextAlign - new fonts can be non-monospaceds 
+16) FastWindowFrame for new UI
+17) New GDI - Chord (a region bounded by the intersection of an ellipse and a line segment, called a secant), SetRectRgn, SetMapperFlags, GetAspectRatioFilter, GetDCOrg
+18) [Offset/Scale]Viewport[Org/Ext]
+19) Improved memory manager - GlobalWire, unwire, unlock; GlobalLRUNewest/Oldest ("mark as recent use"), GlobalNotify, LocalShrink
+20) Swap - SetSwapAreaSize, ValidateFreeSpaces, LimitEmsPages, SetErrorMode
+21) Global Atoms - GlobalAddAtom, etc.  (AddAtom function stores no more than one copy of a given string in the atom table)
+22) Improved timers - GetTickCount, GetTimerResolution
+23) MDI - SetParent, EnumTaskWindows, GetTopWindow, GetNextWindow, GetWindowTask
+24) Event hooks - SetWindowsHook, UnhookWindowsHook, DefHookProc
+25) Removed a bit of Kanji support (?!)
+26) Small improvements in the serial driver
+
+In other words:
+* WMF support
+* MDI and overlapping windows
+* Non-monospace/proportional fonts
+* EMS memory support
