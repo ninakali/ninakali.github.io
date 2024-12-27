@@ -22,6 +22,11 @@ h1, h2, h3, h4 {
 	padding: 0px 10px 0px 10px;
 }
 
+blockquote {
+	font-style: italic;
+	color: #555;
+}
+
 .cut {
 	border: 1px; 
 	border-style: 

@@ -9,7 +9,7 @@ It is common knowledge that Final Fantasy could have been the last game in the s
 
 The miracle of overwhelming commercial success brought incredible attention to Windows. The retro community and computer historians generally seem to be interested in the legendary origins of the system (how it all began) or in its turnabout Windows 3.0 release (what did they do right?). 
 
-This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
+This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. By necessity, I will talk a lot about Windows 1, too. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
 
 Let's start with some hands-on Windows 2 experience to tempt you to read the full story!
 
@@ -256,11 +256,36 @@ Introduced just a few months after the Intel 8088, Motorola 68000 is a 32-bit pr
 
 <div class="post">
 
-## 1979-10 VisiCorp publishes the first spreadsheet program for home computers, VisiCalc for Apple II. Dubbed "the first killer app for the personal computer", it was massively popular.
-1979-?? Steve Jobs strucks a deal with Xerox after seeing a demo of a graphical interface at Xerox PARC.
+## 1979-10 VisiCalc
+
+![](history/05_visicalc.png)
+
+VisiCorp publishes the first spreadsheet program for home computers, VisiCalc for Apple II. Dubbed "the first killer app for the personal computer", it was massively popular. "I need VisiCalc, so I am going to buy a very expensive computer to run it" level of popular.
+
+</div>
+
+<div class="post">
+
+## 1979-?? Steve Jobs decides to make a computer with a graphical interface
+
+Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox'es patents.
 
 > I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong. But we didn’t know that at the time but still thought they had the germ of the idea was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
--- Steve Jobs, interview for "Triumph of the Nerds"
+
+*-- Steve Jobs, interview for "Triumph of the Nerds"*
+
+This pivots a computer in development, Apple Lisa, from being a revamp of Apple II into being something completely new.
+
+</div>
+
+
+<div class="post">
+
+## 1980-08 IBM starts working on PC
+
+![](history/06_pc_mobo.jpg)
+
+The Blue Giant becomes mildly interested in a home computers market, and decides to build a cheap home computer, uncharacteristically for the company outsourcing many parts of the project. A small group of engineers starts working on IBM PC, using Intel 8088 processor because it is the cheapest 16-bit CPU they can find. IBM needs an operating system for their new computer, and starts shopping around.
 
 
 </div>
@@ -268,69 +293,136 @@ Introduced just a few months after the Intel 8088, Motorola 68000 is a 32-bit pr
 
 <div class="post">
 
-## 1980-08 IBM is mildly interested in a home computers market. They begin building IBM PC based on Intel 8088 processor, and need an operating system for it.
+## 1981-04 Xerox Star 
+
+![](history/07_xerox_star.jpg)
+
+
+Xerox polishes ideas from Alto and releases the very first computer using "desktop" paradigm and "folders", Xerox Star 8010. It is a wonderful machine, with a high-resolution screen, mouse, what-you-see-is-what-you-get, and so on. Alas, the basic model costs $75,000.
 
 </div>
 
 
 <div class="post">
 
-## 1981-04 Xerox Star released ($16,500), boasting a desktop paradigm and a high-resolution screen.
-</div>
+## 1981-08 IBM PC 
 
+![](history/08_ibmpc.jpg)
 
-<div class="post">
-
-## 1981-08 IBM PC released ($1,565), shipped with an operating system developed by Microsoft, a famous compiler company back then.
-</div>
-
-
-<div class="post">
-
-## 1981-09 Rumours about Apple Lisa, upcoming Xerox Star competitor, spread around the industry.
-</div>
-
-
-<div class="post">
-
-## 1981-09 Microsoft (probably) starts working on Interface Manager.
-</div>
-
-
-<div class="post">
-
-## 1981-11 VisiCalc's developers are actively working on VisiOn to compete with not-yet-released Lisa.
-
-> In 1981, the Apps division of Microsoft (Microsoft had two primary divisions during this time - "Systems" and "Apps", for systems software and application development respectively) began to develop a common interface library for all of the productivity applications being developed within the division at the time (mostly Word and the Multiplan spreadsheet). This went by several names, notably MUSH (Microsoft User SHell) and Interface Manager, and is an entirely text-mode UI framework signified by the "session control" strip with context-specific commands at the bottom of the screen. There were also brief plans for a "visual shell" using this UI to be shipped using DOS 2.0, but these were scrapped before the final release. Variants of the MUSH/Interface Manager interface would ship in DOS Word 1.0 and Multiplan in 1982 and 1983, after the development of the Windows product had already begun. -- Betawiki
-
+IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IT comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
 
 </div>
 
 
 <div class="post">
 
-## 1982-08 Microsoft releases a spreadsheet editor Multiplan, a VisiCalc competitor. Multiplan will later be obsoleted by Excel.
+## 1981-09 Rumours about Apple Lisa
+
+![](history/09_lisa.png)
+
+Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long ago, but was not a common accesory just yet).
+
+</div>
+
+<div class="post">
+
+## 1981-09 Microsoft Interface Manager (?)
+
+![](history/10_interfacemana.png)
+
+Even in the early 80s there was a big demand for user-friendliness. Microsoft starts investing into its own user-friendly interface, as seen in the above note from Paul Allen (c. 1982). It is likely that the work on something known internally as Interface Manager has begun not later than in September 1981.
+
+> In 1981, the Apps division of Microsoft (Microsoft had two primary divisions during this time - "Systems" and "Apps", for systems software and application development respectively) began to develop a common interface library for all of the productivity applications being developed within the division at the time (mostly Word and the Multiplan spreadsheet). This went by several names, notably MUSH (Microsoft User SHell) and Interface Manager, and is an entirely text-mode UI framework signified by the "session control" strip with context-specific commands at the bottom of the screen. There were also brief plans for a "visual shell" using this UI to be shipped using DOS 2.0, but these were scrapped before the final release. Variants of the MUSH/Interface Manager interface would ship in DOS Word 1.0 and Multiplan in 1982...
+
+*-- Betawiki*
+
+It all started with Charles Simonyi. He created the first WYSIWYG word processor for Xerox PARC, got tired of it, and around 1980, was looking for new opportunities. His ex-coworker and founder of 3Com, Robert Metcalfe, has introduced Charles to Bill Gates, where Simonyi started working on a spreadsheet program. Shortly after, Simonyi hired his co-worker from Xerox PARC, Richard Brodie, to help with Multiplan. This was the beginning of the Apps division. It is said [citation needed] that when Brodie joined Microsoft, Multiplan did not have a menu system just yet, and Brodie was insistent on adding one. Brodie himself mentions that he primarily was working on Microsoft p-Code C compiler, though. So, this might or might not be the beginning of the Windows code.
+
 </div>
 
 
 <div class="post">
 
-## 1982-11 VisiCorp presents VisiOn on COMDEX, allegedly inspiring Bill Gates to alter the concept behind "Windows".
-</div>
+## 1981-11 VisiCalc's developers are actively working on a graphical interface
 
+![](history/11_rosetta_visicorp.png)
 
-<div class="post">
-
-## 1982-12 Sun Window System is being developed.
+Impressive interface of Xerox Star and rumours about not-yet-released Lisa make the creators of VisiCalc consider their future investment. The company's president learns about a small team from Texas (Scott Warren and Dennis Abbe) who created a variant of Xerox PARC's Smalltalk with a windowing interface for seriously underpowered home computers, and hires them to create the company's next big thing.
 
 </div>
 
 
 <div class="post">
 
-## 1983-01 Apple releases Lisa. "The principle difference between the Alto and the Lisa was that the Lisa had a desktop interface." Interestinly, Star had a desktop interface and was document-oriented, too.
+## 1982-08 Microsoft Multiplan
 
->  "the most important development in computers in the last five years, easily outpacing [the IBM PC]" -- BYTE, 1983-02
+![](history/12_multiplan.png)
+
+As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. Despite the rock star project's staff, Multiplan doesn't sell all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:
+
+> The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.
+
+-- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982
+
+The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple "windows" to display multiple spreadsheets at the same time.
+
+</div>
+
+
+<div class="post">
+
+## 1982-11 VisiCorp presents VisiOn on COMDEX
+
+![](history/13_vision.png)
+
+A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one).
+
+</div>
+
+
+<div class="post">
+
+## 1982-12 Sun Window System is being developed
+
+![](history/14_sun1.jpg)
+
+Star, Lisa, and now VisiOn created sort of a "user interface fever", it seems. Even Sun Microsystems begins working on a Sun Window System for its pricey UNIX workstation Sun-1.
+
+</div>
+
+
+<div class="post">
+
+## 1983-01 Apple Lisa
+
+![](history/15_lisa.jpg)
+
+Xerox Star was pretty close to the idea of modern computers, but it was still very rough around the corners. For example, if one window would overlap with the other, the bottom window would stop updating. Not a big deal unless your bottom window is a clock or a mail app. Apple Lisa, though, polished the interface. Just check out this [video](https://youtu.be/m1rROTVVHls?t=311). It was more affordable than Star, but $9,995 was still quite a price tag.
+
+> "The most important development in computers in the last five years, easily outpacing [the IBM PC]" 
+*-- BYTE, 1983-02*
+
+Despite the praise, the series was a commercial failure, likely due to its high cost.
+
+</div>
+
+<div class="post">
+
+## 1983-02 PC Magazine declares 1983 the year of mouse
+
+![](history/16_pcmag83.png)
+
+If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, they proclaim "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame. A big feature of the February issue is not-yet released VisiOn which is going to be all about the mouse.
+
+>  This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, "Micro”?)
+*-- PC Mag, February 1983*
+
+> ...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom.
+*-- "The Tale Of The Mouse", PC Mag, 02/83*
+
+> You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... 
+
+*-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83*
 
 </div>
 
@@ -512,36 +604,28 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 </div>
 
 
-## Microsoft Mouse
-
-If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, is dubbed "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame.
-
-> The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.
-
-- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982
-
-
->  This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, "Micro”?)
-
-- PC Mag, February 1983
-
-> ...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom.
-
-- "The Tale Of The Mouse", PC Mag, 02/83
-
-> You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... 
-
-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83
-
 
 ## Sources
-* Photographs are sourced from Wikipedia. Screenshots are made by me, except for:
-  * None
-* Barbarians led by Bill Gates https://archive.org/details/barbariansledbyb00edst/page/23/mode/1up?view=theater
-* Doing Windows https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/
-* https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows
+* Many photographs are sourced from Wikipedia; see links below.
+* Dates and trivia are taken from various sources and cross-referenced, but might not be absolutely correct or even debatable sometimes.
+* "Barbarians led by Bill Gates": https://archive.org/details/barbariansledbyb00edst/page/23/mode/1up?view=theater
+* "Connections: Patterns of Discovery" https://books.google.co.uk/books?id=DxGyOaAyd6gC&pg=PA92&redir_esc=y#v=onepage&q&f=false
+* "Doing Windows": https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/
+* "The rise of Windows": https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows
 * PC Magazine, various issues
 * BYTE Magazine, various issues
 * Infoworld Sep 1981 and May 1982 
   * https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&pg=PA1&redir_esc=y#v=onepage&q&f=false
   * https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false 
+
+## Links to original images
+* https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg
+* https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:IBM_PC_Motherboard_(1981).jpg
+* https://en.wikipedia.org/wiki/VisiCalc#/media/File:Visicalc.png
+* https://en.wikipedia.org/wiki/Xerox_Star#/media/File:Rank_Xerox_8010+40_brochure_front.jpg
+* https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:Bundesarchiv_B_145_Bild-F077948-0006,_Jugend-Computerschule_mit_IBM-PC.jpg
+* https://youtu.be/FDsbOMR_kU4
+* https://archive.org/details/MSDOS2FuturePlansForMSDOSByPaulAllen/page/n2/mode/1up?view=theater
+* https://dl.acm.org/doi/pdf/10.1145/1113572.1113555
+* https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg
+* https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg
