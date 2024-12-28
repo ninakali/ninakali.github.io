@@ -143,7 +143,7 @@ There weren't many games for Windows 2, but there were some.
 
 <div class="post">
 
-Now, I hope, you are ready for the history tour? I had to start *somewhere*, and The mother of all demos seemed as good place as any. Many of you might already know about some background things I am going to mention, so I hid all the things that were not directly related to Windows under the dropdowns.
+Now, I hope, you are ready for the history tour? I had to start *somewhere*, and The mother of all demos seemed as good place as any.
 
 </div>
 
@@ -154,8 +154,10 @@ Now, I hope, you are ready for the history tour? I had to start *somewhere*, and
 
 ![](history/01_mother.png)
 
+A lecture later called "The mother of all demos" combines graphic displays, computer mouse, windows, and much more.
+
 <details> 
-  <summary>"The mother of all demos" combines graphic displays, computer mouses, windows, and much more</summary><div class="cut">
+  <summary>Why was it important?</summary><div class="cut">
 
 It has been a few decades since the invention of electronic computers, but they are still so costly only some businesses can afford one. Most people cannot even begin to imagine what they would do with one. A group of scientists tries to imagine what could be done with the computers of the future and prepares a presentation of multiple technologies that will be known as "The mother of all demos".
 
@@ -172,12 +174,10 @@ Image source: "The mother of all demos" itself.
 
 ![](history/02_alto.png)
 
-<details> 
-  <summary>The cradle of GUI innovation, Xerox PARC</summary><div class="cut">
 A research division of Xerox, Xerox PARC, releases an experimental computer "workstation" called Alto. An attempt to streamline "The mother of all demos", Alto is the first mass-produced system with a graphical user interface. The computer is made from hundreds of tiny computer chips, and the price starts at $32,000. There is very little demand for such a computer.
 
 Image source: Xerox's Alto commercial.
-</div></details>
+
 </div>
 
 
@@ -187,8 +187,10 @@ Image source: Xerox's Alto commercial.
 
 ![](history/03_apple2.jpg)
 
+Until the release of PC and perhaps even for a few years after it, people usually meant "Apple II" when they were saying "personal computer".
+
 <details> 
-  <summary>The boom of microcomputers begins</summary><div class="cut">
+  <summary>The boom of microcomputers?</summary><div class="cut">
 Since 1970, the semiconductor and computer chip industry has kept doubling chip features while keeping the costs relatively constant. By 1977, a whole computer processor, comparable in performance to Apollo Guidance Computer's processor, would fit on a silicon crystal smaller than a fingernail and might cost about $10.
 
 This created an opportunity to produce small, inexpensive computers for individual usage. A remarkable example of such a computer is the Apple II, released in June 1977, with a retail price of $1,298.
@@ -204,9 +206,10 @@ Two other significant computers, Commodore PET and TRS-80, were released the sam
 
 ![](history/04_intel88.jpg)
 
+Intel 8088 central processor is not quite revolutionary, but it packs a good punch. It is 16-bit, and it uses the segment memory model instead of banking.
 
 <details> 
-  <summary>A word about memory models and address bus sizes.</summary><div class="cut">
+  <summary>Bits? Banking? Segments?</summary><div class="cut">
 
 ### Integer number sizes
 
@@ -268,6 +271,9 @@ VisiCorp publishes the first spreadsheet program for home computers, VisiCalc fo
 
 ## 1979-?? Steve Jobs decides to make a computer with a graphical interface
 
+![](history/05_5_parc.jpg)
+<p class="imgdesc">Xerox Palo Alto Research Centre, or PARC.</p>
+
 Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox'es patents.
 
 > I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong. But we didn’t know that at the time but still thought they had the germ of the idea was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
@@ -310,6 +316,8 @@ Xerox polishes ideas from Alto and releases the very first computer using "deskt
 ![](history/08_ibmpc.jpg)
 
 IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IT comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
+
+The computer, as expected from an i8088-based one, had a segment memory model. While the processor supported up to 1 megabyte of address space, large areas of it were pre-allocated for service usage, so the maximum amount of memory a user could have was limited to 640K. Which was still a lot for the time, because the BASIC model of IBM PC would have only 16K. Moreover, 8-bit contemporaries would rarely have more than 64 or 128K.
 
 </div>
 
@@ -386,7 +394,7 @@ A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit 
 
 ![](history/14_sun1.jpg)
 
-Star, Lisa, and now VisiOn created sort of a "user interface fever", it seems. Even Sun Microsystems begins working on a Sun Window System for its pricey UNIX workstation Sun-1.
+Star, Lisa, and now VisiOn created sort of a "user interface fever", it seems. Even Sun Microsystems begins working on a Sun Window System for its pricey computer Sun-1. Sun-1 was a "workstation", kind of a super beefy computer for science, technology and networking.
 
 </div>
 
@@ -410,7 +418,7 @@ Despite the praise, the series was a commercial failure, likely due to its high 
 
 ## 1983-02 PC Magazine declares 1983 the year of mouse
 
-![](history/16_pcmag83.png)
+![](history/16_pcmag83.jpg)
 
 If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, they proclaim "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame. A big feature of the February issue is not-yet released VisiOn which is going to be all about the mouse.
 
@@ -424,45 +432,98 @@ If you skim over PC Magazine from 1982, you are more likely to find a mention of
 
 *-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83*
 
-</div>
-
-
-<div class="post">
-
-## 1983-04 Microsoft Interface Manager is under very active development.
+The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse Systems was responsible for Sun's mice, and was the first company to offer a mouse for PC. Naturally, VisiOn is expected to use Mouse Systems as well.
 
 </div>
 
 
 <div class="post">
 
-## 1983-05 Microsoft presents MS Mouse. It supports a Doodle graphics editor, which is one of the first graphics editors for a home computer. It can work with Notepad, and will support upcoming Word text processor.
-</div>
+## 1983-04 Microsoft Interface Manager internal demo
 
+![](history/16_5_ms.png)
+<p class="imgdesc">New Microsoft logo from around that time.</p>
 
-<div class="post">
-
-## 1983-09 Microsoft releases Word for DOS and XENIX.
-</div>
-
-
-<div class="post">
-
-## 1983-09 Microsoft presents Interface Manager, freshly renamed to Windows, to BYTE magazine, but it is "smoke and mirrors".
+According to "Barbarians led by Bill Gates", somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called "Interface Manager", was presented internally in April 1983.
 
 </div>
 
 
 <div class="post">
 
-## 1983-11 Microsoft presents Windows at COMDEX. The system is going to have "tiled" windows. The demo is still "vaporware", lacking actual function just yet.
+## 1983-05 Microsoft Mouse and Multi-Tool Notepad
+
+![](history/17a_msmouse.jpg)
+
+Back in 1983, there was no software using computer mice just yet. It is a bit of a chicken-and-egg problem: you cannot sell a mouse-using program when users don't have mice, and you cannot sell mice because there are no programs where you could use it. A common solution for similar conundrums was to bundle hardware and software. If upcoming Microsoft Word needed a mouse, Microsoft had to make and sell one. The standard software included a toy piano, a primitive but one of the first colour graphics editors, and, wait for it...
+
+![](history/17b_npdos.png)
+
+Microsoft Notepad. Both Word and its stripped-down format-less little sister Notepad were developed by Richard Brodie, using the very same interface library as Multiplan, but with mouse support. The interface has some arguable decisions. For example, menu options are listed alphabetically, and the scroll is displayed on the left. Moreover, the scroll does not support "dragging"; instead, clicking left or right mouse button would scroll the document up or down. Some of those decisions would stick in MS interfaces for a while!
 
 </div>
 
 
 <div class="post">
 
-## 1983-11 Sun Window System (Sunwindows) is released. Works on Sun-2 (Motorola 68010-based, $29,300). Has overlapping windows.
+## 1983-09 Microsoft Word
+
+![](history/18a_byte_word.jpg)
+
+Both Notepad and Word were announced around the same time, but it took a few months for Word to actually ship. The first version was released for now long forgotten "this-will-be-the-future" XENIX operating system under the name of Multi-Tool Word, to share the branding with other Multiplan-related programs. The IBM PC version has followed shortly, and it was simply named Microsoft Word. 
+
+![](history/18b_msword.png)
+
+
+Despite the big promise of windowing support in the commercials, Word's windows were as simplistic as the ones in Multiplan. It still was a neat feature, being able to open two files at the same time.
+
+</div>
+
+
+<div class="post">
+
+## 1983-09 Microsoft Windows goes public
+
+![](history/19_windows.jpg)
+
+A new demo of Interface Manager, freshly renamed to "Microsoft Windows" to boast brand recognition, was presented to the reporters from BYTE magazine. It looks like a real operating system, but if you look closely enough, you will notice that it is all smoke and mirrors. 
+
+"Plan" and "Word" display the same file on all photos, and things do not look quite usable yet. One of the things notably missing is the scrollbar. If you think about it, the interface on this demo looks exactly like Multiplan on steroids. Even the alphabetically-sorted command strip in the bottom of the screen looks the same. 
+
+There are big expectations, though. It is said that Windows will support not only IBM PC but many other computers. Windows promises to be cheap to run, requiring only 192 KB of RAM and no hard drive.
+
+You can read the original article from BYTE [reposted on Toasty Tech](http://toastytech.com/guis/win1983.html).
+
+Curiously, the article was only published in December 1983, after the COMDEX.
+
+</div>
+
+
+<div class="post">
+
+## 1983-11 Microsoft presents Windows at COMDEX
+
+![](history/20_comdexwin.jpg)
+
+While VisiOn is behind the schedule, with release announced, but disks not quite hitting the shelves just yet, Microsoft hijacks COMDEX with a guerilla promotion campaign for Microsoft Windows. As some sources say, Microsoft ordered thousands of pillowcases promoting Windows and placed them in hotels around the conference. Just about every person near COMDEX now knows what Windows is and how much better it will be compared to VisiOn.
+
+The demo is still smoke and mirrors, but the scrollbars (on the left side of the window!) are back. Each window now has a menu strip, and there are drop-down menus, just like on Lisa. All for just $99, and it will run on your $1,500 (plus mouse) PC.
+
+You can read a full review of the demo on [Toasty Tech](http://toastytech.com/guis/wincdx.html).
+
+</div>
+
+
+<div class="post">
+
+## 1983-11 Sun Window System (Sunwindows) 
+
+![](history/21_apollo.jpg)
+
+Sun-2 computer ships with its own graphical user interface, called Sunwindows. Sunwindows is not the most remarkable feature of a 32-bit Motorola 68010-based $16,900 computer, so no one really cares.
+
+Like, no one cares so much, there wasn't even an image of the system in the release announcement posted in Computerworld. They could not be bothered to post a single commercial, so instead you see a photo from the Sun's competitor Apollo from the same magazine. Apollo had their own graphical system called Domain released around the same time, virtually unknown to anyone. See, told you, no one cares. Not when your computer is more expensive than notorious Apple Lisa.
+
 </div>
 
 
@@ -503,6 +564,14 @@ If you skim over PC Magazine from 1982, you are more likely to find a mention of
 ## 1985-04 Commodore Amiga 1000 is released, with Intuition interface for its AmigaOS. The reviews of the interface are far from rosy. The platform got no killer app, and in the next years failed to win the market.
 </div>
 
+<div class="post">
+
+
+## 1985-05 EMS LIM
+
+Microsoft thought that bank switching was an inelegant and temporary, but necessary stopgap measure. Slamming his fist on the table during an interview Bill Gates said of expanded memory, "It's garbage! It's a kludge! … But we're going to do it". 
+
+</div>
 
 <div class="post">
 
@@ -617,6 +686,7 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * Infoworld Sep 1981 and May 1982 
   * https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&pg=PA1&redir_esc=y#v=onepage&q&f=false
   * https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false 
+ * https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up
 
 ## Links to original images
 * https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg
@@ -629,3 +699,5 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * https://dl.acm.org/doi/pdf/10.1145/1113572.1113555
 * https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg
 * https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg
+* https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg
+
