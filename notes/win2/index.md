@@ -52,7 +52,8 @@ Due to a number of reasons, standard Windows 2 applications are almost exactly t
 <p class="imgdesc">Calendar and Cardfile are more useful than they might seem.</p>
 
 ![win2live/08_control.png](win2live/08_control.png)
-<p class="imgdesc">Control panel allows to create your own Hot Dog Stand interface, if you want.</p>
+<p class="imgdesc">Control panel allows to create your own <a href="http://yo90s.com/windows-hotdog-stand-theme/">Hot Dog Stand</a> interface, if you want.
+</p>
 
 ![win2live/09_terminal.png](win2live/09_terminal.png)
 <p class="imgdesc">The networking tools in Windows 2.0 are basically non-existent. The terminal tool is beyond basic.</p>
@@ -95,7 +96,7 @@ The list is non-exhaustive, and even misses some major pieces of software (Corel
 <p class="imgdesc">Windows Application Manager aims to solve the same problem, but cheaper.</p>
 
 ![win2live/21_paint_dan.png](win2live/21_paint_dan.png)
-<p class="imgdesc">ZSoft Paintbrush is a bit of a pain to use on Windows, because Windows only supports 8 colours in VGA mode. But it looks just like Microsoft Paintbrush from Windows 3.0.</p>
+<p class="imgdesc">ZSoft Paintbrush is a bit of a pain to use on Windows, because Windows only supports 8 colours on the most common video cards (EGA and VGA, both normally support at least 16 colours). But the program itself looks just like Microsoft Paintbrush from Windows 3.0.</p>
 
 ![win2live/22_paint_yaga.png](win2live/22_paint_yaga.png)
 <p class="imgdesc">That's right! Because Microsoft has licensed ZSoft Paintbrush for its MS Mouse and MS Windows. Also. you can tell that I just needed an excuse to add two screenshots of the program...</p>
@@ -104,19 +105,19 @@ The list is non-exhaustive, and even misses some major pieces of software (Corel
 <p class="imgdesc">XVT Draw is a shareware vector editor. It feels much faster than Illustrator or DRAW!</p>
 
 ![win2live/24_opusmidi.png](win2live/24_opusmidi.png)
-<p class="imgdesc">Opus Composer, also known as WinSong, was made for Windows 1, but it is slightly more useable on Windows 2. It supposed to support MIDI.</p>
+<p class="imgdesc">Opus Composer, also known as WinSong, was made for Windows 1, but it is slightly more useable on Windows 2. The full version of the progam comes with MIDI support.</p>
 
 ![win2live/25_opustape.png](win2live/25_opustape.png)
 <p class="imgdesc">Opus Tapedeck is a counterpart for Opus Composer that works just as a player utility.</p>
 
 ![win2live/26_packrat.png](win2live/26_packrat.png)
-<p class="imgdesc">The genre of desktop organisers seemed to be popular. This is Packrat. Another popular PIM for Windows 2 was IBM Current.</p>
+<p class="imgdesc">The genre of desktop organisers seemed to be popular. This is Packrat. Another popular organiser (also called "PIM") for Windows 2 was IBM Current.</p>
 
 ![win2live/27_casette.png](win2live/27_casette.png)
 <p class="imgdesc">CaseLiner is a tool for generating liners for your mixtapes.</p>
 
 ![win2live/28_comm.png](win2live/28_comm.png)
-<p class="imgdesc">Comprog brings networking on Windows 2.0 to the next level: now you can connect to BBSes and download files.</p>
+<p class="imgdesc">Comprog brings networking on Windows 2.0 to the next level: now you can connect to BBSes and download files (BBS, bulletin board system, is sort of a website before websites were a thing).</p>
 
 ### Entertainment
 There weren't many games for Windows 2, but there were some.
@@ -278,7 +279,7 @@ VisiCorp publishes the first spreadsheet program for home computers, VisiCalc fo
 
 Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox'es patents.
 
-> I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong. But we didn’t know that at the time but still thought they had the germ of the idea was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
+> I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong, but we didn’t know that at the time. But still \[we] thought they had the germ of the idea\[, it] was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
 
 *-- Steve Jobs, interview for "Triumph of the Nerds"*
 
@@ -317,7 +318,7 @@ Xerox polishes ideas from Alto and releases the very first computer using "deskt
 
 ![](history/08_ibmpc.jpg)
 
-IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IT comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
+IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IBM PC comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
 
 The computer, as expected from an i8088-based one, had a segment memory model. While the processor supported up to 1 megabyte of address space, large areas of it were pre-allocated for service usage, so the maximum amount of memory a user could have was limited to 640K. Which was still a lot for the time, because the BASIC model of IBM PC would have only 16K. Moreover, 8-bit contemporaries would rarely have more than 64 or 128K.
 
