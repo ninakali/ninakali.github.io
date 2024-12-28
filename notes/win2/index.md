@@ -20,7 +20,9 @@ Let's start with some hands-on Windows 2 experience to tempt you to read the ful
 <div class="post">
 
 ## Living with Windows 2
-Let's get a time machine, and teleport to the 27th of December 1989 or so.
+Let's get a time machine and teleport to the 31st of December 1989 or so. Our test machine is, perhaps, a cheap IBM PC AT clone 286/12 with 1 megabyte of RAM (around $995 for the system and peripherals, depending on the hard drive and monitor). But it would probably work even on a $600 IBM PC XT compatible.
+
+Let me put this into perspective: a decent system that can run Windows 2.0 smoothly runs at 0.012 GHz and has 0.002 gigabytes of RAM. Likely, your phone is at least one hundred times as fast and has one thousand times more RAM.
 
 ![win2live/01_xls.png](win2live/01_xls.png)
 <p class="imgdesc">Most people would experience Windows 2 through a version shipped with Microsoft Excel. It can calculate stonks and plot charts. What else do you need?</p>
