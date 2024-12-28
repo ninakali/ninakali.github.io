@@ -529,32 +529,72 @@ Like, no one cares so much, there wasn't even an image of the system in the rele
 
 <div class="post">
 
-## 1983-12 VisiOn for IBM PC is released. It is slow, and requires a hard disk, bringing the total system cost close to 3/4 of Apple Lisa. The company has lost many key developers during the work on VisiOn due to poor management. The system was doomed.
+## 1983-12 VisiCorp Visi On
+
+![](history/22_vision.png)
+
+The mammoth is finally released, and no one is impressed. Visi On is $999, slow, memory-hungry, and requires a hard disk. With all the add-ons needed to run it, the total cost of the PC is getting close to 3/4 of Apple Lisa, for a much poorer experience. Third-party app developers were expected to invest in a $20,000 DEC computer to run the cross-compiler for Visi On.
+
+The system was doomed and had no software released except the one VisiCorp shipped with it originally. The company lost many key developers during the work on VisiOn due to poor management and went under shortly after the release. 
 
 </div>
 
 
 <div class="post">
 
-## 1984-01 Apple releases Macintosh.
+## 1984-01 Apple Macintosh
+
+![](history/23a_mac.jpg)
+
+Apple unveils Macintosh. It is a bit pricey ($2,495), but it is sleek, it is snappy, and it has MacWrite and MacPaint.
+
+![](history/23a_mac.png)
+
+Granted, it does not support colour, trading it for high resolution, but it is seriously good.
+
 </div>
 
 
 <div class="post">
 
-## 1984-05 Microsoft releases DR preview builds with a limited set of vendors.
+## 1984-05 Windows DR preview
+
+![](history/24_dr.jpg)
+
+In May 1984, Windows is not quite ready for the general public, but Microsoft releases the first build for a small group of software vendors. The system doesn't use overlapping windows like Mac or Visi On; instead, the windows are tiled. According to the Xerox PARC research, tiling is superior - but the press doesn't like it.
+
 </div>
 
 
 <div class="post">
 
-## 1984-08 IBM announces a text-based windowing system called TopView.
+## 1984-08 IBM announces TopView
+
+![](history/25_topview.png)
+
+IBM decided to release their own windowing interface, to the dismay of Microsoft. Microsoft's saving grace is that IBM TopView is going to be text-mode only, not really suitable for office applications.
+
 </div>
 
 
 <div class="post">
 
-## 1984-11 Digital Research GEM is presented at COMDEX.
+## 1984-11 Digital Research GEM Desktop is presented at COMDEX
+
+![](history/26_gem1.png)
+
+A year after the triumphant Windows reveal, and good ten months after Macinstosh, Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.
+
+<details> 
+  <summary>Digital Research? Should I have known about them?</summary><div class="cut">
+
+As you probably know, the main operating system for personal computers before Windows was Microsoft MS-DOS. But things were quite different before the IBM PC release; the market of operating systems for microcomputers was dominated by Digital Research's CP/M. The CP/M was so popular, Microsoft has borrowed from its design not once but at least twice. First, MS-DOS was heavily inspired by CP/M. Second, a Microsoft-made operating system for low-end Japanese computers, called MSX-DOS, was CP/M compatible.
+
+IBM PC's popularity was a surprise to Digital Research. They were expecting users migrating from 8-bit computers with CP/M to 16-bit computers with CP/M-86, but CP/M-86 for IBM PC did not sell well.
+
+</div></details>
+</div>
+
 
 </div>
 
@@ -700,4 +740,4 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg
 * https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg
 * https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg
-
+* https://betawiki.net/wiki/Windows_1.0_Development_Release_1
