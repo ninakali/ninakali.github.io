@@ -822,6 +822,7 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 </div>
 
 
+<div class="post">
 
 ## Sources
 * Many photographs are sourced from Wikipedia; see links below.
@@ -836,6 +837,10 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
   * https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&pg=PA1&redir_esc=y#v=onepage&q&f=false
   * https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false 
  * https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up
+
+</div>
+
+<div class="post">
 
 ## Links to original images
 * https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg
@@ -853,3 +858,5 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html
 * http://www.gregdonner.org/workbench/wb_10.html
 * https://winworldpc.com/product/gem/2x
+
+</div>
