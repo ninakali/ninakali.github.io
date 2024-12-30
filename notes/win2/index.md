@@ -1,6 +1,9 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
+<p class="by">by Nina Kalinina, December 2024</p>
+
+
 
 It is common knowledge that Final Fantasy could have been the last game in the series. It is far less known that Windows 2, released around the same time, could too have been the last. If anything, things were more certain: even Microsoft believed that Windows 2 would be the last.
 
@@ -10,6 +13,8 @@ It is common knowledge that Final Fantasy could have been the last game in the s
 The miracle of overwhelming commercial success brought incredible attention to Windows. The retro community and computer historians generally seem to be interested in the legendary origins of the system (how it all began) or in its turnabout Windows 3.0 release (what did they do right?). 
 
 This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. By necessity, I will talk a lot about Windows 1, too. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
+
+<div class="cut">If you have comments or feedback, please leave it in <a href="thread">the Mastodon thread</a>.</div>
 
 Let's start with some hands-on Windows 2 experience to tempt you to read the full story!
 
@@ -616,7 +621,11 @@ IBM PC's popularity was a surprise to Digital Research. They were expecting user
 
 <div class="post">
 
-## 1985-04 Commodore Amiga 1000 is released, with Intuition interface for its AmigaOS. The reviews of the interface are far from rosy. The platform got no killer app, and in the next years failed to win the market.
+## 1985-04 Commodore Amiga 1000
+
+![](history/27_amiga.gif)
+
+Amiga 1000, just like the Macintosh, comes with a graphical user interface. It is called "Intuition" or simply AmigaOS/Workbench. The reviews praise the hardware capabilities of the machine, but are not impressed with the interface. In the next few years the platform did not receive any killer app, and failed to win the market.
 </div>
 
 <div class="post">
@@ -624,56 +633,140 @@ IBM PC's popularity was a surprise to Digital Research. They were expecting user
 
 ## 1985-05 EMS LIM
 
-Microsoft thought that bank switching was an inelegant and temporary, but necessary stopgap measure. Slamming his fist on the table during an interview Bill Gates said of expanded memory, "It's garbage! It's a kludge! … But we're going to do it". 
+![](history/28_above.jpg)
+<p class="imgdesc">Intel AboveBoard is one of the examples of memory boards for IBM PC.</p>
+
+Barely four years after the IBM PC release, users have started to struggle with the maximum amount of RAM supported. For business users, a single high-resolution scan or a large spreadsheet will consume all the RAM available, even on a maxed-out 640K IBM PC.
+
+A new Intel processor, 80286, supports up to 16 megabytes of RAM, but it breaks the compatibility with existing programs, so the industry is looking for a different solution. One such solution is Lotus-IBM-Microsoft Expanded Memory Specification, or LIM EMS for short.
+
+EMS brings back the memory management model that was made obsolete by i86/i88: banking. An EMS card could carry up to 32 megabytes of RAM, but only 64 kilobytes of it will be available to the computer at any given time. A special driver and a special circuitry will configure which 64KB block will be available to the computer at any given time.
+
+Microsoft thought that bank switching was inelegant but necessary. PC Magazine quotes Bill Gates: "It's garbage! It's a kludge! But we're going to do it".
 
 </div>
 
 <div class="post">
 
-## 1985-07 Release of Windows Premiere Edition, a technology preview of Windows shared with a limited number of vendors.
-</div>
+## 1985-07 Windows Premiere Edition
 
+![](history/29_win100.png)
 
-<div class="post">
-
-## 1985-08 TopView doesn't work out for IBM. Microsoft and IBM agree to work together on the interface for the next big operating system, IBM OS/2.
-</div>
-
-
-<div class="post">
-
-## 1985-09 Microsoft releases a new spreadsheet software, called Excel, for Macintosh.
-</div>
-
-
-<div class="post">
-
-## 1985-11 Apple allows Microsoft to use its technology in Windows 1.0.
-</div>
-
-
-<div class="post">
-
-## 1985-11 Microsoft releases Windows 1.0 with tiling windows. Supposedly, this was done for the sake of user convenience and efficiency (though the press didn't like it).
-</div>
-
-
-<div class="post">
-
-## 1985-10 Digital Research decides to seriously strip down GEM because of a lawsuit from Apple.
+In the summer of 1985, Windows is still not ready. To placate the press and the business partners about the release getting delayed for more than one year, Microsoft releases Windows 1.00 Premiere Edition for a selected few. As Microsoft promised, it can work from a floppy drive, but it requires close to 256KB of RAM just to start, leaving under 400 KB of RAM for user data and applications.
 
 </div>
 
 
 <div class="post">
 
-## 1986-09 Most developers left Windows project to focus on OS/2 Presentation manager. "Barbarians led by Bill Gates" claims that only a team of three was tasked to to make a new Windows version that could run Excel. Many ex-staffers say that the actual team was much bigger. Regardless, Windows' days seemed to be numbered. "This is it, after this we're not going to have any more Windows. It's all OS/2.", Ballmer said."
+## 1985-08 IBM and Microsoft signed the "Joint Development Agreement"
+
+![](history/30_os2.png)
+
+IBM wants a new operating system for the successor of IBM PC, IBM Personal System/2 (PS/2). Many things are up in the air, but it is clear: IBM TopView as a graphical interface did not work out. Microsoft hoped that IBM would license Windows, but instead IBM offers Microsoft to make a new system, OS/2, from scratch.
+
 </div>
 
 
 <div class="post">
 
-## 1986-09 Compaq ships DeskPro 386, the very first DOS-compatible machine based on i386.
+## 1985-09 Microsoft Excel
+
+<div class="imgfix512">
+
+![](history/31a_excel.png)
+</div>
+
+A victory for new Microsoft branding, Microsoft Excel - a Macintosh-exclusive spreadsheet. Released just a year after Multiplan for Macintosh, it is nevertheless a big leap forward in usability. Even if it is hard to tell from the first glance:
+
+
+<div class="imgfix512">
+
+![](history/31b_multiplan.png)
+<p class="imgdesc">Microsoft Multiplan for Macintosh was released just a year before Excel, and looked almost identical.</p>
+</div>
+
+For a short while, both programs were available.
+</div>
+
+
+<div class="post">
+
+## 1985-10 GEM must be phased out
+
+Despite the praise from Jobs, Apple is furious about DR GEM Desktop infringing on Apple's user interface patents. Digital Research is not ready for a legal battle, and caves in. Apple will receive a financial compensation and a discount on Digital Research services. Digital Research, regrettably, has to pull out of selling GEM Desktop until it is changed to not resemble Macintosh.
+
+![](history/32_gem2.png)
+
+When GEM 2 is released, there are no overlapping windows anymore. It looks like just a *shell* of its old self. Will Windows meet the same fate?
+
+</div>
+
+<div class="post">
+
+## Interlude: a shell or an operating system?
+
+For at least a decade since the release of Windows, computer science purists have debated whether Windows is an operating system or merely an *operating shell*. Sure, it looks nothing like MS-DOS, and it offers many features that DOS simply does not have, like multitasking or a graphical interface, and has a driver subsystem. However, Windows would require MS-DOS to be installed on the computer for a very long time.
+
+For an end user, it does not matter. Sure, Windows 95 boots on top of a custom MS-DOS kernel, but it looks and feels exactly like its look-alike Windows NT4 that runs on top of its own kernel. So, for this article, let's consider all Windows versions operating "systems".
+
+![](history/32a_ntornot.png)
+<p class="imgdesc">Can you tell, looking at the screenshot, whether it is an operating system (Windows NT) or an operating shell on top of MS-DOS (Windows 95)?</p>
+
+</div>
+
+<div class="post">
+
+## 1985-11 Apple allows Microsoft to use its technology
+
+![](history/33_apple.png)
+
+DR GEM is not the only graphical system in the crosshair of Apple lawyers. Right before the Windows release, Bill Gates flies to Cupertino to offer an ultimatum to the CEO of Apple: Microsoft will not provide any software for Macintosh (including very popular Microsoft Excel) if Apple insists on attacking Windows. The negotiations ended with Microsoft getting official permission to use Apple's technology in Windows, as long as there were no overlapping windows and a "trashcan" icon. Plus, Microsoft will have to keep Excel as a Macintosh exclusive for a short while.
+
+</div>
+
+
+<div class="post">
+
+## 1985-11 Microsoft Windows 1.01
+
+![](history/34_win1.png)
+
+When Windows 1.01 finally ships to end-users, very few of them are excited. Tiling windows look unimpressive, and the program library for Windows is tiny. There is no support for freshly invented EMS yet. Windows can only support 640KB of RAM, even on machines that have more, and Windows apps are memory-hungry, so "Out of memory" is a ubiquitous error.
+
+![](history/34b_oom.png)
+<p class="imgdesc">My 286 machine has 16 megabytes of EMS, yet one measly image and one tiny text document make Windows cry.</p>
+
+A major selling point for Windows was its capability to run old DOS applications in a window. In theory. In practice, this worked only with the most basic programs, as most software expected to have total control over the computer's resources.
+
+Curiously, many modern sources quote that a significant drawback of Windows 1 was its lack of scalable proportional fonts. This is simply untrue: Helv and Tms Rmn shipped with it are both proportional *and* support sizes from 8 to 48 points (and they look nicer than on Mac starting from version 1.03). Only the interface elements (title bars and text in dialogue boxes) *were* proportional and looked a bit "clunky".
+</div>
+
+
+<div class="post">
+
+## 1986-09 Windows is on life support?
+
+<div class="imgfix512">
+
+![](history/35_macword.png)
+<p class="imgdesc">Word for Macintosh had an interface radically different from Word for DOS, just like Excel for Macintosh had an interface radically different from Multiplan.</p>
+</div>
+
+With Windows out the door, most developers have left the project to focus on a graphical interface for OS/2 called Presentation Manager. There were still things Microsoft could do about Windows: if Excel for PC needs a graphical interface, it might as well be Microsoft Windows. And if that's the main goal, there aren't many things left to be implemented.
+
+In "Barbarians Led by Bill Gates, " Eller claims that a team of three was left to run the project. "This is it, after this we're not going to have any more Windows. It's all OS/2", said Steve Ballmer. And because "it's all OS/2", even the Windows 2 interface had to be aligned with the upcoming OS/2 Program Manager interface.
+
+It might be that the Windows 2.0 team was bigger than three engineers, as many ex-staffers, including the project's manager Tandy Trower, say. Regardless, Windows' days seemed to be numbered. 
+</div>
+
+
+<div class="post">
+
+## 1986-09 Compaq DeskPro 386
+
+
+, the very first DOS-compatible machine based on i386.
 
 </div>
 
@@ -687,7 +780,8 @@ Microsoft thought that bank switching was an inelegant and temporary, but necess
 <div class="post">
 
 ## 1987-10 A "runtime" version of Windows 2 is used for IBM PC Excel release.
-1987-12 Windows 2.03 released, hitting the stores in early 1988.
+
+## 1987-12 Windows 2.03 released, hitting the stores in early 1988.
 
 Barbarians Led by Bill Gates saying, “A couple people were left to maintain the Windows 2.0 code and fix any bugs reported, but the “glory days” of Windows, such as they were, appeared to be dead and gone. Last one out, turn off the lights.”
 
@@ -756,3 +850,6 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg
 * https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg
 * https://betawiki.net/wiki/Windows_1.0_Development_Release_1
+* https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html
+* http://www.gregdonner.org/workbench/wb_10.html
+* https://winworldpc.com/product/gem/2x
