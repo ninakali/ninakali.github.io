@@ -20,7 +20,7 @@ Let's start with some hands-on Windows 2 experience to tempt you to read the ful
 <div class="post">
 
 ## Living with Windows 2
-Let's get a time machine and teleport to the 31st of December 1989 or so. Our test machine is, perhaps, a cheap IBM PC AT clone 286/12 with 1 megabyte of RAM (around $995 for the system and peripherals, depending on the hard drive and monitor). But it would probably work even on a $600 IBM PC XT compatible.
+Our personal TARDIS took us to the 31st of December 1989 or so. Our test machine is, perhaps, a cheap IBM PC AT clone 286/12 with 1 megabyte of RAM (around $995 for the system and peripherals, depending on the hard drive and monitor). But Windows 2 would work even on a $600 IBM PC XT compatible.
 
 Let me put this into perspective: a decent system that can run Windows 2.0 smoothly runs at 0.012 GHz and has 0.002 gigabytes of RAM. Likely, your phone is at least one hundred times as fast and has one thousand times more RAM.
 
@@ -246,6 +246,8 @@ A way to bypass this limitation is to implement "bank switching" (or simply "ban
 
 For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 16-bit system can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the "address space" simultaneously.
 
+### Segment memory model
+
 Many 16-bit processors use an advanced variant of bank switching known as "segmentation". With segment memory, a processor can access multiple 64K "segments" simultaneously. For example, x86 processors have a Code Segment, which has the program you execute now, a Data Segment to access your data, an Extra Segment to compare or copy memory between two segments and a Stack Segment to store intermediate calculation results. It is much faster than banking but still requires the programmer to use a lot of magic to avoid the limitations imposed by the 64K segment size.
 
 ### Intel 8086 and Intel 8088
@@ -268,6 +270,8 @@ Introduced just a few months after the Intel 8088, Motorola 68000 is a 32-bit pr
 
 VisiCorp publishes the first spreadsheet program for home computers, VisiCalc for Apple II. Dubbed "the first killer app for the personal computer", it was massively popular. "I need VisiCalc, so I am going to buy a very expensive computer to run it" level of popular.
 
+It looks like a regular spreadsheet app, yes, but there is no mouse support, and there are no menus. The program, quite simple at its heart, came with a 180 page long manual, because it was impossible to figure out how to use it otherwise.
+
 </div>
 
 <div class="post">
@@ -283,7 +287,7 @@ Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical in
 
 *-- Steve Jobs, interview for "Triumph of the Nerds"*
 
-This pivots a computer in development, Apple Lisa, from being a revamp of Apple II into being something completely new.
+This pivots a computer in the development, Apple Lisa, from being a revamp of Apple II into being something completely new.
 
 </div>
 
@@ -318,7 +322,7 @@ Xerox polishes ideas from Alto and releases the very first computer using "deskt
 
 ![](history/08_ibmpc.jpg)
 
-IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IBM PC comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
+IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IBM PC comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white (or green) letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.
 
 The computer, as expected from an i8088-based one, had a segment memory model. While the processor supported up to 1 megabyte of address space, large areas of it were pre-allocated for service usage, so the maximum amount of memory a user could have was limited to 640K. Which was still a lot for the time, because the BASIC model of IBM PC would have only 16K. Moreover, 8-bit contemporaries would rarely have more than 64 or 128K.
 
@@ -367,15 +371,19 @@ Impressive interface of Xerox Star and rumours about not-yet-released Lisa make 
 
 ## 1982-08 Microsoft Multiplan
 
+<div class="imgfix720">
+
 ![](history/12_multiplan.png)
 
-As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. Despite the rock star project's staff, Multiplan doesn't sell all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:
+</div>
+
+As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. It was released in August 1982, and despite the rock star project's staff, it wasn't selling all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:
 
 > The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.
 
 -- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982
 
-The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple "windows" to display multiple spreadsheets at the same time.
+The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple "windows" to display multiple spreadsheets simultaneously.
 
 </div>
 
@@ -384,7 +392,7 @@ The command strip bar at the bottom of the screen was considered quite user-frie
 
 ## 1982-11 VisiCorp presents VisiOn on COMDEX
 
-![](history/13_vision.png)
+![](history/13_vision.jpg)
 
 A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one).
 
@@ -408,12 +416,12 @@ Star, Lisa, and now VisiOn created sort of a "user interface fever", it seems. E
 
 ![](history/15_lisa.jpg)
 
-Xerox Star was pretty close to the idea of modern computers, but it was still very rough around the corners. For example, if one window would overlap with the other, the bottom window would stop updating. Not a big deal unless your bottom window is a clock or a mail app. Apple Lisa, though, polished the interface. Just check out this [video](https://youtu.be/m1rROTVVHls?t=311). It was more affordable than Star, but $9,995 was still quite a price tag.
+Xerox Star was pretty close to the idea of modern computers, but it was still very rough around the corners. For example, if one window would overlap with the other, the bottom window would stop updating. Not a big deal unless your bottom window is a clock or a mail app. Apple Lisa, though, polished the interface. Just check out this [video](https://youtu.be/m1rROTVVHls?t=405). It was more affordable than Star, but $9,995 was still quite a price tag.
 
 > "The most important development in computers in the last five years, easily outpacing [the IBM PC]" 
 *-- BYTE, 1983-02*
 
-Despite the praise, the series was a commercial failure, likely due to its high cost.
+Despite the praise, the series was a commercial failure, likely due to its high cost and annoying slowness.
 
 </div>
 
@@ -447,7 +455,7 @@ The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse
 ![](history/16_5_ms.png)
 <p class="imgdesc">New Microsoft logo from around that time.</p>
 
-According to "Barbarians led by Bill Gates", somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called "Interface Manager", was presented internally in April 1983.
+According to "Barbarians led by Bill Gates" by Eller, somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called "Interface Manager", was presented internally in April 1983.
 
 </div>
 
@@ -489,7 +497,7 @@ Despite the big promise of windowing support in the commercials, Word's windows 
 
 ![](history/19_windows.jpg)
 
-A new demo of Interface Manager, freshly renamed to "Microsoft Windows" to boast brand recognition, was presented to the reporters from BYTE magazine. It looks like a real operating system, but if you look closely enough, you will notice that it is all smoke and mirrors. 
+A new demo of Interface Manager, freshly renamed to "Microsoft Windows" to boost brand recognition, was presented to the reporters from BYTE magazine. It looks like a real operating system, but if you look closely enough, you will notice that it is all smoke and mirrors. 
 
 "Plan" and "Word" display the same file on all photos, and things do not look quite usable yet. One of the things notably missing is the scrollbar. If you think about it, the interface on this demo looks exactly like Multiplan on steroids. Even the alphabetically-sorted command strip in the bottom of the screen looks the same. 
 
@@ -551,7 +559,11 @@ The system was doomed and had no software released except the one VisiCorp shipp
 
 Apple unveils Macintosh. It is a bit pricey ($2,495), but it is sleek, it is snappy, and it has MacWrite and MacPaint.
 
-![](history/23a_mac.png)
+<div class="imgfix512">
+
+![](history/23b_mac.png)
+
+</div>
 
 Granted, it does not support colour, trading it for high resolution, but it is seriously good.
 
@@ -575,7 +587,7 @@ In May 1984, Windows is not quite ready for the general public, but Microsoft re
 
 ![](history/25_topview.png)
 
-IBM decided to release their own windowing interface, to the dismay of Microsoft. Microsoft's saving grace is that IBM TopView is going to be text-mode only, not really suitable for office applications.
+IBM decided to release their own windowing interface, to the dismay of Microsoft, their main operating system supplier. Microsoft's saving grace is that IBM TopView is going to be text-mode only, not really suitable for office applications.
 
 </div>
 
@@ -586,7 +598,7 @@ IBM decided to release their own windowing interface, to the dismay of Microsoft
 
 ![](history/26_gem1.png)
 
-A year after the triumphant Windows reveal, and good ten months after Macinstosh, Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.
+A year after the triumphant Windows reveal, and good ten months after Macinstosh. Windows was supposed to ship months ago, but is still nowhere to be seen. Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.
 
 <details> 
   <summary>Digital Research? Should I have known about them?</summary><div class="cut">

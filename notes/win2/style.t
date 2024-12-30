@@ -46,6 +46,22 @@ blockquote {
 	text-align: center; color: #555; font-style: italic;
 	padding:  0px 10px 10px 10px;
 }
+
+.imgfix512 img {
+	width: 512px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+.imgfix720 img {
+	width: 720px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+
 </style>
 <title>Windows 2: Final Fantasy of operating systems</title>
 <body>

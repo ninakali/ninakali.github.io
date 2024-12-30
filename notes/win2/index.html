@@ -46,6 +46,22 @@ blockquote {
 	text-align: center; color: #555; font-style: italic;
 	padding:  0px 10px 10px 10px;
 }
+
+.imgfix512 img {
+	width: 512px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+.imgfix720 img {
+	width: 720px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+
 </style>
 <title>Windows 2: Final Fantasy of operating systems</title>
 <body><div class="post">
@@ -60,7 +76,7 @@ blockquote {
 <hr/><hr/><hr/>
 <div class="post">
 <h2>Living with Windows 2</h2>
-<p>Let's get a time machine and teleport to the 31st of December 1989 or so. Our test machine is, perhaps, a cheap IBM PC AT clone 286/12 with 1 megabyte of RAM (around $995 for the system and peripherals, depending on the hard drive and monitor). But it would probably work even on a $600 IBM PC XT compatible.</p>
+<p>Our personal TARDIS took us to the 31st of December 1989 or so. Our test machine is, perhaps, a cheap IBM PC AT clone 286/12 with 1 megabyte of RAM (around $995 for the system and peripherals, depending on the hard drive and monitor). But Windows 2 would work even on a $600 IBM PC XT compatible.</p>
 <p>Let me put this into perspective: a decent system that can run Windows 2.0 smoothly runs at 0.012 GHz and has 0.002 gigabytes of RAM. Likely, your phone is at least one hundred times as fast and has one thousand times more RAM.</p>
 <p><img src="win2live/01_xls.png" alt="win2live/01_xls.png"></p>
 <p class="imgdesc">Most people would experience Windows 2 through a version shipped with Microsoft Excel. It can calculate stonks and plot charts. What else do you need?</p>
@@ -196,6 +212,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <p>The simplest way to use computer memory is sometimes called a &quot;flat model&quot;. A computer with a 16-bit address bus using flat memory can have not more than 64K of addressable memory elements. This is a problem because things like text documents, spreadsheets and photos simply do not fit in 64K.</p>
 <p>A way to bypass this limitation is to implement &quot;bank switching&quot; (or simply &quot;banking&quot;). Let's say you want 128K of memory on a system with a 16-bit data bus. A common way to implement this is to divide 128K into 8 &quot;banks&quot; of 16K each and add clever circuitry to allow you to choose how these banks are connected to the address bus &quot;on the fly&quot;.</p>
 <p>For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 16-bit system can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the &quot;address space&quot; simultaneously.</p>
+<h3>Segment memory model</h3>
 <p>Many 16-bit processors use an advanced variant of bank switching known as &quot;segmentation&quot;. With segment memory, a processor can access multiple 64K &quot;segments&quot; simultaneously. For example, x86 processors have a Code Segment, which has the program you execute now, a Data Segment to access your data, an Extra Segment to compare or copy memory between two segments and a Stack Segment to store intermediate calculation results. It is much faster than banking but still requires the programmer to use a lot of magic to avoid the limitations imposed by the 64K segment size.</p>
 <h3>Intel 8086 and Intel 8088</h3>
 <p>Both i86 and i88 are 16-bit processors with 20-bit address bus. This means that they support up to 1 megabyte of RAM. These processors use segment memory to avoid long, expensive memory address computations. Initially, the listed price was $124, but quickly dropped to just $14.</p>
@@ -207,6 +224,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <h2>1979-10 VisiCalc</h2>
 <p><img src="history/05_visicalc.png" alt=""></p>
 <p>VisiCorp publishes the first spreadsheet program for home computers, VisiCalc for Apple II. Dubbed &quot;the first killer app for the personal computer&quot;, it was massively popular. &quot;I need VisiCalc, so I am going to buy a very expensive computer to run it&quot; level of popular.</p>
+<p>It looks like a regular spreadsheet app, yes, but there is no mouse support, and there are no menus. The program, quite simple at its heart, came with a 180 page long manual, because it was impossible to figure out how to use it otherwise.</p>
 </div>
 <div class="post">
 <h2>1979-?? Steve Jobs decides to make a computer with a graphical interface</h2>
@@ -217,7 +235,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <p>I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong, but we didn’t know that at the time. But still [we] thought they had the germ of the idea[, it] was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.</p>
 </blockquote>
 <p><em>-- Steve Jobs, interview for &quot;Triumph of the Nerds&quot;</em></p>
-<p>This pivots a computer in development, Apple Lisa, from being a revamp of Apple II into being something completely new.</p>
+<p>This pivots a computer in the development, Apple Lisa, from being a revamp of Apple II into being something completely new.</p>
 </div>
 <div class="post">
 <h2>1980-08 IBM starts working on PC</h2>
@@ -232,7 +250,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <div class="post">
 <h2>1981-08 IBM PC</h2>
 <p><img src="history/08_ibmpc.jpg" alt=""></p>
-<p>IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IBM PC comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.</p>
+<p>IBM releases its home computer IBM PC, with a price tag starting at an almost reasonable $1,565. IBM PC comes either with BASIC, or a disk operating system called PC-DOS. Either way, all you're getting is black screen with white (or green) letters on it. The operating system was developed by Microsoft, a compiler company that supplied BASIC to maybe half of all the home computers.</p>
 <p>The computer, as expected from an i8088-based one, had a segment memory model. While the processor supported up to 1 megabyte of address space, large areas of it were pre-allocated for service usage, so the maximum amount of memory a user could have was limited to 640K. Which was still a lot for the time, because the BASIC model of IBM PC would have only 16K. Moreover, 8-bit contemporaries would rarely have more than 64 or 128K.</p>
 </div>
 <div class="post">
@@ -257,17 +275,19 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 </div>
 <div class="post">
 <h2>1982-08 Microsoft Multiplan</h2>
+<div class="imgfix720">
 <p><img src="history/12_multiplan.png" alt=""></p>
-<p>As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. Despite the rock star project's staff, Multiplan doesn't sell all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:</p>
+</div>
+<p>As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. It was released in August 1982, and despite the rock star project's staff, it wasn't selling all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:</p>
 <blockquote>
 <p>The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.</p>
 </blockquote>
 <p>-- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982</p>
-<p>The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple &quot;windows&quot; to display multiple spreadsheets at the same time.</p>
+<p>The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple &quot;windows&quot; to display multiple spreadsheets simultaneously.</p>
 </div>
 <div class="post">
 <h2>1982-11 VisiCorp presents VisiOn on COMDEX</h2>
-<p><img src="history/13_vision.png" alt=""></p>
+<p><img src="history/13_vision.jpg" alt=""></p>
 <p>A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become &quot;Windows&quot;, but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one).</p>
 </div>
 <div class="post">
@@ -278,12 +298,12 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <div class="post">
 <h2>1983-01 Apple Lisa</h2>
 <p><img src="history/15_lisa.jpg" alt=""></p>
-<p>Xerox Star was pretty close to the idea of modern computers, but it was still very rough around the corners. For example, if one window would overlap with the other, the bottom window would stop updating. Not a big deal unless your bottom window is a clock or a mail app. Apple Lisa, though, polished the interface. Just check out this <a href="https://youtu.be/m1rROTVVHls?t=311">video</a>. It was more affordable than Star, but $9,995 was still quite a price tag.</p>
+<p>Xerox Star was pretty close to the idea of modern computers, but it was still very rough around the corners. For example, if one window would overlap with the other, the bottom window would stop updating. Not a big deal unless your bottom window is a clock or a mail app. Apple Lisa, though, polished the interface. Just check out this <a href="https://youtu.be/m1rROTVVHls?t=405">video</a>. It was more affordable than Star, but $9,995 was still quite a price tag.</p>
 <blockquote>
 <p>&quot;The most important development in computers in the last five years, easily outpacing [the IBM PC]&quot;
 <em>-- BYTE, 1983-02</em></p>
 </blockquote>
-<p>Despite the praise, the series was a commercial failure, likely due to its high cost.</p>
+<p>Despite the praise, the series was a commercial failure, likely due to its high cost and annoying slowness.</p>
 </div>
 <div class="post">
 <h2>1983-02 PC Magazine declares 1983 the year of mouse</h2>
@@ -307,7 +327,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <h2>1983-04 Microsoft Interface Manager internal demo</h2>
 <p><img src="history/16_5_ms.png" alt=""></p>
 <p class="imgdesc">New Microsoft logo from around that time.</p>
-<p>According to &quot;Barbarians led by Bill Gates&quot;, somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called &quot;Interface Manager&quot;, was presented internally in April 1983.</p>
+<p>According to &quot;Barbarians led by Bill Gates&quot; by Eller, somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called &quot;Interface Manager&quot;, was presented internally in April 1983.</p>
 </div>
 <div class="post">
 <h2>1983-05 Microsoft Mouse and Multi-Tool Notepad</h2>
@@ -326,7 +346,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <div class="post">
 <h2>1983-09 Microsoft Windows goes public</h2>
 <p><img src="history/19_windows.jpg" alt=""></p>
-<p>A new demo of Interface Manager, freshly renamed to &quot;Microsoft Windows&quot; to boast brand recognition, was presented to the reporters from BYTE magazine. It looks like a real operating system, but if you look closely enough, you will notice that it is all smoke and mirrors.</p>
+<p>A new demo of Interface Manager, freshly renamed to &quot;Microsoft Windows&quot; to boost brand recognition, was presented to the reporters from BYTE magazine. It looks like a real operating system, but if you look closely enough, you will notice that it is all smoke and mirrors.</p>
 <p>&quot;Plan&quot; and &quot;Word&quot; display the same file on all photos, and things do not look quite usable yet. One of the things notably missing is the scrollbar. If you think about it, the interface on this demo looks exactly like Multiplan on steroids. Even the alphabetically-sorted command strip in the bottom of the screen looks the same.</p>
 <p>There are big expectations, though. It is said that Windows will support not only IBM PC but many other computers. Windows promises to be cheap to run, requiring only 192 KB of RAM and no hard drive.</p>
 <p>You can read the original article from BYTE <a href="http://toastytech.com/guis/win1983.html">reposted on Toasty Tech</a>.</p>
@@ -355,7 +375,9 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <h2>1984-01 Apple Macintosh</h2>
 <p><img src="history/23a_mac.jpg" alt=""></p>
 <p>Apple unveils Macintosh. It is a bit pricey ($2,495), but it is sleek, it is snappy, and it has MacWrite and MacPaint.</p>
-<p><img src="history/23a_mac.png" alt=""></p>
+<div class="imgfix512">
+<p><img src="history/23b_mac.png" alt=""></p>
+</div>
 <p>Granted, it does not support colour, trading it for high resolution, but it is seriously good.</p>
 </div>
 <div class="post">
@@ -366,12 +388,12 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <div class="post">
 <h2>1984-08 IBM announces TopView</h2>
 <p><img src="history/25_topview.png" alt=""></p>
-<p>IBM decided to release their own windowing interface, to the dismay of Microsoft. Microsoft's saving grace is that IBM TopView is going to be text-mode only, not really suitable for office applications.</p>
+<p>IBM decided to release their own windowing interface, to the dismay of Microsoft, their main operating system supplier. Microsoft's saving grace is that IBM TopView is going to be text-mode only, not really suitable for office applications.</p>
 </div>
 <div class="post">
 <h2>1984-11 Digital Research GEM Desktop is presented at COMDEX</h2>
 <p><img src="history/26_gem1.png" alt=""></p>
-<p>A year after the triumphant Windows reveal, and good ten months after Macinstosh, Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.</p>
+<p>A year after the triumphant Windows reveal, and good ten months after Macinstosh. Windows was supposed to ship months ago, but is still nowhere to be seen. Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.</p>
 <details> 
   <summary>Digital Research? Should I have known about them?</summary><div class="cut">
 <p>As you probably know, the main operating system for personal computers before Windows was Microsoft MS-DOS. But things were quite different before the IBM PC release; the market of operating systems for microcomputers was dominated by Digital Research's CP/M. The CP/M was so popular, Microsoft has borrowed from its design not once but at least twice. First, MS-DOS was heavily inspired by CP/M. Second, a Microsoft-made operating system for low-end Japanese computers, called MSX-DOS, was CP/M compatible.</p>
