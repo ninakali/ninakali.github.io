@@ -505,7 +505,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <p>Windows/386 offers support for &quot;virtual 8086&quot;, so it can run and multitask DOS applications quite well. It also provides &quot;software EMS&quot; for 386 computers without an EMS board. Windows/386 seems to be the first system to offer EMS support for multitasking DOS applications, too. The feature, called &quot;Virtual DOS machine&quot;, was heavily praised by the journalists of the time. Sure, a 386 machine would cost you $6,000 - but you can run multiple DOS programs on it simultaneously!</p>
 <p>However, it doesn't use all the capabilities of the new processors. Despite all the improvements, Windows/386 applications still run in the same address space, and multitasking between them is cooperative. Also, contrary to what the name might suggest, Windows/386 will work on both 8086/88 and 80286, thanks to the WIN86 loader shipped with the system.</p>
 <details> 
-  <summary>Notes on Windows/386, preemptive multitasking and real mode memory management</summary><div class="cut">
+  <summary>Windows/386, preemptive multitasking and real mode memory management</summary><div class="cut">
 <h3>Let's be real</h3>
 <p>From the very first release, Windows was a multitasking system. A common way to implement the multitasking on Intel 8086/8088 was to leverage the segment memory model provided by the CPU, and pray, also known as &quot;cooperative multitasking&quot;. When Intel introduced 80286, this mode of operation was dubbed &quot;the real mode&quot;. The programmer would load multiple programs in different memory segments and then make each program yield control of the computer to the operating system every now and then. The OS kernel then would give the control to a different process. If things go wrong, the program never yields the control, and the whole system hangs.</p>
 <p>To make things worse, all programs loaded to memory have access to all the memory. It is not just a security nightmare (imagine your chat client being able to access passwords in your browser's memory, unchecked). Sometimes, due to a bug, one program might corrupt another program's memory. Chances are, when the system switches control to the program with corrupted memory, the program will hang or crash the whole system.</p>
@@ -624,63 +624,99 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <p>OS/2 1.1 includes Presentation Manager, developed jointly by Microsoft and IBM. It looks very similar to Windows 2, but the likeness is only in appearances. OS/2 is a much bigger, resource-hungry system than Windows, and it lacks compatibility with DOS and Windows. IBM is slightly worried that Microsoft keeps developing Windows, and insists the project should be killed. Bill Gates publicly states that Microsoft is 100% behind the OS/2, and Windows 3.0 will be the last. Perhaps, he is hiding something.</p>
 </div>
 <div class="post">
-<h2>1989-07 Apple vs Microsoft lawsuit starts to look like a losing case for Apple.</h2>
+<h2>P.S. 1989-07 Apple vs Microsoft lawsuit starts to look like a losing case for Apple</h2>
+<p><img src="history/44_win30vio.png" alt=""></p>
+<p class="imgdesc">Find all the copyright violations!</p>
+<p>Microsoft has put money on Windows 3.0, but it was not out of the woods yet due to Apple's lawsuit. Thankfully, in 1989, the court decided that 179 out of the 189 copyrighted elements had been licensed to Microsoft in the Windows 1.0 agreement.</p>
+<p>The remaining ten?</p>
+<ul>
+<li>A1 overlapping windows in front of a muted background;</li>
+<li>A8 windows appearing partly on and off screen;</li>
+<li>B1 top overlapping window displayed as the active window;</li>
+<li>B2 window brought to top of stack when mouse clicked;</li>
+<li>D1 gray outline of window dragged along with cursor when mouse pressed on window's title bar;</li>
+<li>D2 window dragged to a new position when the mouse is released after dragging the window's outline;</li>
+<li>D3 newly exposed areas on screen are redisplayed after the window is moved;</li>
+<li>G4 icon may be moved to any part of screen by dragging along with cursor when user presses mouse on icon;</li>
+<li>G5 display of icons on screen behind any open windows;</li>
+<li>G6 icon's title displayed beneath icon</li>
+</ul>
+<blockquote>
+<p>In support of its contention that seven of the ten remaining visual displays (A1, A8, B1, B2, D1, D2, D3) are licensed, Microsoft has submitted a videotape, Exhibit H, which shows that each of the seven visual displays appeared in the 1985 version of Microsoft Excel. -- Apple Computer Inc. v. Microsoft Corp., 759 F. Supp. 1444</p>
+</blockquote>
 </div>
 <div class="post">
-<h2>1990-05 Microsoft releases Windows 3.0</h2>
-<p>and it sells. This eventually results in Microsoft Word and Excel gaining significant market share due to competitors (Lotus and WordPerfect) not supporting Windows and expecting OS/2 to become a standard instead. IBM is upset and nopes out of the joint OS/2 development.</p>
+<h2>P.P.S. 1990-05 Windows 3.0</h2>
+<p><img src="history/45_win30exit.png" alt=""></p>
+<p>Windows 3.0 is presented and released on the same day, and it is an overnight commercial success. It features not just the protected mode kernel but also a DPMI extender that allows this protected mode kernel to execute alongside VM86 and use the memory available in the i386 32-bit protected mode. It has a new user interface and features new applications (finally, Solitaire!)</p>
+<p>Windows 3.0 architecture is a whole different story compared to Windows 2.x, and I recommend reading about it <a href="https://www.xtof.info/inside-windows3.html">elsewhere</a>.</p>
+<p><img src="history/45b_share.png" alt=""></p>
+<p>Microsoft competitors in the business software (Lotus and WordPerfect) miss the opportunity to release their software for Windows. They still believe OS/2 is going to be the next big thing and lose precious time while Microsoft sells Word and Excel like hot pies.</p>
+<p>IBM is understandably upset and nopes out of the joint OS/2 development.</p>
+<p>Windows will dominate the PC operating system marker for the years to come.</p>
+</div>
+<hr/><hr/><hr/>
+<div class="post">
+<h2>Acknowledgments</h2>
+<ul>
+<li>Thank you for reading. It was a very long story! I hope you liked it. If you have any questions or comments, please let me know. You can leave a comment in Mastodon or create a GitHub issue.</li>
+<li>I am infinitely grateful to my fianceé for her endless patience with me while I was writing this document.</li>
+<li>This document would not exist without advice from Michal Necasek of <a href="https://www.os2museum.com/wp/author/michaln/">os2museum</a> and David Simunič of <a href="https://win1.krnl386.com/about.php">krnl386</a> regarding drivers for ancient Windows version.</li>
+</ul>
 </div>
 <div class="post">
 <h2>Sources</h2>
 <ul>
-<li>Many photographs are sourced from Wikipedia; see links below.</li>
-<li>Dates and trivia are taken from various sources and cross-referenced, but might not be absolutely correct or even debatable sometimes.</li>
-<li>&quot;Barbarians led by Bill Gates&quot;: https://archive.org/details/barbariansledbyb00edst/page/23/mode/1up?view=theater</li>
-<li>&quot;Connections: Patterns of Discovery&quot; https://books.google.co.uk/books?id=DxGyOaAyd6gC&amp;pg=PA92&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</li>
-<li>&quot;Doing Windows&quot;: https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/</li>
-<li>&quot;The rise of Windows&quot;: https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows</li>
-<li>https://anotherboringtopic.substack.com/p/the-rise-of-microsoft-windows-2x</li>
-<li>https://www.xtof.info/inside-windows3.html</li>
-<li>https://www.os2museum.com/wp/windows386-2-01/</li>
-<li>https://learn.microsoft.com/en-us/archive/msdn-magazine/2000/july/under-the-hood-happy-10th-anniversary-windows</li>
-<li>https://devblogs.microsoft.com/oldnewthing/20040407-00/?p=39893</li>
-<li>https://www.stayforever.de/windows-interview-with-tandy-trower/</li>
-<li>https://learn.microsoft.com/en-us/archive/blogs/murrays/saving-windows-from-the-os2-bulldozer</li>
-<li>https://learn.microsoft.com/en-us/archive/blogs/larryosterman/farewell-to-one-of-the-great-ones</li>
-<li>https://retrocomputing.stackexchange.com/questions/26466/what-were-the-189-gui-design-elements-that-apple-claimed-look-and-feel-copyrig</li>
+<li>Most Windows screenshots are taken from a live system.</li>
+<li>Many photographs are sourced from Wikipedia or cited from computer magazines; see links below.</li>
+<li>Dates and facts are taken from various sources and cross-referenced, but unfortunately might not be absolutely correct or even debatable sometimes. I can say that I did my due diligence, at the very least.</li>
+<li><a href="https://archive.org/details/barbariansledbyb00edst/page/23/mode/1up?view=theater">&quot;Barbarians led by Bill Gates&quot;, Marlin Eller</a></li>
+<li><a href="https://books.google.co.uk/books?id=DxGyOaAyd6gC&amp;pg=PA92&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">&quot;Connections: Patterns of Discovery&quot;, H. Peter Alesso, Craig F. Smith</a></li>
+<li><a href="https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/">&quot;Doing Windows&quot;, Jimmy Maher</a></li>
+<li><a href="https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows">&quot;The rise of Windows&quot;, Another Boring Topic</a></li>
+<li><a href="https://www.xtof.info/inside-windows3.html">&quot;Inside Windows 3&quot;, Christophe Meneboeuf</a></li>
+<li><a href="https://www.os2museum.com/wp/windows386-2-01/">&quot;Windows/386 2.01&quot;, Michal Necasek</a></li>
+<li><a href="https://learn.microsoft.com/en-us/archive/msdn-magazine/2000/july/under-the-hood-happy-10th-anniversary-windows">&quot;Happy 10th Anniversary Windows&quot;, Microsoft</a></li>
+<li><a href="https://devblogs.microsoft.com/oldnewthing/20040407-00/?p=39893">&quot;A very brief anecdote about Windows 3.0&quot;, Raymond Chen</a> - please note that this anecdote is misleading or wrong</li>
+<li><a href="https://www.stayforever.de/windows-interview-with-tandy-trower/">&quot;Windows: Interview with Tandy Trower&quot;</a></li>
+<li><a href="https://learn.microsoft.com/en-us/archive/blogs/murrays/saving-windows-from-the-os2-bulldozer">&quot;Saving Windows from the OS/2 Bulldozer&quot;, Murray Sargent</a></li>
+<li><a href="https://learn.microsoft.com/en-us/archive/blogs/larryosterman/farewell-to-one-of-the-great-ones">&quot;Farewell to one of the great ones&quot;, Larry Osterman</a></li>
+<li><a href="https://retrocomputing.stackexchange.com/questions/26466/what-were-the-189-gui-design-elements-that-apple-claimed-look-and-feel-copyrig">&quot;What were the 189 GUI design elements that Apple claimed 'look and feel' copyright over?&quot;, stackexchange</a></li>
 <li>PC Magazine, various issues, notably 1983-02</li>
 <li>BYTE Magazine, various issues</li>
 <li>Infoworld Sep 1981 and May 1982<ul>
-<li>https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&amp;pg=PA1&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</li>
-<li>https://books.google.co.uk/books?id=bDAEAAAAMBAJ&amp;pg=PA10&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</li>
+<li><a href="https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&amp;pg=PA1&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">1981</a></li>
+<li><a href="https://books.google.co.uk/books?id=bDAEAAAAMBAJ&amp;pg=PA10&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">1982</a></li>
 </ul>
 </li>
-<li>Computerworld 1983-11-07 https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up</li>
-<li>https://en.wikipedia.org/wiki/Protected_mode#cite_note-Compatibility_limitations-30</li>
+<li><a href="https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up">Computerworld 1983-11-07</a></li>
+<li><a href="http://bitsavers.org/components/intel/80286/210498-005_80286_and_80287_Programmers_Reference_Manual_1987.pdf">80286 and 80287 Programmers Reference Manual</a></li>
 </ul>
 </div>
 <div class="post">
 <h2>Links to original images</h2>
 <ul>
-<li>https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg</li>
-<li>https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:IBM_PC_Motherboard_(1981).jpg</li>
-<li>https://en.wikipedia.org/wiki/VisiCalc#/media/File:Visicalc.png</li>
-<li>https://en.wikipedia.org/wiki/Xerox_Star#/media/File:Rank_Xerox_8010+40_brochure_front.jpg</li>
-<li>https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:Bundesarchiv_B_145_Bild-F077948-0006,_Jugend-Computerschule_mit_IBM-PC.jpg</li>
-<li>https://youtu.be/FDsbOMR_kU4</li>
-<li>https://archive.org/details/MSDOS2FuturePlansForMSDOSByPaulAllen/page/n2/mode/1up?view=theater</li>
-<li>https://dl.acm.org/doi/pdf/10.1145/1113572.1113555</li>
-<li>https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg</li>
-<li>https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg</li>
-<li>https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg</li>
-<li>https://betawiki.net/wiki/Windows_1.0_Development_Release_1</li>
-<li>https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html</li>
-<li>http://www.gregdonner.org/workbench/wb_10.html</li>
-<li>https://winworldpc.com/product/gem/2x</li>
-<li>https://winworldpc.com/screenshot/2cc3ac1f-c692-31e2-809a-11c3a4c2a83d/c29075c2-b278-437e-11c3-a4c2a83d7054</li>
-<li>https://fr.pinterest.com/pin/349169777351550756/</li>
-<li>http://www.guidebookgallery.org/ads/magazines/windows/win20-applications</li>
-<li>https://winworldpc.com/product/newwave/A0100</li>
-<li>https://betawiki.net/wiki/Windows_3.0_build_14#/media/File:Win3.00.14.png</li>
+<li><a href="https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg">https://en.wikipedia.org/wiki/Apple_II_(original)#/media/File:Apple_II_advertisement_Dec_1977_page_2.jpg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:IBM_PC_Motherboard_(1981).jpg">https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:IBM_PC_Motherboard_(1981).jpg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VisiCalc#/media/File:Visicalc.png">https://en.wikipedia.org/wiki/VisiCalc#/media/File:Visicalc.png</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xerox_Star#/media/File:Rank_Xerox_8010+40_brochure_front.jpg">https://en.wikipedia.org/wiki/Xerox_Star#/media/File:Rank_Xerox_8010+40_brochure_front.jpg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:Bundesarchiv_B_145_Bild-F077948-0006,_Jugend-Computerschule_mit_IBM-PC.jpg">https://en.wikipedia.org/wiki/IBM_Personal_Computer#/media/File:Bundesarchiv_B_145_Bild-F077948-0006,_Jugend-Computerschule_mit_IBM-PC.jpg</a></li>
+<li><a href="https://youtu.be/FDsbOMR_kU4">https://youtu.be/FDsbOMR_kU4</a></li>
+<li><a href="https://archive.org/details/MSDOS2FuturePlansForMSDOSByPaulAllen/page/n2/mode/1up?view=theater">https://archive.org/details/MSDOS2FuturePlansForMSDOSByPaulAllen/page/n2/mode/1up?view=theater</a></li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/1113572.1113555">https://dl.acm.org/doi/pdf/10.1145/1113572.1113555</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg">https://en.wikipedia.org/wiki/Sun_Microsystems#/media/File:Sun-1_Badge.jpg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg">https://en.wikipedia.org/wiki/Apple_Lisa#/media/File:Apple-lisa-1.jpg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg">https://en.wikipedia.org/wiki/PARC_(company)#/media/File:Xerox_PARC_in_1977.jpg</a></li>
+<li><a href="https://betawiki.net/wiki/Windows_1.0_Development_Release_1">https://betawiki.net/wiki/Windows_1.0_Development_Release_1</a></li>
+<li><a href="https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html">https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html</a></li>
+<li><a href="http://www.gregdonner.org/workbench/wb_10.html">http://www.gregdonner.org/workbench/wb_10.html</a></li>
+<li><a href="https://winworldpc.com/product/gem/2x">https://winworldpc.com/product/gem/2x</a></li>
+<li><a href="https://winworldpc.com/screenshot/2cc3ac1f-c692-31e2-809a-11c3a4c2a83d/c29075c2-b278-437e-11c3-a4c2a83d7054">https://winworldpc.com/screenshot/2cc3ac1f-c692-31e2-809a-11c3a4c2a83d/c29075c2-b278-437e-11c3-a4c2a83d7054</a></li>
+<li><a href="https://fr.pinterest.com/pin/349169777351550756/">https://fr.pinterest.com/pin/349169777351550756/</a></li>
+<li><a href="http://www.guidebookgallery.org/ads/magazines/windows/win20-applications">http://www.guidebookgallery.org/ads/magazines/windows/win20-applications</a></li>
+<li><a href="https://winworldpc.com/product/newwave/A0100">https://winworldpc.com/product/newwave/A0100</a></li>
+<li><a href="https://betawiki.net/wiki/Windows_3.0_build_14#/media/File:Win3.00.14.png">https://betawiki.net/wiki/Windows_3.0_build_14#/media/File:Win3.00.14.png</a></li>
+<li><a href="https://github.com/danielcosta/MSWORD">https://github.com/danielcosta/MSWORD</a></li>
 </ul>
 </div>
+<hr/><hr/><hr/>
