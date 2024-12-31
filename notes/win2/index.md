@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 2024</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. alpha)</p>
 
 
 
