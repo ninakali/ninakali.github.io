@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.0a)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.0b)</p>
 
 
 
@@ -14,7 +14,7 @@ The miracle of overwhelming commercial success brought incredible attention to W
 
 This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. By necessity, I will talk a lot about the origins of Windows, too. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. Some details are so convoluted and obscure that even *multiple Microsoft sources, including Raymond Chen*, are wrong about essential technical details. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
 
-<div class="cut">If you have comments or feedback, please leave it in <a href="thread">the Mastodon thread</a>.</div>
+<div class="cut">If you have comments or feedback, please leave it in <a href="https://tech.lgbt/@nina_kali_nina/113749698753812898">the Mastodon thread</a>.</div>
 
 But let's start with some hands-on Windows 2 experience, so you will be tempted to read the full story!
 
@@ -1031,7 +1031,7 @@ Windows will dominate the PC operating system marker for the years to come.
 <div class="post">
 
 ## Acknowledgments
-* Thank you for reading. It was a very long story! I hope you liked it. If you have any questions or comments, please let me know. You can leave a comment in Mastodon or create a GitHub issue.
+* Thank you for reading. It was a very long story! I hope you liked it. If you have any questions or comments, please let me know. You can leave a comment in [Mastodon](https://tech.lgbt/@nina_kali_nina/113749698753812898) or create a GitHub issue.
 * I am infinitely grateful to my fianceé for her endless patience with me while I was writing this document.
 * This document would not exist without advice from Michal Necasek of [os2museum](https://www.os2museum.com/wp/author/michaln/) and David Simunič of [krnl386](https://win1.krnl386.com/about.php) regarding drivers for ancient Windows version.
 
