@@ -288,9 +288,7 @@ It looks like a regular spreadsheet app, yes, but there is no mouse support, and
 
 Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox'es patents.
 
-> I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong, but we didn’t know that at the time. But still \[we] thought they had the germ of the idea\[, it] was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious.
-
-*-- Steve Jobs, interview for "Triumph of the Nerds"*
+> I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong, but we didn’t know that at the time. But still \[we] thought they had the germ of the idea\[, it] was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious. *-- Steve Jobs, interview for "Triumph of the Nerds"*
 
 This pivots a computer in the development, Apple Lisa, from being a revamp of Apple II into being something completely new.
 
@@ -352,9 +350,7 @@ Three years in the works, Apple Lisa starts to get a shape. Rumours about it sta
 
 Even in the early 80s there was a big demand for user-friendliness. Microsoft starts investing into its own user-friendly interface, as seen in the above note from Paul Allen (c. 1982). It is likely that the work on something known internally as Interface Manager has begun not later than in September 1981.
 
-> In 1981, the Apps division of Microsoft (Microsoft had two primary divisions during this time - "Systems" and "Apps", for systems software and application development respectively) began to develop a common interface library for all of the productivity applications being developed within the division at the time (mostly Word and the Multiplan spreadsheet). This went by several names, notably MUSH (Microsoft User SHell) and Interface Manager, and is an entirely text-mode UI framework signified by the "session control" strip with context-specific commands at the bottom of the screen. There were also brief plans for a "visual shell" using this UI to be shipped using DOS 2.0, but these were scrapped before the final release. Variants of the MUSH/Interface Manager interface would ship in DOS Word 1.0 and Multiplan in 1982...
-
-*-- Betawiki*
+> In 1981, the Apps division of Microsoft (Microsoft had two primary divisions during this time - "Systems" and "Apps", for systems software and application development respectively) began to develop a common interface library for all of the productivity applications being developed within the division at the time (mostly Word and the Multiplan spreadsheet). This went by several names, notably MUSH (Microsoft User SHell) and Interface Manager, and is an entirely text-mode UI framework signified by the "session control" strip with context-specific commands at the bottom of the screen. There were also brief plans for a "visual shell" using this UI to be shipped using DOS 2.0, but these were scrapped before the final release. Variants of the MUSH/Interface Manager interface would ship in DOS Word 1.0 and Multiplan in 1982... *-- Betawiki*
 
 It all started with Charles Simonyi. He created the first WYSIWYG word processor for Xerox PARC, got tired of it, and around 1980, was looking for new opportunities. His ex-coworker and founder of 3Com, Robert Metcalfe, has introduced Charles to Bill Gates, where Simonyi started working on a spreadsheet program. Shortly after, Simonyi hired his co-worker from Xerox PARC, Richard Brodie, to help with Multiplan. This was the beginning of the Apps division. It is said [citation needed] that when Brodie joined Microsoft, Multiplan did not have a menu system just yet, and Brodie was insistent on adding one. Brodie himself mentions that he primarily was working on Microsoft p-Code C compiler, though. So, this might or might not be the beginning of the Windows code.
 
@@ -384,9 +380,7 @@ Impressive interface of Xerox Star and rumours about not-yet-released Lisa make 
 
 As mentioned earlier, Microsoft has been working on their own VisiCalc competitor. It was released in August 1982, and despite the rock star project's staff, it wasn't selling all too well. Journalists are curious whether Microsoft might release a word processor, and the company's representative hints that they might be working on a mouse-controlled interface:
 
-> The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands.
-
--- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982
+> The way that the word processor becomes really nice is when you get away from keyboard input. Which means, use keyboard input for words only and use something like a mouse, or a joy stick, or a track ball for the editing commands. -- Vern Raburn, President of Microsoft Consumer Products, in interview for PC Magazine April 1982
 
 The command strip bar at the bottom of the screen was considered quite user-friendly at the time. Note that even the very first release of Multiplan supports multiple "windows" to display multiple spreadsheets simultaneously.
 
@@ -399,7 +393,7 @@ The command strip bar at the bottom of the screen was considered quite user-frie
 
 ![](history/13_vision.jpg)
 
-A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one).
+A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one). Some go as far as to claim that Gates wanted to copy VisiOn, but this is unlikely: he already had people with Xerox PARC experience working on a graphical interface, and even put a Xerox Star in the office to "inspire" other engineers.
 
 </div>
 
@@ -438,15 +432,11 @@ Despite the praise, the series was a commercial failure, likely due to its high 
 
 If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, they proclaim "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame. A big feature of the February issue is not-yet released VisiOn which is going to be all about the mouse.
 
->  This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, "Micro”?)
-*-- PC Mag, February 1983*
+>  This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, "Micro”?) *-- PC Mag, February 1983*
 
-> ...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom.
-*-- "The Tale Of The Mouse", PC Mag, 02/83*
+> ...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom. *-- "The Tale Of The Mouse", PC Mag, 02/83*
 
-> You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... 
-
-*-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83*
+> You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... *-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83*
 
 The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse Systems was responsible for Sun's mice, and was the first company to offer a mouse for PC. Naturally, VisiOn is expected to use Mouse Systems as well.
 
@@ -663,7 +653,7 @@ In the summer of 1985, Windows is still not ready. To placate the press and the 
 
 ![](history/30_os2.png)
 
-IBM wants a new operating system for the successor of IBM PC, IBM Personal System/2 (PS/2). Many things are up in the air, but it is clear: IBM TopView as a graphical interface did not work out. Microsoft hoped that IBM would license Windows, but instead IBM offers Microsoft to make a new system, OS/2, from scratch.
+IBM wants a new operating system for the successor of IBM PC, IBM Personal System/2 (PS/2). Many things are up in the air, but it is clear: IBM TopView as a graphical interface did not work out. Microsoft hoped that IBM would license Windows, but instead IBM offers Microsoft to make a new system, OS/2, from scratch. OS/2 is aiming to target abovementioned Intel 80286 processor, to fully reap the benefits of its 16 megabytes of address space and "protected mode", but will have to ditch full DOS compatibility for that.
 
 </div>
 
@@ -706,9 +696,9 @@ When GEM 2 is released, there are no overlapping windows anymore. It looks like 
 
 ## Interlude: a shell or an operating system?
 
-For at least a decade since the release of Windows, computer science purists have debated whether Windows is an operating system or merely an *operating shell*. Sure, it looks nothing like MS-DOS, and it offers many features that DOS simply does not have, like multitasking or a graphical interface, and has a driver subsystem. However, Windows would require MS-DOS to be installed on the computer for a very long time.
+For at least a decade since the release of Windows, computer science purists have debated whether Windows is an operating system or merely an *operating shell*. Sure, it looks nothing like MS-DOS, and it offers many features that DOS simply does not have, like multitasking or a graphical interface, and has a driver subsystem. However, Windows would require MS-DOS to be installed on the computer for a very long time. Perhaps due to this, Microsoft itself called Windows an "Operating Environment".
 
-For an end user, it does not matter. Sure, Windows 95 boots on top of a custom MS-DOS kernel, but it looks and feels exactly like its look-alike Windows NT4 that runs on top of its own kernel. So, for this article, let's consider all Windows versions operating "systems".
+For an end user, this trivia does not matter. Sure, Windows 95 boots on top of a custom MS-DOS kernel, but it looks and feels exactly like its look-alike Windows NT4 that runs on top of its own kernel. So, for this article, let's consider all Windows versions operating "systems". 
 
 ![](history/32a_ntornot.png)
 <p class="imgdesc">Can you tell, looking at the screenshot, whether it is an operating system (Windows NT) or an operating shell on top of MS-DOS (Windows 95)?</p>
@@ -753,11 +743,13 @@ Curiously, many modern sources quote that a significant drawback of Windows 1 wa
 <p class="imgdesc">Word for Macintosh had an interface radically different from Word for DOS, just like Excel for Macintosh had an interface radically different from Multiplan.</p>
 </div>
 
-With Windows out the door, most developers have left the project to focus on a graphical interface for OS/2 called Presentation Manager. There were still things Microsoft could do about Windows: if Excel for PC needs a graphical interface, it might as well be Microsoft Windows. And if that's the main goal, there aren't many things left to be implemented.
+With Windows out the door, most developers have left the project to focus on a graphical interface for OS/2 called Presentation Manager. There were still things Microsoft could do about Windows. According to the project's manager, Tandy Trower, there were three primary goals for the next Windows version:
 
-In "Barbarians Led by Bill Gates, " Eller claims that a team of three was left to run the project. "This is it, after this we're not going to have any more Windows. It's all OS/2", said Steve Ballmer. And because "it's all OS/2", even the Windows 2 interface had to be aligned with the upcoming OS/2 Program Manager interface.
+* Address the criticism: allow overlapping windows, use proportional fonts in the interface,
+* Become a platform for Excel for IBM PC: support EMS memory to allow for large spreadsheets,
+* Align the Windows interface with the upcoming OS/2 Presentation Manager interface.
 
-It might be that the Windows 2.0 team was bigger than three engineers, as many ex-staffers, including the project's manager Tandy Trower, say. Regardless, Windows' days seemed to be numbered. 
+The scope of the project seemed narrow. In "Barbarians Led by Bill Gates," Eller claims that a team of three was left to run the project. "This is it, after this we're not going to have any more Windows. It's all OS/2", said Steve Ballmer. In reality, the Windows 2.0 team was probably bigger, say many ex-staffers including Trower. Regardless, Windows' days seemed to be numbered.
 </div>
 
 
@@ -765,25 +757,90 @@ It might be that the Windows 2.0 team was bigger than three engineers, as many e
 
 ## 1986-09 Compaq DeskPro 386
 
+![](history/36a_compaq1.jpg)
+![](history/36b_compaq2.jpg)
+<p class="imgdesc">A DeskPro 386 advertisement from 1989.</p>
 
-, the very first DOS-compatible machine based on i386.
+While IBM was trying to figure out how to migrate their PCs to Intel 286, a brave PC clone maker Compaq has released its DeskPro 386, the very first DOS-compatible machine based on Intel 80386.
+
+In terms of computing capabilities, a step from i286 to i386 is as big as a leap between i8080 and i8088. Not only it was a 32-bit processor with 32-bit address model (up to 4 gigabytes of RAM, in theory), it had a "virtual 8086 mode", allowing hardware multitasking for old-style "real mode" DOS applications. Of course, there were no operating systems supporting any of those features just yet, but it's a matter of time, right?
 
 </div>
 
 
 <div class="post">
 
-## 1987-09 Windows/386, a first variant of Windows 2.0 released for Compaq i386. It finally features overlapping windows.
-</div>
+## 1987-09 Windows/386 (2.01)
 
+![](history/37_win386.png)
+
+And who can make a better operating system for PC than Microsoft?
+
+According to rumours, Compaq engineers joined the Windows team and actively contributed to the Windows kernel development so it would support Intel 80386. Whether it is true or not, the very first Windows 2.x version was something called Windows/386, shipped with Compaq DeskPro 386 in the early autumn of 1987.
+
+When it comes to user-facing features and capabilities, Windows/386 was a regular Windows 2 system. Overlapping windows, 8-colour graphics on EGA and VGA displays, Paint and Write are the most useful included accessories.
+
+Windows/386 offers support for "virtual 8086", so it can run and multitask DOS applications quite well. It also provides "software EMS" for 386 computers without an EMS board. Windows/386 seems to be the first system to offer EMS support for multitasking DOS applications, too. The feature, called "Virtual DOS machine", was heavily praised by the journalists of the time. Sure, a 386 machine would cost you $6,000 - but you can run multiple DOS programs on it simultaneously!
+
+However, it doesn't use all the capabilities of the new processors. Despite all the improvements, Windows/386 applications still run in the same address space, and multitasking between them is cooperative. Also, contrary to what the name might suggest, Windows/386 will work on both 8086/88 and 80286, thanks to the WIN86 loader shipped with the system.
+
+<details> 
+  <summary>Notes on Windows/386, preemptive multitasking and real mode memory management</summary><div class="cut">
+
+### Let's be real
+
+From the very first release, Windows was a multitasking system. A common way to implement the multitasking on Intel 8086/8088 was to leverage the segment memory model provided by the CPU, and pray, also known as "cooperative multitasking". When Intel introduced 80286, this mode of operation was dubbed "the real mode". The programmer would load multiple programs in different memory segments and then make each program yield control of the computer to the operating system every now and then. The OS kernel then would give the control to a different process. If things go wrong, the program never yields the control, and the whole system hangs. 
+
+To make things worse, all programs loaded to memory have access to all the memory. It is not just a security nightmare (imagine your chat client being able to access passwords in your browser's memory, unchecked). Sometimes, due to a bug, one program might corrupt another program's memory. Chances are, when the system switches control to the program with corrupted memory, the program will hang or crash the whole system.
+
+This hardware limitation resulted in Windows 1 not being able to run DOS applications well, as they would rarely "play by the rules".
+
+### Enter v86
+
+Thanks to the new "virtual 8086" (v86) hardware in i386, cooperative multitasking can become a relic of the past. The operating system can now create a bunch of "virtual 8086", each running its program while the OS continues to keep absolute control over the computer. A signal from a timer would allow the operating system to switch from executing one v86 to the other multiple times per second. The application running inside of the v86 would not even notice. Each "virtual 8086" process is isolated from others, and a crash or a "hang" of a single process will not affect the whole system. This mode of operation is "preemptive multitasking".
+
+### Windows/386
+
+The problem with multitasking between v86'es is that each "virtual 8086" is still limited to the i86/i88 memory model and cannot access more than one megabyte of memory space (and thus 640KB of RAM, as per IBM PC limitations) without banking or EMS. At least the EMS can be emulated in software using the "memory management unit" now available in the processor. 
+
+If all the v86 were equal, that would be one thing. But in Windows/386 architecture, one of the v86 ran *the Windows itself*. Yep, you read that right!
+
+The reason for this quirk is simple, or, rather, simplicity. If you wanted to use the same Windows kernel code for 8086 and 386, the simplest way to improve things for a 386 would be to just change nothing in your i86/i88 code and cram its execution into a v86. This way, Windows/386 would improve the experience of DOS emulation thanks to the i386 protected mode. However, Windows applications would still run in a cooperative multitasking mode and will be limited to 640KB of RAM and whatever EMS is available.
+
+### Bonus: the memories
+
+One of the operating system's tasks is to manage the computer's RAM. Applications constantly ask the OS for some memory and then return the unused memory to the system. This poses a problem for the OS. Imagine that your computer has a 64KB block of memory free. Then Program A asks for 32KB. Then Program B asks for 16KB. Your memory would look like this:
+
+`[Program A - first 16K | Program A - second 16 K | Program B - first 16 K | Free 16 K]`
+
+Then Program A returns the extra allocated memory, so the block now looks like this:
+
+`[ Free 16 K | Free 16 K | Program B - 16 K | Free 16 K]`
+
+The amount of free memory is now 48 KB.  Program B wants to allocate, let's say, 40 KB. But there is no continuous memory region that big! In "real mode", the operating system needs to move the Program B's allocated memory around, which is a relatively slow operation.
+
+</div></details>
+
+</div>
 
 <div class="post">
 
-## 1987-10 A "runtime" version of Windows 2 is used for IBM PC Excel release.
+## 1987-10 Excel for IBM PC
 
-## 1987-12 Windows 2.03 released, hitting the stores in early 1988.
+![](history/38_excel2.png)
 
-Barbarians Led by Bill Gates saying, “A couple people were left to maintain the Windows 2.0 code and fix any bugs reported, but the “glory days” of Windows, such as they were, appeared to be dead and gone. Last one out, turn off the lights.”
+The first release of Windows 2 you could buy off the shelf was bundled with the very first Excel for IBM PC in October 1987. This arrangment was not particularly uncommon back in the days: Aldus shipped its Pagemaker bundled with Windows 1 for quite some time. Such version of Windows were called "runtime", and did not have the standard Windows accessories.
+
+</div>
+
+<div class="post">
+
+## 1987-12 Finally, Windows 2.03 
+
+![](history/39_win203.png)
+
+
+> “A couple people were left to maintain the Windows 2.0 code and fix any bugs reported, but the “glory days” of Windows, such as they were, appeared to be dead and gone. Last one out, turn off the lights.” *-- Eller in "Barbarians Led by Bill Gates"*
 
 </div>
 
@@ -791,8 +848,14 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 <div class="post">
 
 ## 1988-03 Apple files a lawsuit againt Microsoft for patent violation in Windows 2.
+
+
 </div>
 
+<div class="post">
+
+## 1988-05 Windows/286 2.1
+</div>
 
 <div class="post">
 
@@ -831,12 +894,18 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * "Connections: Patterns of Discovery" https://books.google.co.uk/books?id=DxGyOaAyd6gC&pg=PA92&redir_esc=y#v=onepage&q&f=false
 * "Doing Windows": https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/
 * "The rise of Windows": https://anotherboringtopic.substack.com/p/the-rise-of-windows-part-2-windows
-* PC Magazine, various issues
+* https://anotherboringtopic.substack.com/p/the-rise-of-microsoft-windows-2x
+* https://www.xtof.info/inside-windows3.html
+* https://www.os2museum.com/wp/windows386-2-01/
+* https://learn.microsoft.com/en-us/archive/msdn-magazine/2000/july/under-the-hood-happy-10th-anniversary-windows
+* https://devblogs.microsoft.com/oldnewthing/20040407-00/?p=39893
+* https://www.stayforever.de/windows-interview-with-tandy-trower/
+* PC Magazine, various issues, notably 1983-02
 * BYTE Magazine, various issues
 * Infoworld Sep 1981 and May 1982 
   * https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&pg=PA1&redir_esc=y#v=onepage&q&f=false
   * https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false 
- * https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up
+ * Computerworld 1983-11-07 https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up
 
 </div>
 
@@ -858,5 +927,6 @@ Barbarians Led by Bill Gates saying, “A couple people were left to maintain th
 * https://www.digibarn.com/collections/screenshots/xerox-star-8010/index.html
 * http://www.gregdonner.org/workbench/wb_10.html
 * https://winworldpc.com/product/gem/2x
+* https://winworldpc.com/screenshot/2cc3ac1f-c692-31e2-809a-11c3a4c2a83d/c29075c2-b278-437e-11c3-a4c2a83d7054
 
 </div>
