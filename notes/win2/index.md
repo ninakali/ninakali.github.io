@@ -870,7 +870,7 @@ Apple is furious to see that Microsoft has implemented overlapping windows, and 
 
 ## 1988-05 Windows/286 2.1
 
-![](history/41_win286.png)
+![](history/41_win286.jpg)
 
 Windows 2.1 tries hard to be not just a bugfix release. The system is now named Windows/286 to indicate some i286 support and differentiate it from Windows/386, but in reality, both Windows/286 and Windows/386 would work on i8088, i286 and i386. As far as I can tell, the Windows kernel file is identical between the two.
 
@@ -911,17 +911,71 @@ No. If someone, including Microsoft, tells you so, they're wrong. Soon, you will
 
 </div>
 
-
 <div class="post">
 
-## 1988-08 Dave Weise's pet project to port Windows kernel to 386 gains traction inside Microsoft. It is decided to release Windows 3.0 and develop it further.
+## 1988-06 Windows kernel for the protected mode
+
+![](history/42_protected.png)
+<p class="imgdesc">The earliest known build of Windows 3.0, boasting <b>megabytes</b> of memory available to programs.</p>
+
+Windows was supposed to die, and it would have if not for one fateful encounter.
+
+> "Well, at a late-June Friday-night party celebrating the opening of Microsoft's big new Canyon-Park manufacturing facility, Murray spied his good friend David Weise, a Windows developer, fellow physicist, and all-round computer whiz. Looking for some fun, Murray teased David that David's new Windows 286 (Windows 2.x with access to the 64-KB HMA) was basically a joke. What one really should do was to get Windows into protected mode and blow away the 640-KB RAM barrier altogether. Much to Murray's surprise, David said, "Yes, let's go do it!" So Murray said, "OK, how about tomorrow?" David said, "No, let's go right now!" --  "The Personal Computer from the Inside Out", by Richard Shoemaker and Murray Sargent.
+
+Larry Osterman, in "Farewell to one of the great ones", recounts:
+
+> I (and others) believe that David is single handedly responsible for making Microsoft over a billion dollars.  He's also (IMHO) the person who is most responsible for the success of Windows 3.0. He (along with Murray Sargent, creator of the SST debugger) also figured out how to get normal Windows applications running in protected mode. Which totally and utterly and irrevocably blew apart the 640K memory barrier.
+
+> I remember [...] I ran into David, and he called me into his office "Hey, look at what I've got working!". He showed me existing windows apps running in protected mode on the 286.  UNMODIFIED Windows 1.0 applications running in protected mode.
+
+> He then ran me around the rest of the group, and they showed me the other stuff they were working on.  Ralph had written a new driver architecture called VxD. [...] They had display drivers that could display 256 color bitmaps on the screen (the best OS/2 could do at the time was 16 colors).
+
+> My jaw was dropping lower and lower as I moved from office to office.  "Oh my goodness, you can't let Steve [Ballmer] see this, he's going to pitch a fit" (those aren't quite the words I used, but this is a family blog).
+
+> You see, at this time, Microsoft's systems division was 100% focused on OS/2 1.1.  All of the efforts of the systems division were totally invested in OS/2 development.  We had invested literally tens of millions of dollars on OS/2, because we **knew** that it was the future for Microsoft. 
+
+> And here was this little skunkworks project [...] It was blindingly obvious, even at that early date [...] there was just no comparison between the two platforms - if they had to compete head-to-head, Windows 3.0 would win hands down.
+
+> Btw, David had discussed it with Steve [...] As David put it, he realized that this was potentially an issue, so he went to Steve, and told him about it. [...] Steve's only comment was that David should tell his manager and his manager's manager so that they'd not be surprised at the product review that was going to happen later that day.  At the product review, Steve and Bill greenlighted the Windows 3.0 project, and the rest was history.
+
+<details> 
+  <summary>Why protected-mode Windows seemed impossible, and how did it work?</summary><div class="cut">
+
+### Protected mode
+I mentioned "protected mode" before but never explained what it did. Intel 80286 was the first microprocessor to receive a special circuitry called a "memory management unit" (MMU). MMU was mandatory for big multitasking multi-user computers; with the help of MMU, it was possible to make certain memory areas available only to specific code segments. If MMU is configured correctly, one program can't read another program's memory.
+
+This feature is undoubtedly nice to have and could improve the stability of the applications running inside Windows. However, this is not the only reason why Windows needed to run in the protected mode. For 80286, the protected mode allowed the application full access to all the addressable memory: 16 megabytes of physical and much more virtual memory.
+
+### Real mode and protected mode
+When Intel designed 80286, they full-ishly expected everyone to rewrite their software. Old applications didn't, couldn't, shouldn't run in protected mode. This was the whole reason for creating the OS/2 project for IBM and Microsoft.
+
+But, as it happens, *some* real-mode applications can run in the protected mode. According to Intel's manual, if an application utilized or relied on any of the techniques below, it would not run:
+* Segment arithmetic
+* Privileged instructions
+* Direct hardware access
+* Writing to a code segment
+* Executing data
+* Overlapping segments
+* Use of BIOS functions
+
+Larry Osterman mentions that one of David Weise's projects was to migrate Windows video drivers for 286 into protected mode to free some precious below-640-KB memory. This likely was a significant inspiration for the whole protected-mode-Windows project. 
+
+All that was left was to ensure that the Windows kernel followed these strict rules for compatibility between the real and protected modes. Easier said than done. Especially when you do not have any insight about the runtime state of the kernel. Modern developers are blessed with emulators, disassemblers and debuggers. During the Windows 2.x days, such tools barely existed. Naturally, Microsoft Visual C and its debugger did not support all 286 and 386 features back then. Sargent's debugger was pivotal.
+
+### Windows 3.0 Standard mode
+Now, **this** is the Windows 3.0 Standard Mode. It is a protected-mode kernel that requires at least an Intel 80286 and does not need a kludge of EMS to access the system's memory. The multitasking is still cooperative, but the application's memory can now be protected from bugs, making the system significantly more stable.
+</div></details>  
 
 </div>
 
 
 <div class="post">
 
-## 1988-11 OS/2 1.1 includes Presentation Manager, developed jointly by Microsoft and IBM. A graphical interface of Presentation Manager is very similar to Windows 2.0. IBM insists Microsoft should kill Windows.
+## 1988-11 OS/2 1.1
+
+![](history/43_os2.png)
+
+OS/2 1.1 includes Presentation Manager, developed jointly by Microsoft and IBM. It looks very similar to Windows 2, but the likeness is only in appearances. OS/2 is a much bigger, resource-hungry system than Windows, and it lacks compatibility with DOS and Windows. IBM is slightly worried that Microsoft keeps developing Windows, and insists the project should be killed. Bill Gates publicly states that Microsoft is 100% behind the OS/2, and Windows 3.0 will be the last. Perhaps, he is hiding something.
 
 </div>
 
@@ -935,7 +989,9 @@ No. If someone, including Microsoft, tells you so, they're wrong. Soon, you will
 
 <div class="post">
 
-## 1990-05 Microsoft releases Windows 3.0, and it sells. This eventually results in Microsoft Word and Excel gaining significant market share due to competitors (Lotus and WordPerfect) not supporting Windows and expecting OS/2 to become a standard instead. IBM is upset and nopes out of the joint OS/2 development.
+## 1990-05 Microsoft releases Windows 3.0
+
+and it sells. This eventually results in Microsoft Word and Excel gaining significant market share due to competitors (Lotus and WordPerfect) not supporting Windows and expecting OS/2 to become a standard instead. IBM is upset and nopes out of the joint OS/2 development.
 
 </div>
 
@@ -955,13 +1011,16 @@ No. If someone, including Microsoft, tells you so, they're wrong. Soon, you will
 * https://learn.microsoft.com/en-us/archive/msdn-magazine/2000/july/under-the-hood-happy-10th-anniversary-windows
 * https://devblogs.microsoft.com/oldnewthing/20040407-00/?p=39893
 * https://www.stayforever.de/windows-interview-with-tandy-trower/
+* https://learn.microsoft.com/en-us/archive/blogs/murrays/saving-windows-from-the-os2-bulldozer
+* https://learn.microsoft.com/en-us/archive/blogs/larryosterman/farewell-to-one-of-the-great-ones
+* https://retrocomputing.stackexchange.com/questions/26466/what-were-the-189-gui-design-elements-that-apple-claimed-look-and-feel-copyrig
 * PC Magazine, various issues, notably 1983-02
 * BYTE Magazine, various issues
 * Infoworld Sep 1981 and May 1982 
   * https://books.google.co.uk/books?id=Mj0EAAAAMBAJ&pg=PA1&redir_esc=y#v=onepage&q&f=false
   * https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false 
  * Computerworld 1983-11-07 https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up
-
+* https://en.wikipedia.org/wiki/Protected_mode#cite_note-Compatibility_limitations-30
 </div>
 
 <div class="post">
@@ -986,4 +1045,5 @@ No. If someone, including Microsoft, tells you so, they're wrong. Soon, you will
 * https://fr.pinterest.com/pin/349169777351550756/
 * http://www.guidebookgallery.org/ads/magazines/windows/win20-applications
 * https://winworldpc.com/product/newwave/A0100
+* https://betawiki.net/wiki/Windows_3.0_build_14#/media/File:Win3.00.14.png
 </div>
