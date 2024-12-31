@@ -146,7 +146,8 @@ There weren't many games for Windows 2, but there were some.
 <p class="imgdesc">Taipei is very pretty, and this is why I put it at the end.</p>
 
 There are many, many more interesting programs for Windows, including:
-* a CAD Engineering Capture, a GIF viewer Easel, 
+* a CAD Engineering Capture, 
+* a GIF viewer Easel, 
 * an AI graphical expert Nexpert, 
 * e-mail clients The Network Courier and Windows mail,
 * multiple office applications, including Samna/Lotus Ami, NBI Legend and Palantir WinText.
