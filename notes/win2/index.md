@@ -254,7 +254,7 @@ The simplest way to use computer memory is sometimes called a "flat model". A co
 
 A way to bypass this limitation is to implement "bank switching" (or simply "banking"). Let's say you want 128K of memory on a system with a 16-bit data bus. A common way to implement this is to divide 128K into 8 "banks" of 16K each and add clever circuitry to allow you to choose how these banks are connected to the address bus "on the fly". 
 
-For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 16-bit system can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the "address space" simultaneously.
+For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 8-bit system (with 16 bit address bus) can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the "address space" simultaneously.
 
 ### Segment memory model
 

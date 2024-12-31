@@ -71,7 +71,7 @@ blockquote {
 <title>Windows 2: Final Fantasy of operating systems</title>
 <body><div class="post">
 <h1>Windows 2: Final Fantasy of operating systems</h1>
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. alpha)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.0a)</p>
 <p>It is common knowledge that Final Fantasy could have been the last game in the series. It is far less known that Windows 2, released around the same time, could too have been the last. If anything, things were more certain: even Microsoft believed that Windows 2 would be the last.</p>
 <p><img src="win2live/00_iroke.png" alt=""></p>
 <p class="imgdesc">PC Paintbrush and MS Excel were some of the most successful programs for Windows 2.</p>
@@ -225,7 +225,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <h3>Memory management model</h3>
 <p>The simplest way to use computer memory is sometimes called a &quot;flat model&quot;. A computer with a 16-bit address bus using flat memory can have not more than 64K of addressable memory elements. This is a problem because things like text documents, spreadsheets and photos simply do not fit in 64K.</p>
 <p>A way to bypass this limitation is to implement &quot;bank switching&quot; (or simply &quot;banking&quot;). Let's say you want 128K of memory on a system with a 16-bit data bus. A common way to implement this is to divide 128K into 8 &quot;banks&quot; of 16K each and add clever circuitry to allow you to choose how these banks are connected to the address bus &quot;on the fly&quot;.</p>
-<p>For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 16-bit system can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the &quot;address space&quot; simultaneously.</p>
+<p>For example, you can have banks 0, 1 and 2 available to the processor at addresses 0, 1x16K and 2x16K, but the 3x16K addresses could be connected to any of the banks. Voila, your 8-bit system (with 16 bit address bus) can access more memory! The downside is that you cannot directly copy things between, say, bank 4 and bank 6, as they cannot be mapped to the &quot;address space&quot; simultaneously.</p>
 <h3>Segment memory model</h3>
 <p>Many 16-bit processors use an advanced variant of bank switching known as &quot;segmentation&quot;. With segment memory, a processor can access multiple 64K &quot;segments&quot; simultaneously. For example, x86 processors have a Code Segment, which has the program you execute now, a Data Segment to access your data, an Extra Segment to compare or copy memory between two segments and a Stack Segment to store intermediate calculation results. It is much faster than banking but still requires the programmer to use a lot of magic to avoid the limitations imposed by the 64K segment size.</p>
 <h3>Intel 8086 and Intel 8088</h3>
