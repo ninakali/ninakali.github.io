@@ -12,11 +12,11 @@ It is common knowledge that Final Fantasy could have been the last game in the s
 
 The miracle of overwhelming commercial success brought incredible attention to Windows. The retro community and computer historians generally seem to be interested in the legendary origins of the system (how it all began) or in its turnabout Windows 3.0 release (what did they do right?). 
 
-This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. By necessity, I will talk a lot about Windows 1, too. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
+This story instead will be about the underdog of Windows, version 2. To understand where it all went wrong, we must start looking at events that happened even before Microsoft was founded. By necessity, I will talk a lot about the origins of Windows, too. Instead of following interpersonal/corporate drama, I will try to focus on the technical aspects of Windows and its competitors, as well as the technological limitations of the computers around the time. Some details are so convoluted and obscure that even *multiple Microsoft sources, including Raymond Chen*, are wrong about essential technical details. It is going to be quite a journey, and it might seem a bit random, but I promise that eventually, it all will start making sense.
 
 <div class="cut">If you have comments or feedback, please leave it in <a href="thread">the Mastodon thread</a>.</div>
 
-Let's start with some hands-on Windows 2 experience to tempt you to read the full story!
+But let's start with some hands-on Windows 2 experience, so you will be tempted to read the full story!
 
 </div>
 
@@ -57,7 +57,7 @@ Due to a number of reasons, standard Windows 2 applications are almost exactly t
 <p class="imgdesc">Calendar and Cardfile are more useful than they might seem.</p>
 
 ![win2live/08_control.png](win2live/08_control.png)
-<p class="imgdesc">Control panel allows to create your own <a href="http://yo90s.com/windows-hotdog-stand-theme/">Hot Dog Stand</a> interface, if you want.
+<p class="imgdesc">Control panel allows to create your own <a href="http://yo90s.com/windows-hotdog-stand-theme/">Hot Dog Stand</a> interface, if you want. Contrary to the urban legend started by Microsoft, it is *not* the first version of Control Panel.
 </p>
 
 ![win2live/09_terminal.png](win2live/09_terminal.png)
@@ -145,6 +145,11 @@ There weren't many games for Windows 2, but there were some.
 ![win2live/34_taipei.png](win2live/34_taipei.png)
 <p class="imgdesc">Taipei is very pretty, and this is why I put it at the end.</p>
 
+There are many, many more interesting programs for Windows, including:
+* a CAD Engineering Capture, a GIF viewer Easel, 
+* an AI graphical expert Nexpert, 
+* e-mail clients The Network Courier and Windows mail,
+* multiple office applications, including Samna/Lotus Ami, NBI Legend and Palantir WinText.
 </div>
 
 <hr/><hr/><hr/>
@@ -530,6 +535,8 @@ Sun-2 computer ships with its own graphical user interface, called Sunwindows. S
 
 Like, no one cares so much, there wasn't even an image of the system in the release announcement posted in Computerworld. They could not be bothered to post a single commercial, so instead you see a photo from the Sun's competitor Apollo from the same magazine. Apollo had their own graphical system called Domain released around the same time, virtually unknown to anyone. See, told you, no one cares. Not when your computer is more expensive than notorious Apple Lisa.
 
+Sunwindows and Appolo Domain were just a few examples of people trying to make a graphical user interface. Another notable example from 1983 was the W windowing system, which was later rewritten into the X windowing system and became dominant on UNIX and Linux computers. However, these systems had little consequence for the users of personal computers.
+
 </div>
 
 
@@ -730,6 +737,9 @@ When Windows 1.01 finally ships to end-users, very few of them are excited. Tili
 A major selling point for Windows was its capability to run old DOS applications in a window. In theory. In practice, this worked only with the most basic programs, as most software expected to have total control over the computer's resources.
 
 Curiously, many modern sources quote that a significant drawback of Windows 1 was its lack of scalable proportional fonts. This is simply untrue: Helv and Tms Rmn shipped with it are both proportional *and* support sizes from 8 to 48 points (and they look nicer than on Mac starting from version 1.03). Only the interface elements (title bars and text in dialogue boxes) *were* proportional and looked a bit "clunky".
+
+A unique feature of Windows that many reviewers, both now and then, are failing to notice is its Graphics Device Interface (GDI). Not only was it built in compliance with ISO/IEC 7942 GKS standard, but it also allows a layer of abstraction between output devices that enables as-close-as-possible representation between different screens and printers. GDI was the magic behind "What you see is what you get", and nailing it was one of the main reasons the Windows release was delayed.
+
 </div>
 
 
@@ -761,7 +771,7 @@ The scope of the project seemed narrow. In "Barbarians Led by Bill Gates," Eller
 ![](history/36b_compaq2.jpg)
 <p class="imgdesc">A DeskPro 386 advertisement from 1989.</p>
 
-While IBM was trying to figure out how to migrate their PCs to Intel 286, a brave PC clone maker Compaq has released its DeskPro 386, the very first DOS-compatible machine based on Intel 80386.
+While IBM was trying to figure out how to migrate their PCs to Intel 286, a brave PC clone maker Compaq has released its DeskPro 386, the very first DOS-compatible machine based on the newest Intel 80386 processor.
 
 In terms of computing capabilities, a step from i286 to i386 is as big as a leap between i8080 and i8088. Not only it was a 32-bit processor with 32-bit address model (up to 4 gigabytes of RAM, in theory), it had a "virtual 8086 mode", allowing hardware multitasking for old-style "real mode" DOS applications. Of course, there were no operating systems supporting any of those features just yet, but it's a matter of time, right?
 
@@ -795,17 +805,17 @@ To make things worse, all programs loaded to memory have access to all the memor
 
 This hardware limitation resulted in Windows 1 not being able to run DOS applications well, as they would rarely "play by the rules".
 
-### Enter v86
+### Enter VM86
 
-Thanks to the new "virtual 8086" (v86) hardware in i386, cooperative multitasking can become a relic of the past. The operating system can now create a bunch of "virtual 8086", each running its program while the OS continues to keep absolute control over the computer. A signal from a timer would allow the operating system to switch from executing one v86 to the other multiple times per second. The application running inside of the v86 would not even notice. Each "virtual 8086" process is isolated from others, and a crash or a "hang" of a single process will not affect the whole system. This mode of operation is "preemptive multitasking".
+Thanks to the new "virtual 8086" (VM86) hardware in i386, cooperative multitasking can become a relic of the past. The operating system can now create a bunch of "virtual 8086", each running its program while the OS continues to keep absolute control over the computer. A signal from a timer would allow the operating system to switch from executing one VM86 to the other multiple times per second. The application running inside of the VM86 would not even notice. Each "virtual 8086" process is isolated from others, and a crash or a "hang" of a single process will not affect the whole system. This mode of operation is "preemptive multitasking".
 
 ### Windows/386
 
-The problem with multitasking between v86'es is that each "virtual 8086" is still limited to the i86/i88 memory model and cannot access more than one megabyte of memory space (and thus 640KB of RAM, as per IBM PC limitations) without banking or EMS. At least the EMS can be emulated in software using the "memory management unit" now available in the processor. 
+The problem with multitasking between VM86s is that each "virtual 8086" is still limited to the i86/i88 memory model and cannot access more than one megabyte of memory space (and thus 640KB of RAM, as per IBM PC limitations) without banking or EMS. At least the EMS can be emulated in software using the "memory management unit" now available in the processor. 
 
-If all the v86 were equal, that would be one thing. But in Windows/386 architecture, one of the v86 ran *the Windows itself*. Yep, you read that right!
+If all the VM86 were equal, that would be one thing. But in Windows/386 architecture, one of the VM86 ran *the Windows itself*. Yep, you read that right!
 
-The reason for this quirk is simple, or, rather, simplicity. If you wanted to use the same Windows kernel code for 8086 and 386, the simplest way to improve things for a 386 would be to just change nothing in your i86/i88 code and cram its execution into a v86. This way, Windows/386 would improve the experience of DOS emulation thanks to the i386 protected mode. However, Windows applications would still run in a cooperative multitasking mode and will be limited to 640KB of RAM and whatever EMS is available.
+The reason for this quirk is simple, or, rather, simplicity. If you wanted to use the same Windows kernel code for 8086 and 386, the simplest way to improve things for a 386 would be to just change nothing in your i86/i88 code and cram its execution into a VM86. This way, Windows/386 would improve the experience of DOS emulation thanks to the i386 protected mode. However, Windows applications would still run in a cooperative multitasking mode and will be limited to 640KB of RAM and whatever EMS is available.
 
 ### Bonus: the memories
 
@@ -847,15 +857,60 @@ The first release of Windows 2 you could buy off the shelf was bundled with the 
 
 <div class="post">
 
-## 1988-03 Apple files a lawsuit againt Microsoft for patent violation in Windows 2.
+## 1988-03 Apple files a lawsuit againt Microsoft for patent violation in Windows 2
 
+![](history/40_newwave.png)
+<p class="imgdesc">HP NewWave, a shell for Windows 2.</p> 
+
+Apple is furious to see that Microsoft has implemented overlapping windows, and files a copyright claim for "look and feel". The release of HP NewWave for Windows 2, featuring pretty icons and the infamous trashcan, only adds oil to the fire. If Apple wins the case, it would damage OS/2 and kill Windows.
 
 </div>
 
 <div class="post">
 
 ## 1988-05 Windows/286 2.1
+
+![](history/41_win286.png)
+
+Windows 2.1 tries hard to be not just a bugfix release. The system is now named Windows/286 to indicate some i286 support and differentiate it from Windows/386, but in reality, both Windows/286 and Windows/386 would work on i8088, i286 and i386. As far as I can tell, the Windows kernel file is identical between the two.
+
+And if this is not confusing enough, look at the system's packaging. It bears the label "Presentation Manager", which is an entirely different thing for a completely different operating system! It seems even some staff at Microsoft were confused about this release.
+
+<details> 
+  <summary>HMA: the 286 part of Windows/286</summary><div class="cut">
+
+As you might have noticed, Windows 1 was an i8088 program, and the next Windows release targeted the i386, skipping a couple of processor generations in between (Intel 80186 and Intel 80286).
+
+Intel 80286 was, in fact, a significant upgrade on i8088, adding support for "protected mode" and 1 gigabyte of virtual memory (though only 16 megabytes of physical memory were available). Unfortunately for Microsoft, using either of the features broke backwards compatibility. It was impossible to run real-mode DOS software inside the 286'es protected mode. A whole new operating system and a whole set of new software were needed. Perhaps this is why Bill Gates called the chip "brain-dead".
+
+By the way, "a whole set of new software" for i286 was supposed to be the joint Microsoft-IBM OS/2.
+
+But maybe Windows could benefit from i286 in some way, too? The answer is a confused "Uh, well, okay, a bit".
+
+### The cursed "A20 gate"
+
+Let's try to remember how the segment memory model worked in i8086. The register size was 16 bits, but the address bus width was 20 bits. If a program wanted to access a byte in memory, it had to fill out two 16-bit registers: segment and offset. If the segment value was "100" and the offset value was "200", the memory cell selected by the processor was 100x16 + 200 = 1800. This allows accessing all possible 1,048,576 memory addresses, starting from segment:offset 0:0 and ending with FFF0:FFFF (61440x16 + 65535).
+
+Would you care to guess what would happen if you set the segment to its maximum value of 65535?
+
+On i8086, the memory would "wrap around", so the memory cell FFF0:0010 would point to the same cell in memory as the beginning of the memory at 0000:0000. But i286 could be wired directly to larger amounts of RAM; the FFF0:0010 would point to the start of a whole 64K memory segment above the first megabyte of address space.
+
+And we cannot have that! There were programs for DOS that actually used memory wrapping. So IBM, in its forever wisdom, has supplied its IBM PC AT with circuitry that turns off the 21st address line, called "A20", and makes the i286 behave exactly like the i8088 did. The circuitry could be controlled through the *keyboard controller*, of all things. For the decades to come, booting of operating systems on IBM PC-compatibles would start with the OS talking to the keyboard controller to turn the damned thing off. 
+
+### HIMEM.SYS
+
+After the system is booted, a typical Windows 2.0 system would have about 400 kilobytes of "conventional" RAM free. The computer might have up to 16 megabytes of EMS memory, but not all applications were compatible with EMS. Every kilobyte of conventional memory counts.
+
+So, Microsoft ships Windows 2.1 with a driver called "HIMEM.SYS" that opens the A20 gate, thus adding 65,519 bytes of RAM to the system. Windows/286 can use this pathetic piece of memory, called HMA/High Memory Area, and previous versions of Windows could not.
+
+### Is Windows/286 using the same idea as Windows 3.0 Standard Mode?
+
+No. If someone, including Microsoft, tells you so, they're wrong. Soon, you will know why.
+
+</div></details>  	
+
 </div>
+
 
 <div class="post">
 
@@ -928,5 +983,7 @@ The first release of Windows 2 you could buy off the shelf was bundled with the 
 * http://www.gregdonner.org/workbench/wb_10.html
 * https://winworldpc.com/product/gem/2x
 * https://winworldpc.com/screenshot/2cc3ac1f-c692-31e2-809a-11c3a4c2a83d/c29075c2-b278-437e-11c3-a4c2a83d7054
-
+* https://fr.pinterest.com/pin/349169777351550756/
+* http://www.guidebookgallery.org/ads/magazines/windows/win20-applications
+* https://winworldpc.com/product/newwave/A0100
 </div>
