@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.0b)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.01)</p>
 
 
 
@@ -307,7 +307,7 @@ This pivots a computer in the development, Apple Lisa, from being a revamp of Ap
 
 ![](history/06_pc_mobo.jpg)
 
-The Blue Giant becomes mildly interested in a home computers market, and decides to build a cheap home computer, uncharacteristically for the company outsourcing many parts of the project. A small group of engineers starts working on IBM PC, using Intel 8088 processor because it is the cheapest 16-bit CPU they can find. IBM needs an operating system for their new computer, and starts shopping around.
+The <s>Blue Giant</s> Big Blue becomes mildly interested in a home computers market, and decides to build a cheap home computer, uncharacteristically for the company outsourcing many parts of the project. A small group of engineers starts working on IBM PC, using Intel 8088 processor because it is the cheapest 16-bit CPU they can find. IBM needs an operating system for their new computer, and starts shopping around.
 
 
 </div>
