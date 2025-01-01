@@ -5,7 +5,7 @@
 
 
 
-It is common knowledge that Final Fantasy could have been the last game in the series. It is far less known that Windows 2, released around the same time, could too have been the last. If anything, things were more certain: even Microsoft believed that Windows 2 would be the last.
+It is common knowledge that Final Fantasy could have been the "final" game for the studio, the first and the last in the series. It is far less known that Windows 2, released around the same time, could too have been the last. If anything, things were more certain: even Microsoft believed that Windows 2 would be the last.
 
 ![](win2live/00_iroke.png)
 <p class="imgdesc">PC Paintbrush and MS Excel were some of the most successful programs for Windows 2.</p>
