@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.01)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.02 25-01-01)</p>
 
 
 
@@ -33,7 +33,7 @@ Let me put this into perspective: a decent system that can run Windows 2.0 smoot
 <p class="imgdesc">Most people would experience Windows 2 through a version shipped with Microsoft Excel. It can calculate stonks and plot charts. What else do you need?</p>
 
 ### Standard applications
-Due to a number of reasons, standard Windows 2 applications are almost exactly the same as Windows 1 applications.
+For a number of reasons, standard Windows 2 applications are almost exactly the same as Windows 1 applications.
 
 ![win2live/02_executive.png](win2live/02_executive.png)
 <p class="imgdesc">MS-DOS Executive is sort of a file manager for Windows that is used to start programs.</p>
@@ -344,7 +344,7 @@ The computer, as expected from an i8088-based one, had a segment memory model. W
 
 ![](history/09_lisa.png)
 
-Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long ago, but was not a common accesory just yet).
+Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long ago, but was not a common accessory just yet).
 
 </div>
 
@@ -1035,6 +1035,8 @@ Windows will dominate the PC operating system marker for the years to come.
 * Thank you for reading. It was a very long story! I hope you liked it. If you have any questions or comments, please let me know. You can leave a comment in [Mastodon](https://tech.lgbt/@nina_kali_nina/113749698753812898) or create a GitHub issue.
 * I am infinitely grateful to my fianceé for her endless patience with me while I was writing this document.
 * This document would not exist without advice from Michal Necasek of [os2museum](https://www.os2museum.com/wp/author/michaln/) and David Simunič of [krnl386](https://win1.krnl386.com/about.php) regarding drivers for ancient Windows version.
+* My interest in operating systems started with systems' *interfaces*. [ToastyTech](http://toastytech.com/guis/) was alwasy a source of inspiration for me.
+* It would be very difficult if not impossible to produce some of the illustrations without kind people archiving old things at [archive.org](https://archive.org/). 
 
 </div>
 
