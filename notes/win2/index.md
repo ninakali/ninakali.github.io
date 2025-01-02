@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.03 25-01-01)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.04 2025-01-02)</p>
 
 
 
@@ -1024,7 +1024,7 @@ Microsoft competitors in the business software (Lotus and WordPerfect) miss the 
 
 IBM is understandably upset and nopes out of the joint OS/2 development.
 
-Windows will dominate the PC operating system marker for the years to come.
+Windows will dominate the PC operating system market for the years to come.
 </div>
 
 <hr/><hr/><hr/>
