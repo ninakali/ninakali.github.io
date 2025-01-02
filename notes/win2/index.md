@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.04 2025-01-02)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.05 2025-01-02)</p>
 
 
 
@@ -737,7 +737,7 @@ When Windows 1.01 finally ships to end-users, very few of them are excited. Tili
 
 A major selling point for Windows was its capability to run old DOS applications in a window. In theory. In practice, this worked only with the most basic programs, as most software expected to have total control over the computer's resources.
 
-Curiously, many modern sources quote that a significant drawback of Windows 1 was its lack of scalable proportional fonts. This is simply untrue: Helv and Tms Rmn shipped with it are both proportional *and* support sizes from 8 to 48 points (and they look nicer than on Mac starting from version 1.03). Only the interface elements (title bars and text in dialogue boxes) *were* proportional and looked a bit "clunky".
+Curiously, many modern sources quote that a significant drawback of Windows 1 was its lack of scalable proportional fonts. This is simply untrue: Helv and Tms Rmn shipped with it are both proportional *and* support sizes from 8 to 48 points (and they look nicer than on Mac starting from version 1.03). Only the font for interface elements (title bars, menu strips and dialogue boxes) was monospaced and looked a bit "clunky".
 
 A unique feature of Windows that many reviewers, both now and then, are failing to notice is its Graphics Device Interface (GDI). Not only was it built in compliance with ISO/IEC 7942 GKS standard, but it also allows a layer of abstraction between output devices that enables as-close-as-possible representation between different screens and printers. GDI was the magic behind "What you see is what you get", and nailing it was one of the main reasons the Windows release was delayed.
 
@@ -852,6 +852,58 @@ The first release of Windows 2 you could buy off the shelf was bundled with the 
 
 
 > “A couple people were left to maintain the Windows 2.0 code and fix any bugs reported, but the “glory days” of Windows, such as they were, appeared to be dead and gone. Last one out, turn off the lights.” *-- Eller in "Barbarians Led by Bill Gates"*
+
+<details> 
+  <summary>Wait, why does it look so ugly?</summary><div class="cut">
+
+### Colours
+All the display drivers shipped with Windows 2 only support eight colours: black, white, red/green/blue and cyan/magenta/yellow. It is hard to say why exactly, but I have a hypothesis.
+
+The colour displays of the era (EGA and VGA) generally supported a palette of 16 colours, adding two shades of grey, dark red/green/blue, dark cyan/magenta, and dark orange "brown" to the colours you can witness in Windows 2. However, the VGA standard was introduced just 5 months prior to Windows/386; the EGA was still dominating the PC colour graphics market. And the EGA standard has a very peculiar way of storing the images.
+
+![](history/39b_egg.png)
+<p class="imgdesc">A test image.</p>
+
+Let's suppose you have an image, and you want to represent it in the computer memory. You could store the image as the list of colours representing each pixel: 0 for black, 1 for dark grey, and so on until 15 for white. One byte can encode two pixels. That's how VGA and more modern video cards usually store images. So, a 640x400 display in 16 colours will require 640x400/2 bytes of memory - two blocks of 64KB.
+
+Or, you could separate your image into red, green and blue components and store those as zeroes and ones. With three image component "planes", one byte of each plane can store 8 pixels. This means 3x640x400/8 = 96 KB for an image in 8 colours.
+
+![](history/39c_eggrgb.png)
+<p class="imgdesc">An illustration of how image planes might be stored in the computer's memory.</p>
+
+It is possible to represent all theoretically available colours by adding the 4th image plane, "intensity". Some third-party drivers for Windows 2 do that; all Windows 3 drivers support the EGA intensity plane. However, this increases the complexity of the conversion between RGB colours and bits in the video memory.
+
+### Fonts
+
+Windows 1 fonts were not great, and Windows 2 fonts were still not great. They look much thicker and uglier than fonts in Windows 95 and later versions, and there is a reason for that. 
+
+![](history/39d_grey.png)
+
+Since Windows 95, all Windows versions require a display that supports at least 16 colours. This was an unreasonable demand in the era of Windows 2; many computers that ran Windows were using monochrome displays. Windows 95+ can display inactive interface elements as greyed out. Windows 2 had to skip drawing half of the pixels in the font to simulate this effect. To keep the text readable even when faux-grey is applied, each line must be at least two pixels wide.
+
+![](history/39e_cga.png)
+
+And if that doesn't sound bad enough, you should know that many computers only supported rectangular pixels (tall-wide 2:1 ratio), and the font still had to look similar between the two.
+
+Designing a bitmap font for such demands is a difficult task, and Microsoft didn't do a great job here.
+
+### Interface elements
+In the modern era, everyone knows that scrollbars exist for text areas that can be scrolled, so they are hidden. Everyone knows that windows can be resized with a mouse by clicking and dragging the side of a window. It was not common knowledge in the 80s, so the interface elements had to be prominent enough so the user would realise they existed.
+
+### General lack of design knowledge
+Last, and probably the most significant reason for ugliness, is that the general interface design knowledge either did not exist yet or was available only to the selected few. You can tell by comparing MacOS from 1984 with Windows from 1987.
+
+<div class="imgfix512">
+
+![](history/23b_mac.png)
+
+</div>
+
+![](win2live/04_wricalc.png)
+
+Macintosh has a sleek interface because Apple hired interface designers and performed lots of UX research. In 1987's Microsoft, the interface design was left to software engineers who coded the system. Back then, Microsoft had a bit over 1800 employees, while Apple had over 6000.
+
+</div></details>
 
 </div>
 
