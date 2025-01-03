@@ -27,6 +27,15 @@ h1, h2, h3, h4 {
 	font-style: italic;
 }
 
+table {
+	border: 1px;
+	border-style: solid;
+}
+
+th {background-color: #d2d2d2;}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 blockquote {
 	font-style: italic;
 	color: #555;
@@ -34,8 +43,8 @@ blockquote {
 
 .cut {
 	border: 1px; 
-	border-style: 
-	solid; border-radius: 5px; 
+	border-style: solid; 
+	border-radius: 5px; 
 	border-color: #888; 
 	background-color: #E5E5E5; 
 	padding: 10px;

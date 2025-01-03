@@ -27,6 +27,15 @@ h1, h2, h3, h4 {
 	font-style: italic;
 }
 
+table {
+	border: 1px;
+	border-style: solid;
+}
+
+th {background-color: #d2d2d2;}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 blockquote {
 	font-style: italic;
 	color: #555;
@@ -34,8 +43,8 @@ blockquote {
 
 .cut {
 	border: 1px; 
-	border-style: 
-	solid; border-radius: 5px; 
+	border-style: solid; 
+	border-radius: 5px; 
 	border-color: #888; 
 	background-color: #E5E5E5; 
 	padding: 10px;
@@ -71,7 +80,7 @@ blockquote {
 <title>Windows 2: Final Fantasy of operating systems</title>
 <body><div class="post">
 <h1>Windows 2: Final Fantasy of operating systems</h1>
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.06 2025-01-02)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.07 2025-01-03)</p>
 <p>It is common knowledge that Final Fantasy could have been the &quot;final&quot; game for the studio, the first and the last in the series. It is far less known that Windows 2, released around the same time, faced a similar fate. If anything, things were more certain: even Microsoft firmly believed that Windows 2 would be the last.</p>
 <p><img src="win2live/00_iroke.png" alt=""></p>
 <p class="imgdesc">PC Paintbrush and MS Excel were some of the most successful programs for Windows 2.</p>
@@ -270,7 +279,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <div class="post">
 <h2>1981-09 Rumours about Apple Lisa</h2>
 <p><img src="history/09_lisa.png" alt=""></p>
-<p>Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long ago, but was not a common accessory just yet).</p>
+<p>Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long time ago, but was not a common accessory just yet).</p>
 </div>
 <div class="post">
 <h2>1981-09 Microsoft Interface Manager (?)</h2>
@@ -646,6 +655,89 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 <p>All that was left was to ensure that the Windows kernel followed these strict rules for compatibility between the real and protected modes. Easier said than done. Especially when you do not have any insight about the runtime state of the kernel. Modern developers are blessed with emulators, disassemblers and debuggers. During the Windows 2.x days, such tools barely existed. Naturally, Microsoft Visual C and its debugger did not support all 286 and 386 features back then. Sargent's debugger was pivotal.</p>
 <h3>Windows 3.0 Standard mode</h3>
 <p>Now, <strong>this</strong> is the Windows 3.0 Standard Mode. It is a protected-mode kernel that requires at least an Intel 80286 and does not need a kludge of EMS to access the system's memory. The multitasking is still cooperative, but the application's memory can now be protected from bugs, making the system significantly more stable.</p>
+<h3>Windows kernel comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Kernel</th>
+<th>Required CPU</th>
+<th>Supported RAM</th>
+<th>Windows in protected mode</th>
+<th>DOS applications in VM86</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows/386 2.01 - win86.com</td>
+<td>i86</td>
+<td>640kB + EMS</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows 2.03</td>
+<td>i86</td>
+<td>640kB + EMS</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows/286 2.1</td>
+<td>i86</td>
+<td>640kB + EMS + 64kB HMA</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows/386 2.01 - win386.exe</td>
+<td>i386</td>
+<td>640kB + EMS</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Windows 3.0 Real Mode</td>
+<td>i86</td>
+<td>640kB + EMS + 64kB HMA</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows 3.0 Standard Mode</td>
+<td>i286</td>
+<td>16MB</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows 3.1 Standard Mode</td>
+<td>i286</td>
+<td>512MB¹</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Windows 3.0 Enhanced 386 Mode</td>
+<td>i386</td>
+<td>16MB²</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Windows 3.1 Enhanced 386 Mode</td>
+<td>i386</td>
+<td>256MB³</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><em>Notes:</em></p>
+<ol>
+<li>For an i286 computer, the maximum amount of RAM will be limited to 16MB. According to KB Q84388, Windows 3.1 in Standard Mode could use all the memory available by the XMS driver, with a theoretical limit of up to 512MB. Realistically, the LDT table (a RAM map for the MMU) will likely be out of space after allocating 256MB.</li>
+<li>The XMS driver shipped with Windows 3.0 only supports 16 MB. Adding a more advanced XMS driver, for example, QEMM, will make Windows 3.0 &quot;see&quot; up to 256 MB of RAM, but the kernel memory manager does not expect this much memory, and the system will likely hang if over 16 MB of RAM is being used. You can replicate this behaviour by loading two different 2000x2000x24bpp BMP images into Paint.</li>
+<li>Did you notice that Enhanced mode supports less memory than Standard mode? This is due to half of the memory space allocated for virtual memory, says KB Q84388.</li>
+</ol>
 </div></details>  
 </div>
 <div class="post">
@@ -723,6 +815,7 @@ Since 1970, the semiconductor and computer chip industry has kept doubling chip 
 </li>
 <li><a href="https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up">Computerworld 1983-11-07</a></li>
 <li><a href="http://bitsavers.org/components/intel/80286/210498-005_80286_and_80287_Programmers_Reference_Manual_1987.pdf">80286 and 80287 Programmers Reference Manual</a></li>
+<li><a href="https://jeffpar.github.io/kbarchive/kb/084/Q84388/">KB084-Q84388</a></li>
 </ul>
 </div>
 <div class="post">

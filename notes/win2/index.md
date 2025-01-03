@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.06 2025-01-02)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.07 2025-01-03)</p>
 
 
 
@@ -344,7 +344,7 @@ The computer, as expected from an i8088-based one, had a segment memory model. W
 
 ![](history/09_lisa.png)
 
-Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long ago, but was not a common accessory just yet).
+Three years in the works, Apple Lisa starts to get a shape. Rumours about it start spreading around the industry, naming it an upcoming Xerox Star competitor. Journalists are thrilled to learn that it probably will support a mouse (which was invented a long time ago, but was not a common accessory just yet).
 
 </div>
 
@@ -1017,6 +1017,26 @@ All that was left was to ensure that the Windows kernel followed these strict ru
 
 ### Windows 3.0 Standard mode
 Now, **this** is the Windows 3.0 Standard Mode. It is a protected-mode kernel that requires at least an Intel 80286 and does not need a kludge of EMS to access the system's memory. The multitasking is still cooperative, but the application's memory can now be protected from bugs, making the system significantly more stable.
+
+### Windows kernel comparison
+| Kernel | Required CPU | Supported RAM | Windows in protected mode | DOS applications in VM86 |
+--- | --- | --- | --- | --- |
+Windows/386 2.01 - win86.com | i86 | 640kB + EMS | No | No
+Windows 2.03 | i86 | 640kB + EMS | No | No
+Windows/286 2.1 | i86 | 640kB + EMS + 64kB HMA | No | No
+Windows/386 2.01 - win386.exe | i386 | 640kB + EMS | No | Yes
+Windows 3.0 Real Mode | i86 | 640kB + EMS + 64kB HMA | No | No
+Windows 3.0 Standard Mode | i286 | 16MB | Yes | No
+Windows 3.1 Standard Mode | i286 | 512MB¹ | Yes | No
+Windows 3.0 Enhanced 386 Mode | i386 | 16MB² | Yes | Yes
+Windows 3.1 Enhanced 386 Mode | i386 | 256MB³ | Yes | Yes
+
+*Notes:*
+1. For an i286 computer, the maximum amount of RAM will be limited to 16MB. According to KB Q84388, Windows 3.1 in Standard Mode could use all the memory available by the XMS driver, with a theoretical limit of up to 512MB. Realistically, the LDT table (a RAM map for the MMU) will likely be out of space after allocating 256MB.
+2. The XMS driver shipped with Windows 3.0 only supports 16 MB. Adding a more advanced XMS driver, for example, QEMM, will make Windows 3.0 "see" up to 256 MB of RAM, but the kernel memory manager does not expect this much memory, and the system will likely hang if over 16 MB of RAM is being used. You can replicate this behaviour by loading two different 2000x2000x24bpp BMP images into Paint.
+3. Did you notice that Enhanced mode supports less memory than Standard mode? This is due to half of the memory space allocated for virtual memory, says KB Q84388.
+
+
 </div></details>  
 
 </div>
@@ -1117,6 +1137,7 @@ Windows will dominate the PC operating system market for the years to come.
   * [1982](https://books.google.co.uk/books?id=bDAEAAAAMBAJ&pg=PA10&redir_esc=y#v=onepage&q&f=false)
 * [Computerworld 1983-11-07](https://archive.org/details/sim_computerworld_1983-11-07_17_45/page/14/mode/1up)
 * [80286 and 80287 Programmers Reference Manual](http://bitsavers.org/components/intel/80286/210498-005_80286_and_80287_Programmers_Reference_Manual_1987.pdf)
+* [KB084-Q84388](https://jeffpar.github.io/kbarchive/kb/084/Q84388/)
 </div>
 
 <div class="post">
