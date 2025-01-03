@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.05 2025-01-02)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.06 2025-01-02)</p>
 
 
 
@@ -110,7 +110,7 @@ The list is non-exhaustive, and even misses some major pieces of software (Corel
 <p class="imgdesc">XVT Draw is a shareware vector editor. It feels much faster than Illustrator or DRAW!</p>
 
 ![win2live/24_opusmidi.png](win2live/24_opusmidi.png)
-<p class="imgdesc">Opus Composer, also known as WinSong, was made for Windows 1, but it is slightly more useable on Windows 2. The full version of the progam comes with MIDI support.</p>
+<p class="imgdesc">Opus Composer, also known as WinSong, was made for Windows 1, but it is slightly more useable on Windows 2. The full version of the program comes with MIDI support.</p>
 
 ![win2live/25_opustape.png](win2live/25_opustape.png)
 <p class="imgdesc">Opus Tapedeck is a counterpart for Opus Composer that works just as a player utility.</p>
@@ -292,7 +292,7 @@ It looks like a regular spreadsheet app, yes, but there is no mouse support, and
 ![](history/05_5_parc.jpg)
 <p class="imgdesc">Xerox Palo Alto Research Centre, or PARC.</p>
 
-Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox'es patents.
+Steve Jobs sees Xerox Alto in Xerox PARC, and becomes obsessed with graphical interfaces. Shortly after, he strucks a deal with Xerox, where Xerox could buy a chunk of Apple stock in exchange for Xerox's patents.
 
 > I was so blinded by the first thing they showed me, which was the graphical user interface. I thought it was the best thing I’d ever seen in my life. Now remember it was very flawed. What we saw was incomplete, they’d done a bunch of things wrong, but we didn’t know that at the time. But still \[we] thought they had the germ of the idea\[, it] was there and they’d done it very well. And within – you know – ten minutes it was obvious to me that all computers would work like this some day. It was obvious. You could argue about how many years it would take. You could argue about who the winners and losers might be. You could’t argue about the inevitability, it was so obvious. *-- Steve Jobs, interview for "Triumph of the Nerds"*
 
@@ -395,11 +395,11 @@ The command strip bar at the bottom of the screen was considered quite user-frie
 
 <div class="post">
 
-## 1982-11 VisiCorp presents VisiOn on COMDEX
+## 1982-11 VisiCorp presents Visi On on COMDEX
 
 ![](history/13_vision.jpg)
 
-A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one). Some go as far as to claim that Gates wanted to copy VisiOn, but this is unlikely: he already had people with Xerox PARC experience working on a graphical interface, and even put a Xerox Star in the office to "inspire" other engineers.
+A demo of Visi On, the graphical multi-tasking shell by VisiCorp, is a smash hit on the biggest PC conference COMDEX. Multiple sources quote that it influenced Bill Gates to prioritise work on what later will become "Windows", but it is unclear whether he was inspired or outraged. Perhaps, he was not comfortable with VisiCorp entering his home turf, operating systems (despite Microsoft just entering the VisiCorp's one). Some go as far as to claim that Gates wanted to copy Visi On, but this is unlikely: he already had people with Xerox PARC experience working on a graphical interface, and even put a Xerox Star in the office to "inspire" other engineers.
 
 </div>
 
@@ -410,7 +410,7 @@ A demo of VisiOn, the graphical multi-tasking shell by VisiCorp, is a smash hit 
 
 ![](history/14_sun1.jpg)
 
-Star, Lisa, and now VisiOn created sort of a "user interface fever", it seems. Even Sun Microsystems begins working on a Sun Window System for its pricey computer Sun-1. Sun-1 was a "workstation", kind of a super beefy computer for science, technology and networking.
+Star, Lisa, and now Visi On created sort of a "user interface fever", it seems. Even Sun Microsystems begins working on a Sun Window System for its pricey computer Sun-1. Sun-1 was a "workstation", kind of a super beefy computer for science, technology and networking.
 
 </div>
 
@@ -436,15 +436,15 @@ Despite the praise, the series was a commercial failure, likely due to its high 
 
 ![](history/16_pcmag83.jpg)
 
-If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, they proclaim "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame. A big feature of the February issue is not-yet released VisiOn which is going to be all about the mouse.
+If you skim over PC Magazine from 1982, you are more likely to find a mention of Mickey Mouse than a "mouse" as a pointer device. The next year, though, they proclaim "The Year of Mouse on PC". The actual year of mouse in the Lunar calendar was actually 1984, what a shame. A big feature of the February issue is not-yet released Visi On which is going to be all about the mouse.
 
 >  This issue marks the unofficial IBM debut of California’s second-most famous rodent: the computer mouse. (Mickey and Minnie’s first-born, "Micro”?) *-- PC Mag, February 1983*
 
 > ...menu-driven systems as Apple’s new Lisa or the Xerox 8010 (better known as the “Star”) have, in fact, elevated the mouse's status from a laboratory curiosity to rodent stardom. *-- "The Tale Of The Mouse", PC Mag, 02/83*
 
-> You simply point to what you want to do by using a mouse... VisiOn handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... *-- "VisiOn, a mouse on the digital desktop", PC Mag, 02/83*
+> You simply point to what you want to do by using a mouse... Visi On handles windows on the screen in a way that makes it look as if one piece of paper is on top of another... *-- "Visi On, a mouse on the digital desktop", PC Mag, 02/83*
 
-The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse Systems was responsible for Sun's mice, and was the first company to offer a mouse for PC. Naturally, VisiOn is expected to use Mouse Systems as well.
+The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse Systems was responsible for Sun's mice, and was the first company to offer a mouse for PC. Naturally, Visi On is expected to use Mouse Systems as well.
 
 </div>
 
@@ -456,7 +456,7 @@ The magazine mentions a multitude of vendors, most notably, Mouse Systems. Mouse
 ![](history/16_5_ms.png)
 <p class="imgdesc">New Microsoft logo from around that time.</p>
 
-According to "Barbarians led by Bill Gates" by Eller, somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy VisiOn and reverse-engineer Xerox Star. The result of a few months of work, a demo called "Interface Manager", was presented internally in April 1983.
+According to "Barbarians led by Bill Gates" by Eller, somewhere around late 1982, a small team of engineers at Microsoft was tasked to copy Visi On and reverse-engineer Xerox Star. The result of a few months of work, a demo called "Interface Manager", was presented internally in April 1983.
 
 </div>
 
@@ -517,7 +517,7 @@ Curiously, the article was only published in December 1983, after the COMDEX.
 
 ![](history/20_comdexwin.jpg)
 
-While VisiOn is behind the schedule, with release announced, but disks not quite hitting the shelves just yet, Microsoft hijacks COMDEX with a guerilla promotion campaign for Microsoft Windows. As some sources say, Microsoft ordered thousands of pillowcases promoting Windows and placed them in hotels around the conference. Just about every person near COMDEX now knows what Windows is and how much better it will be compared to VisiOn.
+While Visi On is behind the schedule, with release announced, but disks not quite hitting the shelves just yet, Microsoft hijacks COMDEX with a guerrilla promotion campaign for Microsoft Windows. As some sources say, Microsoft ordered thousands of pillowcases promoting Windows and placed them in hotels around the conference. Just about every person near COMDEX now knows what Windows is and how much better it will be compared to Visi On.
 
 The demo is still smoke and mirrors, but the scrollbars (on the left side of the window!) are back. Each window now has a menu strip, and there are drop-down menus, just like on Lisa. All for just $99, and it will run on your $1,500 (plus mouse) PC.
 
@@ -549,7 +549,7 @@ Sunwindows and Appolo Domain were just a few examples of people trying to make a
 
 The mammoth is finally released, and no one is impressed. Visi On is $999, slow, memory-hungry, and requires a hard disk. With all the add-ons needed to run it, the total cost of the PC is getting close to 3/4 of Apple Lisa, for a much poorer experience. Third-party app developers were expected to invest in a $20,000 DEC computer to run the cross-compiler for Visi On.
 
-The system was doomed and had no software released except the one VisiCorp shipped with it originally. The company lost many key developers during the work on VisiOn due to poor management and went under shortly after the release. 
+The system was doomed and had no software released except the one VisiCorp shipped with it originally. The company lost many key developers during the work on Visi On due to poor management and went under shortly after the release. 
 
 </div>
 
@@ -601,7 +601,7 @@ IBM decided to release their own windowing interface, to the dismay of Microsoft
 
 ![](history/26_gem1.png)
 
-A year after the triumphant Windows reveal, and good ten months after Macinstosh. Windows was supposed to ship months ago, but is still nowhere to be seen. Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.
+A year after the triumphant Windows reveal, and good ten months after Macintosh. Windows was supposed to ship months ago, but is still nowhere to be seen. Digital Research presents a clone of Macintosh that runs on IBM PC. Even Steve Jobs seeminly praised the system.
 
 <details> 
   <summary>Digital Research? Should I have known about them?</summary><div class="cut">
@@ -840,7 +840,7 @@ The amount of free memory is now 48 KB.  Program B wants to allocate, let's say,
 
 ![](history/38_excel2.png)
 
-The first release of Windows 2 you could buy off the shelf was bundled with the very first Excel for IBM PC in October 1987. This arrangment was not particularly uncommon back in the days: Aldus shipped its Pagemaker bundled with Windows 1 for quite some time. Such version of Windows were called "runtime", and did not have the standard Windows accessories.
+The first release of Windows 2 you could buy off the shelf was bundled with the very first Excel for IBM PC in October 1987. This arrangement was not particularly uncommon back in the days: Aldus shipped its Pagemaker bundled with Windows 1 for quite some time. Such version of Windows were called "runtime", and did not have the standard Windows accessories.
 
 </div>
 
@@ -910,7 +910,7 @@ Macintosh has a sleek interface because Apple hired interface designers and perf
 
 <div class="post">
 
-## 1988-03 Apple files a lawsuit againt Microsoft for patent violation in Windows 2
+## 1988-03 Apple files a lawsuit against Microsoft for patent violation in Windows 2
 
 ![](history/40_newwave.png)
 <p class="imgdesc">HP NewWave, a shell for Windows 2.</p> 
@@ -1085,9 +1085,9 @@ Windows will dominate the PC operating system market for the years to come.
 
 ## Acknowledgments
 * Thank you for reading. It was a very long story! I hope you liked it. If you have any questions or comments, please let me know. You can leave a comment in [Mastodon](https://tech.lgbt/@nina_kali_nina/113749698753812898) or create a GitHub issue.
-* I am infinitely grateful to my fianceé for her endless patience with me while I was writing this document.
+* I am infinitely grateful to my fiancée for her endless patience with me while I was writing this document.
 * This document would not exist without advice from Michal Necasek of [os2museum](https://www.os2museum.com/wp/author/michaln/) and David Simunič of [krnl386](https://win1.krnl386.com/about.php) regarding drivers for ancient Windows version.
-* My interest in operating systems started with systems' *interfaces*. [ToastyTech](http://toastytech.com/guis/) was alwasy a source of inspiration for me.
+* My interest in operating systems started with systems' *interfaces*. [ToastyTech](http://toastytech.com/guis/) was always a source of inspiration for me.
 * It would be very difficult if not impossible to produce some of the illustrations without kind people archiving old things at [archive.org](https://archive.org/). 
 
 </div>
