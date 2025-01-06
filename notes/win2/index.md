@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2: Final Fantasy of operating systems
-<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.07 2025-01-03)</p>
+<p class="by">by Nina Kalinina, December 31st, 2024 (rev. 1.08 2025-01-06)</p>
 
 
 
@@ -704,12 +704,16 @@ When GEM 2 is released, there are no overlapping windows anymore. It looks like 
 
 ## Interlude: a shell or an operating system?
 
+Both today and four decades ago, the simplest way to explain an "operating system" to someone was to say that it is a program that allows you to run other programs. This definition, however, misses an important nuance. Some programs like this can be installed on a pristine computer and thus truly can be called "operating systems". Some programs require you to have an operating system installed first, and, more often than not, they are not strictly necessary but are merely convenient ways to run programs. Such programs were called "shells".
+
 For at least a decade since the release of Windows, computer science purists have debated whether Windows is an operating system or merely an *operating shell*. Sure, it looks nothing like MS-DOS, and it offers many features that DOS simply does not have, like multitasking or a graphical interface, and has a driver subsystem. However, Windows would require MS-DOS to be installed on the computer for a very long time. Perhaps due to this, Microsoft itself called Windows an "Operating Environment".
 
 For an end user, this trivia does not matter. Sure, Windows 95 boots on top of a custom MS-DOS kernel, but it looks and feels exactly like its look-alike Windows NT4 that runs on top of its own kernel. So, for this article, let's consider all Windows versions operating "systems". 
 
 ![](history/32a_ntornot.png)
 <p class="imgdesc">Can you tell, looking at the screenshot, whether it is an operating system (Windows NT) or an operating shell on top of MS-DOS (Windows 95)?</p>
+
+Curiously, Windows itself has a shell. Early versions had a shell called MS-DOS executive, then it was Program Manager, and starting from Windows 95, it was the "new shell", or simply "the shell."
 
 </div>
 
