@@ -1,0 +1,41 @@
+body { 
+  max-width: 800px; margin:40px auto; font-family: Arial, Helvetica, sans-serif;
+  background: lightgrey; padding: 5px;
+  border-radius: 5px;
+}
+
+.patternfield {
+  border: 1px; border-style: solid; border-color: #888;
+  margin: 5px; padding: 10px 10px 10px 10px;
+  border-radius: 5px; background-color: #DDD;
+}
+
+.chan {
+  border: 1px; border-style: solid; border-color: #888;
+  margin: 5px; padding: 10px 10px 10px 10px;
+  border-radius: 5px; background-color: #DDD;
+  max-width: 250px;
+  z-index: 10;  
+  position:fixed;
+  right: 100px;  
+  top: 100px;
+}
+
+.pattern th {background-color: #828282;}
+
+.pattern tr:nth-child(even) {background-color: #c2c2c2;}
+
+.pattern {
+  border-collapse: collapse;
+  border: solid 1px #111;
+  font-family: 'Courier New', monospace;
+}
+
+.pattern th {
+  border-right: solid 1px #111; 
+  border-left: solid 1px #111;
+}
+
+td:nth-child(2n+1) {
+  border-right: solid 1px #111; 
+}
