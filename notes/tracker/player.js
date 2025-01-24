@@ -12,7 +12,6 @@ var curchan = 0;
 var toneWaveform = new Tone.Waveform();
 
 // TODO
-// 2. UI to change channel type - Synth, MembraneSynth and MetalSynth
 // 3. Volume support
 
 var synths = [];
@@ -74,23 +73,31 @@ function disconnect_waveform(chan) {
     synths[chan].disconnect(toneWaveform);
 }
 
-function map_properties() {
+function map_properties(ch) {
+    if (ch == null) {
+        ch = curchan;
+    }
+
     document.getElementById("channum").innerHTML = curchan;
 
-    document.getElementById("attack").value = synths[curchan].envelope.attack;
-    document.getElementById("at").innerHTML = synths[curchan].envelope.attack;
+    document.getElementById("waveshape").value = synths[curchan].type;
 
-    document.getElementById("decay").value = synths[curchan].envelope.decay;
-    document.getElementById("de").innerHTML = synths[curchan].envelope.decay;
+    document.getElementById("attack").value = synths[ch].envelope.attack;
+    document.getElementById("at").innerHTML = synths[ch].envelope.attack;
 
-    document.getElementById("sustain").value = synths[curchan].envelope.sustain;
-    document.getElementById("su").innerHTML = synths[curchan].envelope.sustain;
+    document.getElementById("decay").value = synths[ch].envelope.decay;
+    document.getElementById("de").innerHTML = synths[ch].envelope.decay;
 
-    document.getElementById("release").value = synths[curchan].envelope.release;
-    document.getElementById("re").innerHTML = synths[curchan].envelope.release;
+    document.getElementById("sustain").value = synths[ch].envelope.sustain;
+    document.getElementById("su").innerHTML = synths[ch].envelope.sustain;
 
-    document.getElementById("duration").value = synths[curchan].sustaindur;
-    document.getElementById("du").innerHTML = synths[curchan].sustaindur;
+    document.getElementById("release").value = synths[ch].envelope.release;
+    document.getElementById("re").innerHTML = synths[ch].envelope.release;
+
+    console.log(synths[ch].sustaindur);
+
+    document.getElementById("duration").value = synths[ch].sustaindur;
+    document.getElementById("du").innerHTML = synths[ch].sustaindur;
 
 }
 
@@ -133,6 +140,77 @@ function adj(opt) {
     map_properties(); // update the numeric representation of the value
 }
 
+function setshape() {
+    newtype = document.getElementById("waveshape").value
+    if (synths[curchan].type == "noise") {
+        disconnect_waveform(curchan);
+        en = synths[curchan].envelope;
+        len = synths[curchan].sustaindur;
+        synths[curchan] = new Tone.Synth().toDestination();
+        synths[curchan].envelope.attack = en.attack;
+        synths[curchan].envelope.decay = en.decay;
+        synths[curchan].envelope.sustain = en.sustain;
+        synths[curchan].envelope.release = en.release;
+        synths[curchan].sustaindur = len;
+        connect_waveform(curchan);
+        synths[curchan].oscillator.type = newtype;
+        synths[curchan].type = newtype;
+    } else {
+        if (newtype != "noise") {
+            synths[curchan].oscillator.type = newtype;
+            synths[curchan].type = newtype;
+        } else {
+            disconnect_waveform(curchan);
+            en = synths[curchan].envelope;
+            len = synths[curchan].sustaindur;
+            synths[curchan] = new Tone.MetalSynth().toDestination();
+            synths[curchan].envelope.attack = en.attack;
+            synths[curchan].envelope.decay = en.decay;
+            synths[curchan].envelope.sustain = en.sustain;
+            synths[curchan].envelope.release = en.release;
+            synths[curchan].sustaindur = len;
+            connect_waveform(curchan);
+            synths[curchan].type = newtype;
+        }
+    }
+}
+
+function load_patches(state) {
+    inst = JSON.parse(atob(state));
+    disconnect_waveform(curchan);
+    for (var ch = 0; ch <= MAX_CH; ch++) {
+        type = inst[ch][0];
+        if (type == "noise") {
+            synths[ch] = new Tone.MetalSynth().toDestination();
+        } else {
+            synths[ch] = new Tone.Synth().toDestination();
+        }
+        synths[ch].type = type;
+        synths[ch].envelope.attack = Number(inst[ch][1]);
+        synths[ch].envelope.decay = Number(inst[ch][2]);
+        synths[ch].envelope.sustain = Number(inst[ch][3]);
+        synths[ch].envelope.release = Number(inst[ch][4]);
+        synths[ch].sustaindur = Number(inst[ch][5]);
+    }
+    connect_waveform(curchan);
+    map_properties();
+}
+
+function save_patches() {
+    inst = []
+    for (var ch = 0; ch <= MAX_CH; ch++) {
+        inst.push([
+            synths[ch].type,
+            synths[ch].envelope.attack,
+            synths[ch].envelope.decay,
+            synths[ch].envelope.sustain,
+            synths[ch].envelope.release,
+            synths[ch].sustaindur
+        ])
+    }
+    return btoa(JSON.stringify(inst))
+}
+
 function gen_pattern(with_vol, with_controls) {
     out = ""
     if (with_controls) {
@@ -142,11 +220,11 @@ function gen_pattern(with_vol, with_controls) {
         <button onclick="chanchange(2)">&gt;</button><br/>\
         <div id="waveform"></div>\
         <div id="knobs">\
-        Shape: <select name="waveshape" id="waveshape">\
+        Shape: <select onchange="setshape()" name="waveshape" id="waveshape">\
           <option value="triangle">Triangle</option>\
           <option value="sine">Sine</option>\
           <option value="square">Square</option>\
-          <option value="noise">Noise</option>\
+          <option value="noise">Complex Noise</option>\
         </select><br/>\
 		A: <input type="range" onchange="adj(1)" id="attack" name="attack" min="0" max="2" step="0.01">\
 		<i id="at">0.01</i><br/>\
@@ -283,7 +361,6 @@ function makeSound(ch, wh, vol) {
         synths[ch].triggerRelease(now);
     } else {
         dur = Number(synths[ch].sustaindur)
-        console.log(dur);
         synths[ch].triggerAttackRelease(wh.replace("-", ""), dur);
     }
 
@@ -317,7 +394,7 @@ function play_or_stop() {
     }
 }
 
-function activate(with_vol, with_controls) {
+function main(with_vol, with_controls) {
 
     document.write(gen_pattern(with_vol, with_controls))
     waveform({
