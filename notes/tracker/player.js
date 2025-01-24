@@ -1,16 +1,25 @@
-const MAX_LINES = 63;
-const MAX_CH = 7;
+// This code is NOT great. It is pieced from different components and different styles,
+// as it is meant to be disposable, quickly prototypable, so it is OK it uses lots of
+// questionable decisions. It is never meant to be a proper tracker.
+
+var MAX_LINES = 63;
+var MAX_CH = 7;
 
 var cursor = [0, 0];
 
+var curchan = 0;
+
+var toneWaveform = new Tone.Waveform();
+
 // TODO
-// 1. UI to control/tweak channels
 // 2. UI to change channel type - Synth, MembraneSynth and MetalSynth
 // 3. Volume support
 
 var synths = [];
 for (i = 0; i < MAX_CH + 1; i++) {
     synths.push(new Tone.Synth().toDestination())
+    synths[i].type = "sine";
+    synths[i].oscillator.type = "sine";
 }
 
 document.addEventListener("click", function(e) {
@@ -26,20 +35,92 @@ document.addEventListener("click", function(e) {
     }
 })
 
+function connect_waveform(chan) {
+    synths[chan].connect(toneWaveform);
+}
+
+function disconnect_waveform(chan) {
+    synths[chan].disconnect(toneWaveform);
+}
+
+function map_properties() {
+    document.getElementById("channum").innerHTML = curchan;
+
+    document.getElementById("attack").value = synths[curchan].envelope.attack;
+    document.getElementById("at").innerHTML = synths[curchan].envelope.attack;
+
+    document.getElementById("decay").value = synths[curchan].envelope.decay;
+    document.getElementById("de").innerHTML = synths[curchan].envelope.decay;
+
+    document.getElementById("sustain").value = synths[curchan].envelope.sustain;
+    document.getElementById("su").innerHTML = synths[curchan].envelope.sustain;
+
+    document.getElementById("release").value = synths[curchan].envelope.release;
+    document.getElementById("re").innerHTML = synths[curchan].envelope.release;
+
+}
+
+function chanchange(dir) {
+    if (dir == 1) { // left
+        if (curchan > 0) {
+            disconnect_waveform(curchan);
+            curchan -= 1;
+            map_properties();
+            connect_waveform(curchan);
+        }
+    } else { //right
+        if (curchan < MAX_CH) {
+            disconnect_waveform(curchan);
+            curchan += 1;
+            map_properties();
+            connect_waveform(curchan);
+        }
+    }
+}
+
+function adj(opt) {
+    switch (opt) {
+        case 1:
+            synths[curchan].envelope.attack = document.getElementById("attack").value;
+            break;
+        case 2:
+            synths[curchan].envelope.decay = document.getElementById("decay").value;
+            break;
+        case 3:
+            synths[curchan].envelope.sustain = document.getElementById("sustain").value;
+            break;
+        case 4:
+            synths[curchan].envelope.release = document.getElementById("release").value;
+            break;
+    }
+    map_properties(); // update the numeric representation of the value
+}
+
 function gen_pattern(with_vol, with_controls) {
     out = ""
     if (with_controls) {
-        out += '<p class="chan">\
-		<b>Channel 1</b><br/>\
-		A: <input type="range" id="attack" name="attack" min="0" max="2" step="0.01">\
+        out += '<div class="chan">\
+		<button onclick="chanchange(1)">&lt;</button>\
+        <b>Channel <i id="channum">1</i> settings</b>\
+        <button onclick="chanchange(2)">&gt;</button><br/>\
+        <div id="waveform"></div>\
+        <div id="knobs">\
+        Shape: <select name="waveshape" id="waveshape">\
+          <option value="triangle">Triangle</option>\
+          <option value="sine">Sine</option>\
+          <option value="square">Square</option>\
+          <option value="noise">Noise</option>\
+        </select><br/>\
+		A: <input type="range" onchange="adj(1)" id="attack" name="attack" min="0" max="2" step="0.01">\
 		<i id="at">0.01</i><br/>\
-		D: <input type="range" id="decay" name="decay" min="0" max="2" step="0.01">\
+		D: <input type="range" onchange="adj(2)" id="decay" name="decay" min="0" max="2" step="0.01">\
 		<i id="de">0.01</i><br/>\
-		S: <input type="range" id="sustain" name="sustain" min="0" max="2" step="0.01">\
+		S: <input type="range" onchange="adj(3)" id="sustain" name="sustain" min="0" max="1" step="0.01">\
 		<i id="su">0.01</i><br/>\
-		R: <input type="range" id="release" name="release" min="0" max="5" step="0.04">\
+		R: <input type="range" onchange="adj(4)" id="release" name="release" min="0" max="5" step="0.04">\
 		<i id="re">0.01</i><br/>\
-	</p>'
+        </div>\
+	</div>'
     }
 
 
@@ -118,7 +199,8 @@ function put_note(l, ch, pitch) {
         document.getElementById(`pat${l}_${ch}`).innerHTML = "OFF";
     } else {
         document.getElementById(`pat${l}_${ch}`).innerHTML = pitch.toUpperCase().padEnd(2, "-") + octave.toString();
-        synths[ch].triggerAttackRelease(pitch.toUpperCase() + octave.toString(), "0.5");
+        dur = Number(synths[ch].envelope.attack) + Number(synths[ch].envelope.decay) + Number(synths[ch].envelope.release)
+        synths[ch].triggerAttackRelease(pitch.toUpperCase() + octave.toString(), dur);
     }
 }
 
@@ -153,17 +235,17 @@ function update_bpm(bpm) {
 
 playing = false;
 
-var playInterval = [null]; //tood
+var playInterval = [null]; // blerg
 
 function makeSound(ch, wh, vol) {
-    const now = Tone.now();
     if (wh == "...") {
         // nothing
     } else if (wh == "OFF") {
         synths[ch].triggerRelease(now);
     } else {
-
-        synths[ch].triggerAttack(wh.replace("-", ""), now);
+        dur = Number(synths[ch].envelope.attack) + Number(synths[ch].envelope.decay) + Number(synths[ch].envelope.release)
+        console.log(dur);
+        synths[ch].triggerAttackRelease(wh.replace("-", ""), dur);
     }
 
 }
@@ -199,6 +281,13 @@ function play_or_stop() {
 function activate(with_vol, with_controls) {
 
     document.write(gen_pattern(with_vol, with_controls))
+    waveform({
+        tone: toneWaveform,
+        parent: document.querySelector("#waveform"),
+    });
+
+    map_properties();
+    connect_waveform(curchan);
 
     highlight(cursor[0], cursor[1]);
 
@@ -273,6 +362,7 @@ function activate(with_vol, with_controls) {
                 play_or_stop();
             } else {
                 if (event.key.toLowerCase() in notes) {
+                    event.preventDefault(); // stop space to scroll!
                     put_note(cursor[0], cursor[1], notes[event.key.toLowerCase()])
                     unhighlight(cursor[0], cursor[1]);
                     if (cursor[0] < MAX_LINES) cursor[0] += 1;
@@ -286,12 +376,4 @@ function activate(with_vol, with_controls) {
         }
     });
 
-}
-
-function play() {
-    const synth = new Tone.Synth().toDestination();
-    const now = Tone.now();
-    // trigger the attack immediately
-    synth.triggerAttack("C4", now);
-    synth.triggerRelease(now + 1);
 }

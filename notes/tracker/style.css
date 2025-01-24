@@ -14,11 +14,26 @@ body {
   border: 1px; border-style: solid; border-color: #888;
   margin: 5px; padding: 10px 10px 10px 10px;
   border-radius: 5px; background-color: #DDD;
-  max-width: 250px;
+  max-width: 300px;
   z-index: 10;  
   position:fixed;
   right: 100px;  
   top: 100px;
+  font-family: 'Courier New', monospace;
+}
+
+#knobs {
+    font-family: 'Courier New', monospace;
+    line-height: 1.8;
+    vertical-align: middle;
+}
+
+input[type=range] {
+  vertical-align: middle;
+}
+
+#waveform {
+  padding: 10px 10px 10px 10px;
 }
 
 .pattern th {background-color: #828282;}
