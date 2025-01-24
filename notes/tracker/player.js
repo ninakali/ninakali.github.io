@@ -16,8 +16,9 @@ var toneWaveform = new Tone.Waveform();
 // 3. Volume support
 
 var synths = [];
-for (i = 0; i < MAX_CH + 1; i++) {
+for (i = 0; i <= MAX_CH; i++) {
     synths.push(new Tone.Synth().toDestination())
+    synths[i].sustaindur = 0.5;
     synths[i].type = "sine";
     synths[i].oscillator.type = "sine";
 }
@@ -34,6 +35,36 @@ document.addEventListener("click", function(e) {
         }
     }
 })
+
+function save_pattern() {
+    state = []
+
+    for (var ch = 0; ch <= MAX_CH; ch++) {
+        state.push([]);
+        for (var l = 0; l <= MAX_LINES; l++) {
+            pitch = document.getElementById(`pat${l}_${ch}`).innerHTML;
+            volume = document.getElementById(`pat${l}_${ch}_vol`).innerHTML;
+            state[state.length - 1].push([pitch, volume]);
+        }
+    }
+
+    return btoa(JSON.stringify(state));
+}
+
+function load_pattern(state) {
+    state = JSON.parse(atob(state));
+
+    for (var ch = 0; ch <= MAX_CH; ch++) {
+        for (var l = 0; l <= MAX_LINES; l++) {
+            pitch = state[ch][l][0];
+            volume = state[ch][l][1];
+            document.getElementById(`pat${l}_${ch}`).innerHTML = pitch;
+            document.getElementById(`pat${l}_${ch}_vol`).innerHTML = volume;
+        }
+    }
+}
+
+
 
 function connect_waveform(chan) {
     synths[chan].connect(toneWaveform);
@@ -57,6 +88,9 @@ function map_properties() {
 
     document.getElementById("release").value = synths[curchan].envelope.release;
     document.getElementById("re").innerHTML = synths[curchan].envelope.release;
+
+    document.getElementById("duration").value = synths[curchan].sustaindur;
+    document.getElementById("du").innerHTML = synths[curchan].sustaindur;
 
 }
 
@@ -92,6 +126,9 @@ function adj(opt) {
         case 4:
             synths[curchan].envelope.release = document.getElementById("release").value;
             break;
+        case 5:
+            synths[curchan].sustaindur = document.getElementById("duration").value;
+            break;
     }
     map_properties(); // update the numeric representation of the value
 }
@@ -119,6 +156,8 @@ function gen_pattern(with_vol, with_controls) {
 		<i id="su">0.01</i><br/>\
 		R: <input type="range" onchange="adj(4)" id="release" name="release" min="0" max="5" step="0.04">\
 		<i id="re">0.01</i><br/>\
+        L: <input type="range" onchange="adj(5)" id="duration" name="duration" min="0" max="2" step="0.01">\
+        <i id="du">0.01</i><br/>\
         </div>\
 	</div>'
     }
@@ -131,7 +170,7 @@ function gen_pattern(with_vol, with_controls) {
   <tr>\
   	<th>x</th>'
 
-    for (var c = 0; c < MAX_CH + 1; c++) {
+    for (var c = 0; c <= MAX_CH; c++) {
         out += `<th colspan=2>Ch ${c}</th>`
     }
     out += '</tr>'
@@ -139,7 +178,7 @@ function gen_pattern(with_vol, with_controls) {
         out += `<tr id="pat_l${i}">\n`
         line = i.toString().padStart(2, "0")
         out += `<td>${line}</td>`
-        for (var c = 0; c < MAX_CH + 1; c++) {
+        for (var c = 0; c <= MAX_CH; c++) {
             out += `<td id="pat${i}_${c}">...</td>`
             if (with_vol) {
                 out += `<td id="pat${i}_${c}_vol">..</td>`
@@ -199,7 +238,7 @@ function put_note(l, ch, pitch) {
         document.getElementById(`pat${l}_${ch}`).innerHTML = "OFF";
     } else {
         document.getElementById(`pat${l}_${ch}`).innerHTML = pitch.toUpperCase().padEnd(2, "-") + octave.toString();
-        dur = Number(synths[ch].envelope.attack) + Number(synths[ch].envelope.decay) + Number(synths[ch].envelope.release)
+        dur = Number(synths[ch].sustaindur)
         synths[ch].triggerAttackRelease(pitch.toUpperCase() + octave.toString(), dur);
     }
 }
@@ -243,7 +282,7 @@ function makeSound(ch, wh, vol) {
     } else if (wh == "OFF") {
         synths[ch].triggerRelease(now);
     } else {
-        dur = Number(synths[ch].envelope.attack) + Number(synths[ch].envelope.decay) + Number(synths[ch].envelope.release)
+        dur = Number(synths[ch].sustaindur)
         console.log(dur);
         synths[ch].triggerAttackRelease(wh.replace("-", ""), dur);
     }
@@ -256,7 +295,7 @@ function playTimer() {
     setTimeout(function() {
         unhighlight_line(l);
     }, 15000 / bpm);
-    for (var ch = 0; ch < MAX_CH + 1; ch++) {
+    for (var ch = 0; ch <= MAX_CH; ch++) {
         makeSound(ch, document.getElementById(`pat${l}_${ch}`).innerHTML, null)
     }
     cursor[0] += 1;
@@ -267,7 +306,7 @@ function play_or_stop() {
     const now = Tone.now();
     if (playing) {
         if (playInterval[0]) clearInterval(playInterval[0]);
-        for (var i = 0; i < MAX_CH + 1; i++) synths[i].triggerRelease(now);
+        for (var i = 0; i <= MAX_CH; i++) synths[i].triggerRelease(now);
         unhighlight_line(cursor[0]);
         highlight(cursor[0], cursor[1]);
         playing = false;
