@@ -1,0 +1,55 @@
+<html>
+<script src="tone.js"></script>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<button id="play">play</button>
+
+<script>
+
+const play = document.querySelector("#play");
+
+const player = new Tone.Player().toDestination();
+player.loop = true;
+
+play.onclick = () => {
+
+	const renderingPromise = Tone.Offline(({ transport }) => {
+		const  channel = new Tone.Channel().toDestination();
+
+		const synthA = new Tone.Synth({
+			envelope: {
+				attack: 0.01,
+				decay: 5,
+				sustain: 0,
+			},
+			oscillator: {
+				type: "sawtooth4",
+			},
+		}).connect(channel);
+
+		const seqA = new Tone.Sequence(
+			(time, note) => {
+				synthA.triggerAttack(note, time);
+			},
+			["A4", null, "G4", null, "G#4", "F#4", "E4", "A4", null, "G4", null, "G#4", "F#4", "E4"],
+			"8n"
+		).start(0);
+		seqA.loop = false;
+
+		transport.bpm.value = 150;
+		transport.start();
+
+		return channel.ready;
+	}, 4);
+
+	renderingPromise.then((buffer) => (player.buffer = buffer))
+	renderingPromise.then(() => (player.start(Tone.now(), 1)));
+};
+
+
+</script>
+
+
+</body>
+</html>

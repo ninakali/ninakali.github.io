@@ -9,10 +9,16 @@ var cursor = [0, 0];
 
 var curchan = 0;
 
-var toneWaveform = new Tone.Waveform();
-
 // TODO
+// 0. playback: add two copies of the lines, add a loop segment for the second copy to simulate real synth/patterns
+// 1. live editing: delete "live" synths, replace with on-demand single-trigger synth
+// 2. preview: get audiobuffer and render manually
 // 3. Volume support
+// 4. changing channels on the pattern should change channels in the instrument tool
+// 6. loading instruments somehow breaks the type of the instrument / doesn't really load it properly 
+// - missed correct type load, should be fixed in 0/1 but double-check
+// 7. new UI for playback and octave/bpm
+// 8. mini-keyboard UI
 
 var synths = [];
 for (i = 0; i <= MAX_CH; i++) {
@@ -50,6 +56,63 @@ function save_pattern() {
     return btoa(JSON.stringify(state));
 }
 
+
+const player = new Tone.Player().toDestination();
+player.loop = true;
+
+function render_and_play() {
+    const renderingPromise = Tone.Offline(({
+        transport
+    }) => {
+        const channel = new Tone.Channel().toDestination();
+
+        for (var ch = 0; ch <= MAX_CH; ch++) {
+            var synth = null;
+            if (synths[ch].type == "noise") {
+                synth = new Tone.MetalSynth().connect(channel);
+            } else {
+                synth = new Tone.Synth().connect(channel);
+            }
+
+            // TODO: set oscillator type if needed
+            synth.envelope.attack = synths[ch].envelope.attack
+            synth.envelope.decay = synths[ch].envelope.decay
+            synth.envelope.sustain = synths[ch].envelope.sustain
+            synth.envelope.release = synths[ch].envelope.release
+            synth.sustaindur = synths[ch].sustaindur
+
+            // now the synth is set, and we can feed the channel the audio data
+
+            for (var l = 0; l <= MAX_LINES; l++) {
+                var when = l * 15 / bpm;
+                wh = document.getElementById(`pat${l}_${ch}`).innerHTML;
+                if (wh == "...") {
+                    // nothing
+                } else if (wh == "OFF") {
+                    synth.triggerAttackRelease(null, 0, when);
+                } else {
+                    dur = Number(synth.sustaindur)
+                    synth.triggerAttackRelease(wh.replace("-", ""), dur, when);
+                }
+            }
+
+        }
+
+        transport.start();
+
+        return channel.ready;
+    }, MAX_LINES * (15 / bpm));
+
+    renderingPromise.then((buffer) => (player.buffer = buffer))
+    renderingPromise.then(() => (go()));
+};
+
+function go() {
+    console.log("buffer ready");
+    player.start(Tone.now(), cursor[0] * (15 / bpm))
+}
+
+
 function load_pattern(state) {
     state = JSON.parse(atob(state));
 
@@ -63,14 +126,12 @@ function load_pattern(state) {
     }
 }
 
-
-
 function connect_waveform(chan) {
-    synths[chan].connect(toneWaveform);
+    //synths[chan].connect(toneWaveform);
 }
 
 function disconnect_waveform(chan) {
-    synths[chan].disconnect(toneWaveform);
+    //synths[chan].disconnect(toneWaveform);
 }
 
 function map_properties(ch) {
@@ -186,6 +247,7 @@ function load_patches(state) {
             synths[ch] = new Tone.Synth().toDestination();
         }
         synths[ch].type = type;
+        // TODO: set oscillator type if needed!
         synths[ch].envelope.attack = Number(inst[ch][1]);
         synths[ch].envelope.decay = Number(inst[ch][2]);
         synths[ch].envelope.sustain = Number(inst[ch][3]);
@@ -355,40 +417,51 @@ playing = false;
 var playInterval = [null]; // blerg
 
 function makeSound(ch, wh, vol) {
+    // actually, NOW might have been useful here...
+    var now = Tone.now();
     if (wh == "...") {
         // nothing
     } else if (wh == "OFF") {
-        synths[ch].triggerRelease(now);
+        synths[ch].triggerAttackRelease();
     } else {
         dur = Number(synths[ch].sustaindur)
-        synths[ch].triggerAttackRelease(wh.replace("-", ""), dur);
+        synths[ch].triggerAttackRelease(wh.replace("-", ""), dur, now);
+        // uuh seems to be faster after all... but then maybe we do need length regardless
+        //synths[ch].triggerAttack(wh.replace("-", ""), now);
     }
 
 }
 
 function playTimer() {
+    // TODO: sync the animation properly
     highlight_line(cursor[0]);
     const l = cursor[0];
     setTimeout(function() {
         unhighlight_line(l);
     }, 15000 / bpm);
-    for (var ch = 0; ch <= MAX_CH; ch++) {
-        makeSound(ch, document.getElementById(`pat${l}_${ch}`).innerHTML, null)
-    }
+    //for (var ch = 0; ch <= MAX_CH; ch++) {
+    //    makeSound(ch, document.getElementById(`pat${l}_${ch}`).innerHTML, null)
+    //}
     cursor[0] += 1;
     if (cursor[0] > MAX_LINES) cursor[0] = 0;
 }
 
 function play_or_stop() {
-    const now = Tone.now();
     if (playing) {
         if (playInterval[0]) clearInterval(playInterval[0]);
-        for (var i = 0; i <= MAX_CH; i++) synths[i].triggerRelease(now);
+
+        player.stop();
+
         unhighlight_line(cursor[0]);
         highlight(cursor[0], cursor[1]);
         playing = false;
     } else {
+
+        for (var i = 0; i <= MAX_CH; i++) synths[i].triggerAttackRelease(); //and immediate quiet
+
+        render_and_play();
         playInterval[0] = setInterval(playTimer, 15000 / bpm);
+
         unhighlight(cursor[0], cursor[1]);
         playing = true;
     }
@@ -397,10 +470,6 @@ function play_or_stop() {
 function main(with_vol, with_controls) {
 
     document.write(gen_pattern(with_vol, with_controls))
-    waveform({
-        tone: toneWaveform,
-        parent: document.querySelector("#waveform"),
-    });
 
     map_properties();
     connect_waveform(curchan);
