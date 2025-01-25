@@ -387,8 +387,8 @@ var octave = 4;
 var bpm = 120;
 
 var notes = {
-    "q": "C",
-    "y": "C",
+    "w": "C", // French keyboard
+    "y": "C", // German keyboard
     "z": "C",
     "s": "C#",
     "x": "D",
