@@ -10,9 +10,9 @@ var cursor = [0, 0];
 var curchan = 0;
 
 // TODO
-// 0. playback: add two copies of the lines, add a loop segment for the second copy to simulate real synth/patterns
-// 1. live editing: delete "live" synths, replace with on-demand single-trigger synth
-// 2. preview: get audiobuffer and render manually
+// 0. sync the playing with the current line
+// 1. playback: add two copies of the lines, add a loop segment for the second copy to simulate real synth/patterns
+// 2. new waveform preview
 // 3. Volume support
 // 4. changing channels on the pattern should change channels in the instrument tool
 // 6. loading instruments somehow breaks the type of the instrument / doesn't really load it properly 
@@ -22,7 +22,7 @@ var curchan = 0;
 
 var synths = [];
 for (i = 0; i <= MAX_CH; i++) {
-    synths.push(new Tone.Synth().toDestination())
+    synths.push({envelope: {attack: 0.005, decay: 0.1, sustain: 0.3, release:1}, oscillator: {}})
     synths[i].sustaindur = 0.5;
     synths[i].type = "sine";
     synths[i].oscillator.type = "sine";
@@ -58,7 +58,7 @@ function save_pattern() {
 
 
 const player = new Tone.Player().toDestination();
-player.loop = true;
+player.loop = false;
 
 function render_and_play() {
     const renderingPromise = Tone.Offline(({
@@ -103,13 +103,57 @@ function render_and_play() {
         return channel.ready;
     }, MAX_LINES * (15 / bpm));
 
+    player.loop = true;
+
     renderingPromise.then((buffer) => (player.buffer = buffer))
     renderingPromise.then(() => (go()));
 };
 
-function go() {
-    console.log("buffer ready");
-    player.start(Tone.now(), cursor[0] * (15 / bpm))
+function single_note_render_and_play(what) {
+    const renderingPromise = new Tone.Offline(({
+        transport
+    }) => {
+        transport.stop()
+
+        const channel = new Tone.Channel().toDestination();
+
+        ch = cursor[1];
+        var synth = null;
+        if (synths[ch].type == "noise") {
+            synth = new Tone.MetalSynth().connect(channel);
+        } else {
+            synth = new Tone.Synth().connect(channel);
+        }
+
+        // TODO: set oscillator type if needed
+        synth.envelope.attack = synths[ch].envelope.attack
+        synth.envelope.decay = synths[ch].envelope.decay
+        synth.envelope.sustain = synths[ch].envelope.sustain
+        synth.envelope.release = synths[ch].envelope.release
+        synth.sustaindur = synths[ch].sustaindur
+
+        // now the synth is set, and we can feed the channel the audio data
+
+        dur = Number(synth.sustaindur)
+        synth.triggerAttackRelease(what.replace("-", ""), dur, 0);
+
+        transport.start();
+
+        return channel.ready;
+    }, 6); // 6 seconds sounds reasonable lol
+
+    player.loop = false;
+
+    renderingPromise.then((buffer) => (player.buffer = buffer))
+    renderingPromise.then(() => (go(true)));
+};
+
+function go(no_offset) {
+    if (no_offset) {
+        player.start(Tone.now())
+    } else {
+        player.start(Tone.now(), cursor[0] * (15 / bpm))
+    }
 }
 
 
@@ -378,8 +422,7 @@ function put_note(l, ch, pitch) {
         document.getElementById(`pat${l}_${ch}`).innerHTML = "OFF";
     } else {
         document.getElementById(`pat${l}_${ch}`).innerHTML = pitch.toUpperCase().padEnd(2, "-") + octave.toString();
-        dur = Number(synths[ch].sustaindur)
-        synths[ch].triggerAttackRelease(pitch.toUpperCase() + octave.toString(), dur);
+        single_note_render_and_play(pitch.toUpperCase() + octave.toString())
     }
 }
 
@@ -457,8 +500,7 @@ function play_or_stop() {
         playing = false;
     } else {
 
-        for (var i = 0; i <= MAX_CH; i++) synths[i].triggerAttackRelease(); //and immediate quiet
-
+        player.stop();
         render_and_play();
         playInterval[0] = setInterval(playTimer, 15000 / bpm);
 
