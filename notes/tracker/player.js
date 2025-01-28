@@ -10,7 +10,7 @@ var cursor = [0, 0];
 var curchan = 0;
 
 // TODO
-// 0. sync the playing with the current line - allow starting not from the beginning
+// 0. show a banner "rendering"
 // 0.5 move cursor to the current position after playing stops
 // 1. playback: add two copies of the lines, !! start from the current line!! add a loop segment for the second copy to simulate real synth/patterns
 // 2. new waveform preview
@@ -114,6 +114,8 @@ function render_and_play() {
 
     player.loop = true;
 
+    play_started_time = null;
+
     renderingPromise.then((buffer) => (player.buffer = buffer))
     renderingPromise.then(() => (go()));
 };
@@ -160,11 +162,13 @@ function single_note_render_and_play(what) {
 var play_started_time = null;
 
 function go(no_offset) {
+    console.log("buffer ready")
+
     if (no_offset) {
         player.start(Tone.now())
     } else {
         player.start(Tone.now(), cursor[0] * (15 / bpm))
-        play_started_time = player.immediate();
+        play_started_time = player.immediate() - cursor[0] * (15 / bpm);
     }
 }
 
@@ -296,9 +300,25 @@ function load_patches(state) {
     for (var ch = 0; ch <= MAX_CH; ch++) {
         type = inst[ch][0];
         if (type == "noise") {
-            synths[ch] = new Tone.MetalSynth().toDestination();
+            synths[ch] = {
+                envelope: {
+                    attack: 0.005,
+                    decay: 0.1,
+                    sustain: 0.3,
+                    release: 1
+                },
+                oscillator: {}
+            }
         } else {
-            synths[ch] = new Tone.Synth().toDestination();
+            synths[ch] = {
+                envelope: {
+                    attack: 0.005,
+                    decay: 0.1,
+                    sustain: 0.3,
+                    release: 1
+                },
+                oscillator: {}
+            }
         }
         synths[ch].type = type;
         // TODO: set oscillator type if needed!
@@ -471,22 +491,22 @@ var playInterval = [null]; // blerg
 
 function playTimer() {
     // TODO: sync the animation properly
+    if (play_started_time != null) {
+        current_time = player.immediate() - play_started_time;
 
-    current_time = player.immediate() - play_started_time;
+        offset_in_a_loop = current_time % ((MAX_LINES + 1) * 15 / bpm);
 
-    offset_in_a_loop = current_time % ((MAX_LINES + 1) * 15 / bpm);
-    console.log(offset_in_a_loop)
+        let line_to_highlight = Math.ceil(offset_in_a_loop * bpm / 15);
+        if (line_to_highlight > MAX_LINES) {
+            line_to_highlight = MAX_LINES;
+        }
 
-    let line_to_highlight = Math.ceil(offset_in_a_loop * bpm / 15);
-    if (line_to_highlight > MAX_LINES) {
-        line_to_highlight = MAX_LINES;
+        highlight_line(line_to_highlight);
+        setTimeout(function() {
+            unhighlight_line(line_to_highlight);
+        }, 15000 / bpm);
+
     }
-
-    highlight_line(line_to_highlight);
-    setTimeout(function() {
-        unhighlight_line(line_to_highlight);
-    }, 15000 / bpm);
-
     /* cursor[0] = line_to_highlight; TODO: fix cursor relocation - only allowed after play has begun*/
 }
 
@@ -503,7 +523,7 @@ function play_or_stop() {
 
         player.stop();
         render_and_play();
-        playInterval[0] = setInterval(playTimer, 15000 / bpm / 2);
+        playInterval[0] = setInterval(playTimer, 16);
 
         unhighlight(cursor[0], cursor[1]);
         playing = true;
