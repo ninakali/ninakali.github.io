@@ -12,6 +12,7 @@ var curchan = 0;
 // TODO
 // 0. show a banner "rendering"
 // 0.5 move cursor to the current position after playing stops
+// 0.7 check for race conditions; cancel playing if rendering is in progress
 // 1. playback: add two copies of the lines, !! start from the current line!! add a loop segment for the second copy to simulate real synth/patterns
 // 2. new waveform preview
 // 3. Volume support
