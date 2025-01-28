@@ -10,6 +10,7 @@ var cursor = [0, 0];
 var curchan = 0;
 
 // TODO
+// -1. wth why metal synth is so slow lmao
 // 0. show a banner "rendering"
 // 0.5 move cursor to the current position after playing stops
 // 0.7 check for race conditions; cancel playing if rendering is in progress
@@ -77,6 +78,7 @@ function render_and_play() {
         const channel = new Tone.Channel().toDestination();
 
         for (var ch = 0; ch <= MAX_CH; ch++) {
+            console.log(`channel ${ch}`, Date.now())
             var synth = null;
             if (synths[ch].type == "noise") {
                 synth = new Tone.MetalSynth().connect(channel);
@@ -108,10 +110,15 @@ function render_and_play() {
 
         }
 
+        console.log("finish add", Date.now())
+
         transport.start();
 
+        console.log("herewego add", Date.now())
         return channel.ready;
     }, (MAX_LINES + 1) * (15 / bpm));
+
+    console.log("prep", Date.now())
 
     player.loop = true;
 
@@ -163,7 +170,7 @@ function single_note_render_and_play(what) {
 var play_started_time = null;
 
 function go(no_offset) {
-    console.log("buffer ready")
+    console.log("buffer ready", Date.now())
 
     if (no_offset) {
         player.start(Tone.now())
