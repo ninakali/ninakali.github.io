@@ -10,8 +10,9 @@ var cursor = [0, 0];
 var curchan = 0;
 
 // TODO
-// 0. sync the playing with the current line
-// 1. playback: add two copies of the lines, add a loop segment for the second copy to simulate real synth/patterns
+// 0. sync the playing with the current line - allow starting not from the beginning
+// 0.5 move cursor to the current position after playing stops
+// 1. playback: add two copies of the lines, !! start from the current line!! add a loop segment for the second copy to simulate real synth/patterns
 // 2. new waveform preview
 // 3. Volume support
 // 4. changing channels on the pattern should change channels in the instrument tool
@@ -22,7 +23,15 @@ var curchan = 0;
 
 var synths = [];
 for (i = 0; i <= MAX_CH; i++) {
-    synths.push({envelope: {attack: 0.005, decay: 0.1, sustain: 0.3, release:1}, oscillator: {}})
+    synths.push({
+        envelope: {
+            attack: 0.005,
+            decay: 0.1,
+            sustain: 0.3,
+            release: 1
+        },
+        oscillator: {}
+    })
     synths[i].sustaindur = 0.5;
     synths[i].type = "sine";
     synths[i].oscillator.type = "sine";
@@ -101,7 +110,7 @@ function render_and_play() {
         transport.start();
 
         return channel.ready;
-    }, MAX_LINES * (15 / bpm));
+    }, (MAX_LINES + 1) * (15 / bpm));
 
     player.loop = true;
 
@@ -148,11 +157,14 @@ function single_note_render_and_play(what) {
     renderingPromise.then(() => (go(true)));
 };
 
+var play_started_time = null;
+
 function go(no_offset) {
     if (no_offset) {
         player.start(Tone.now())
     } else {
         player.start(Tone.now(), cursor[0] * (15 / bpm))
+        play_started_time = player.immediate();
     }
 }
 
@@ -198,8 +210,6 @@ function map_properties(ch) {
 
     document.getElementById("release").value = synths[ch].envelope.release;
     document.getElementById("re").innerHTML = synths[ch].envelope.release;
-
-    console.log(synths[ch].sustaindur);
 
     document.getElementById("duration").value = synths[ch].sustaindur;
     document.getElementById("du").innerHTML = synths[ch].sustaindur;
@@ -459,34 +469,25 @@ playing = false;
 
 var playInterval = [null]; // blerg
 
-function makeSound(ch, wh, vol) {
-    // actually, NOW might have been useful here...
-    var now = Tone.now();
-    if (wh == "...") {
-        // nothing
-    } else if (wh == "OFF") {
-        synths[ch].triggerAttackRelease();
-    } else {
-        dur = Number(synths[ch].sustaindur)
-        synths[ch].triggerAttackRelease(wh.replace("-", ""), dur, now);
-        // uuh seems to be faster after all... but then maybe we do need length regardless
-        //synths[ch].triggerAttack(wh.replace("-", ""), now);
-    }
-
-}
-
 function playTimer() {
     // TODO: sync the animation properly
-    highlight_line(cursor[0]);
-    const l = cursor[0];
+
+    current_time = player.immediate() - play_started_time;
+
+    offset_in_a_loop = current_time % ((MAX_LINES + 1) * 15 / bpm);
+    console.log(offset_in_a_loop)
+
+    let line_to_highlight = Math.ceil(offset_in_a_loop * bpm / 15);
+    if (line_to_highlight > MAX_LINES) {
+        line_to_highlight = MAX_LINES;
+    }
+
+    highlight_line(line_to_highlight);
     setTimeout(function() {
-        unhighlight_line(l);
+        unhighlight_line(line_to_highlight);
     }, 15000 / bpm);
-    //for (var ch = 0; ch <= MAX_CH; ch++) {
-    //    makeSound(ch, document.getElementById(`pat${l}_${ch}`).innerHTML, null)
-    //}
-    cursor[0] += 1;
-    if (cursor[0] > MAX_LINES) cursor[0] = 0;
+
+    /* cursor[0] = line_to_highlight; TODO: fix cursor relocation - only allowed after play has begun*/
 }
 
 function play_or_stop() {
@@ -502,7 +503,7 @@ function play_or_stop() {
 
         player.stop();
         render_and_play();
-        playInterval[0] = setInterval(playTimer, 15000 / bpm);
+        playInterval[0] = setInterval(playTimer, 15000 / bpm / 2);
 
         unhighlight(cursor[0], cursor[1]);
         playing = true;
