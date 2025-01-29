@@ -2,16 +2,18 @@
 // as it is meant to be disposable, quickly prototypable, so it is OK it uses lots of
 // questionable decisions. It is never meant to be a proper tracker.
 
-var MAX_LINES = 63;
-var MAX_CH = 7;
+// biome-ignore lint/style/useConst: doens't strictly mean it's const
+let MAX_LINES = 63;
+// biome-ignore lint/style/useConst: doens't strictly mean it's const
+let MAX_CH = 7;
 
-var cursor = [0, 0];
+const cursor = [0, 0];
 
-var curchan = 0;
+let curchan = 0;
 
 // TODO
-// -1. wth why metal synth is so slow lmao
-// 0. show a banner "rendering"
+// 0. drum sampler: turn of envelope UI if the channel is a sampler
+// 0.3 move line-generating code into a function
 // 0.5 move cursor to the current position after playing stops
 // 0.7 check for race conditions; cancel playing if rendering is in progress
 // 1. playback: add two copies of the lines, !! start from the current line!! add a loop segment for the second copy to simulate real synth/patterns
@@ -23,7 +25,7 @@ var curchan = 0;
 // 7. new UI for playback and octave/bpm
 // 8. mini-keyboard UI
 
-var synths = [];
+const synths = [];
 for (i = 0; i <= MAX_CH; i++) {
     synths.push({
         envelope: {
@@ -39,7 +41,7 @@ for (i = 0; i <= MAX_CH; i++) {
     synths[i].oscillator.type = "sine";
 }
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", (e) => {
     if (!playing) {
         id = e.target.id;
         if (id.startsWith("pat")) {
@@ -55,9 +57,9 @@ document.addEventListener("click", function(e) {
 function save_pattern() {
     state = []
 
-    for (var ch = 0; ch <= MAX_CH; ch++) {
+    for (let ch = 0; ch <= MAX_CH; ch++) {
         state.push([]);
-        for (var l = 0; l <= MAX_LINES; l++) {
+        for (let l = 0; l <= MAX_LINES; l++) {
             pitch = document.getElementById(`pat${l}_${ch}`).innerHTML;
             volume = document.getElementById(`pat${l}_${ch}_vol`).innerHTML;
             state[state.length - 1].push([pitch, volume]);
@@ -77,34 +79,58 @@ function render_and_play() {
     }) => {
         const channel = new Tone.Channel().toDestination();
 
-        for (var ch = 0; ch <= MAX_CH; ch++) {
+        for (let ch = 0; ch <= MAX_CH; ch++) {
             console.log(`channel ${ch}`, Date.now())
-            var synth = null;
-            if (synths[ch].type == "noise") {
-                synth = new Tone.MetalSynth().connect(channel);
+            let synth = null;
+            if (synths[ch].type === "noise") {
+                synth = new Tone.Sampler({
+                    urls: {
+                        "C2": "cleankick_c2.ogg",
+                        "E3": "snare_e3.ogg",
+                        "C4": "closedhat_c4.ogg",
+                        "C5": "openhat_c5.ogg",
+                    },
+                    onload: () => {
+                        // TODO: ayyyy should be a function
+                        for (let l = 0; l <= MAX_LINES; l++) {
+                            const when = l * 15 / bpm;
+                            wh = document.getElementById(`pat${l}_${ch}`).innerHTML;
+                            if (wh === "...") {
+                                // nothing
+                            } else if (wh === "OFF") {
+                                synth.triggerAttackRelease(null, 0, when);
+                            } else {
+                                dur = Number(synths[ch].sustaindur)
+                                synth.triggerAttackRelease(wh.replace("-", ""), dur, when);
+                            }
+                        }
+                    },
+                    baseUrl: "samples/"
+                }).connect(channel)
             } else {
                 synth = new Tone.Synth().connect(channel);
-            }
 
-            // TODO: set oscillator type if needed
-            synth.envelope.attack = synths[ch].envelope.attack
-            synth.envelope.decay = synths[ch].envelope.decay
-            synth.envelope.sustain = synths[ch].envelope.sustain
-            synth.envelope.release = synths[ch].envelope.release
-            synth.sustaindur = synths[ch].sustaindur
+                console.log(synth)
+                // TODO: set oscillator type if needed
+                synth.envelope.attack = synths[ch].envelope.attack
+                synth.envelope.decay = synths[ch].envelope.decay
+                synth.envelope.sustain = synths[ch].envelope.sustain
+                synth.envelope.release = synths[ch].envelope.release
+                synth.sustaindur = synths[ch].sustaindur
 
-            // now the synth is set, and we can feed the channel the audio data
+                // now the synth is set, and we can feed the channel the audio data
 
-            for (var l = 0; l <= MAX_LINES; l++) {
-                var when = l * 15 / bpm;
-                wh = document.getElementById(`pat${l}_${ch}`).innerHTML;
-                if (wh == "...") {
-                    // nothing
-                } else if (wh == "OFF") {
-                    synth.triggerAttackRelease(null, 0, when);
-                } else {
-                    dur = Number(synth.sustaindur)
-                    synth.triggerAttackRelease(wh.replace("-", ""), dur, when);
+                for (let l = 0; l <= MAX_LINES; l++) {
+                    const when = l * 15 / bpm;
+                    wh = document.getElementById(`pat${l}_${ch}`).innerHTML;
+                    if (wh === "...") {
+                        // nothing
+                    } else if (wh === "OFF") {
+                        synth.triggerAttackRelease(null, 0, when);
+                    } else {
+                        dur = Number(synth.sustaindur)
+                        synth.triggerAttackRelease(wh.replace("-", ""), dur, when);
+                    }
                 }
             }
 
@@ -124,6 +150,7 @@ function render_and_play() {
 
     play_started_time = null;
 
+    // biome-ignore lint/suspicious/noAssignInExpressions: whatever lol
     renderingPromise.then((buffer) => (player.buffer = buffer))
     renderingPromise.then(() => (go()));
 };
@@ -137,24 +164,39 @@ function single_note_render_and_play(what) {
         const channel = new Tone.Channel().toDestination();
 
         ch = cursor[1];
-        var synth = null;
-        if (synths[ch].type == "noise") {
-            synth = new Tone.MetalSynth().connect(channel);
+        let synth = null;
+        if (synths[ch].type === "noise") {
+            synth = new Tone.Sampler({
+                urls: {
+                    "C2": "cleankick_c2.ogg",
+                    "E3": "snare_e3.ogg",
+                    "C4": "closedhat_c4.ogg",
+                    "C5": "openhat_c5.ogg",
+                },
+                onload: () => {
+                    dur = Number(synth.sustaindur)
+                    synth.triggerAttackRelease(what.replace("-", ""), dur, 0);
+                },
+                baseUrl: "http://localhost:8080/samples/"
+            }).connect(channel)
+
         } else {
             synth = new Tone.Synth().connect(channel);
+            // TODO: set oscillator type if needed
+            synth.envelope.attack = synths[ch].envelope.attack
+            synth.envelope.decay = synths[ch].envelope.decay
+            synth.envelope.sustain = synths[ch].envelope.sustain
+            synth.envelope.release = synths[ch].envelope.release
+            synth.sustaindur = synths[ch].sustaindur
+
+            dur = Number(synth.sustaindur)
+            synth.triggerAttackRelease(what.replace("-", ""), dur, 0);
         }
 
-        // TODO: set oscillator type if needed
-        synth.envelope.attack = synths[ch].envelope.attack
-        synth.envelope.decay = synths[ch].envelope.decay
-        synth.envelope.sustain = synths[ch].envelope.sustain
-        synth.envelope.release = synths[ch].envelope.release
-        synth.sustaindur = synths[ch].sustaindur
 
         // now the synth is set, and we can feed the channel the audio data
 
-        dur = Number(synth.sustaindur)
-        synth.triggerAttackRelease(what.replace("-", ""), dur, 0);
+
 
         transport.start();
 
@@ -163,11 +205,12 @@ function single_note_render_and_play(what) {
 
     player.loop = false;
 
+    // biome-ignore lint/suspicious/noAssignInExpressions: maybe one day
     renderingPromise.then((buffer) => (player.buffer = buffer))
     renderingPromise.then(() => (go(true)));
 };
 
-var play_started_time = null;
+let play_started_time = null;
 
 function go(no_offset) {
     console.log("buffer ready", Date.now())
@@ -181,11 +224,11 @@ function go(no_offset) {
 }
 
 
-function load_pattern(state) {
-    state = JSON.parse(atob(state));
+function load_pattern(original_state) {
+    const state = JSON.parse(atob(original_state));
 
-    for (var ch = 0; ch <= MAX_CH; ch++) {
-        for (var l = 0; l <= MAX_LINES; l++) {
+    for (let ch = 0; ch <= MAX_CH; ch++) {
+        for (let l = 0; l <= MAX_LINES; l++) {
             pitch = state[ch][l][0];
             volume = state[ch][l][1];
             document.getElementById(`pat${l}_${ch}`).innerHTML = pitch;
@@ -202,9 +245,11 @@ function disconnect_waveform(chan) {
     //synths[chan].disconnect(toneWaveform);
 }
 
-function map_properties(ch) {
-    if (ch == null) {
+function map_properties(orig_ch) {
+    if (orig_ch == null) {
         ch = curchan;
+    } else {
+        ch = orig_ch;
     }
 
     document.getElementById("channum").innerHTML = curchan;
@@ -229,7 +274,7 @@ function map_properties(ch) {
 }
 
 function chanchange(dir) {
-    if (dir == 1) { // left
+    if (dir === 1) { // left
         if (curchan > 0) {
             disconnect_waveform(curchan);
             curchan -= 1;
@@ -269,7 +314,7 @@ function adj(opt) {
 
 function setshape() {
     newtype = document.getElementById("waveshape").value
-    if (synths[curchan].type == "noise") {
+    if (synths[curchan].type === "noise") {
         disconnect_waveform(curchan);
         en = synths[curchan].envelope;
         len = synths[curchan].sustaindur;
@@ -283,7 +328,7 @@ function setshape() {
         synths[curchan].oscillator.type = newtype;
         synths[curchan].type = newtype;
     } else {
-        if (newtype != "noise") {
+        if (newtype !== "noise") {
             synths[curchan].oscillator.type = newtype;
             synths[curchan].type = newtype;
         } else {
@@ -305,9 +350,9 @@ function setshape() {
 function load_patches(state) {
     inst = JSON.parse(atob(state));
     disconnect_waveform(curchan);
-    for (var ch = 0; ch <= MAX_CH; ch++) {
+    for (let ch = 0; ch <= MAX_CH; ch++) {
         type = inst[ch][0];
-        if (type == "noise") {
+        if (type === "noise") {
             synths[ch] = {
                 envelope: {
                     attack: 0.005,
@@ -342,7 +387,7 @@ function load_patches(state) {
 
 function save_patches() {
     inst = []
-    for (var ch = 0; ch <= MAX_CH; ch++) {
+    for (let ch = 0; ch <= MAX_CH; ch++) {
         inst.push([
             synths[ch].type,
             synths[ch].envelope.attack,
@@ -392,15 +437,15 @@ function gen_pattern(with_vol, with_controls) {
   <tr>\
   	<th>x</th>'
 
-    for (var c = 0; c <= MAX_CH; c++) {
+    for (let c = 0; c <= MAX_CH; c++) {
         out += `<th colspan=2>Ch ${c}</th>`
     }
     out += '</tr>'
-    for (var i = 0; i < MAX_LINES + 1; i++) {
+    for (let i = 0; i < MAX_LINES + 1; i++) {
         out += `<tr id="pat_l${i}">\n`
         line = i.toString().padStart(2, "0")
         out += `<td>${line}</td>`
-        for (var c = 0; c <= MAX_CH; c++) {
+        for (let c = 0; c <= MAX_CH; c++) {
             out += `<td id="pat${i}_${c}">...</td>`
             if (with_vol) {
                 out += `<td id="pat${i}_${c}_vol">..</td>`
@@ -456,7 +501,7 @@ function unhighlight_line(l) {
 function put_note(l, ch, pitch) {
     if (pitch == null) {
         document.getElementById(`pat${l}_${ch}`).innerHTML = "...";
-    } else if (pitch == "off") {
+    } else if (pitch === "off") {
         document.getElementById(`pat${l}_${ch}`).innerHTML = "OFF";
     } else {
         document.getElementById(`pat${l}_${ch}`).innerHTML = pitch.toUpperCase().padEnd(2, "-") + octave.toString();
@@ -464,10 +509,10 @@ function put_note(l, ch, pitch) {
     }
 }
 
-var octave = 4;
-var bpm = 120;
+let octave = 4;
+let bpm = 120;
 
-var notes = {
+const notes = {
     "w": "C", // French keyboard
     "y": "C", // German keyboard
     "z": "C",
@@ -495,7 +540,7 @@ function update_bpm(bpm) {
 
 playing = false;
 
-var playInterval = [null]; // blerg
+const playInterval = [null]; // blerg
 
 function playTimer() {
     // TODO: sync the animation properly
@@ -510,7 +555,7 @@ function playTimer() {
         }
 
         highlight_line(line_to_highlight);
-        setTimeout(function() {
+        setTimeout(() => {
             unhighlight_line(line_to_highlight);
         }, 15000 / bpm);
 
@@ -547,16 +592,16 @@ function main(with_vol, with_controls) {
 
     highlight(cursor[0], cursor[1]);
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', (event) => {
         if (!playing) {
-            if (event.keyCode == 37) {
+            if (event.keyCode === 37) {
                 unhighlight(cursor[0], cursor[1]);
                 cursor[1] -= 1;
                 if (cursor[1] < 0) {
                     cursor[1] = 0
                 };
                 highlight(cursor[0], cursor[1]);
-            } else if (event.keyCode == 40) {
+            } else if (event.keyCode === 40) {
                 event.preventDefault();
                 unhighlight(cursor[0], cursor[1]);
                 cursor[0] += 1;
@@ -564,14 +609,14 @@ function main(with_vol, with_controls) {
                     cursor[0] = MAX_LINES
                 };
                 highlight(cursor[0], cursor[1]);
-            } else if (event.keyCode == 39) {
+            } else if (event.keyCode === 39) {
                 unhighlight(cursor[0], cursor[1]);
                 cursor[1] += 1;
                 if (cursor[1] > MAX_CH) {
                     cursor[1] = MAX_CH
                 };
                 highlight(cursor[0], cursor[1]);
-            } else if (event.keyCode == 38) {
+            } else if (event.keyCode === 38) {
                 event.preventDefault();
                 unhighlight(cursor[0], cursor[1]);
                 cursor[0] -= 1;
@@ -579,7 +624,7 @@ function main(with_vol, with_controls) {
                     cursor[0] = 0
                 };
                 highlight(cursor[0], cursor[1]);
-            } else if (event.keyCode == 8) { //backspace
+            } else if (event.keyCode === 8) { //backspace
                 put_note(cursor[0], cursor[1], null);
                 unhighlight(cursor[0], cursor[1]);
                 cursor[0] -= 1;
@@ -587,34 +632,34 @@ function main(with_vol, with_controls) {
                     cursor[0] = 0
                 };
                 highlight(cursor[0], cursor[1]);
-            } else if (event.keyCode == 46) { //delete
+            } else if (event.keyCode === 46) { //delete
                 put_note(cursor[0], cursor[1], null);
-            } else if (event.key == "<") { //octave down
+            } else if (event.key === "<") { //octave down
                 if (octave > 1) {
                     octave -= 1;
                     update_octave(octave);
                 }
-            } else if (event.key == ">") { //octave up
+            } else if (event.key === ">") { //octave up
                 if (octave < 7) {
                     octave += 1;
                     update_octave(octave);
                 }
-            } else if (event.key == "_") { //bpm down
+            } else if (event.key === "_") { //bpm down
                 if (bpm > 60) {
                     bpm -= 5;
                     update_bpm(bpm);
                 }
-            } else if (event.key == "+") { //bpm up
+            } else if (event.key === "+") { //bpm up
                 if (bpm < 200) {
                     bpm += 5;
                     update_bpm(bpm);
                 }
-            } else if (event.key == "Home") { // To the beginning
+            } else if (event.key === "Home") { // To the beginning
                 unhighlight(cursor[0], cursor[1]);
                 cursor[0] = 0;
                 cursor[1] = 0;
                 highlight(cursor[0], cursor[1]);
-            } else if (event.key == "Enter") { //gooo! or stop
+            } else if (event.key === "Enter") { //gooo! or stop
                 play_or_stop();
             } else {
                 if (event.key.toLowerCase() in notes) {
@@ -626,7 +671,7 @@ function main(with_vol, with_controls) {
                 }
             }
         } else {
-            if (event.key == "Enter") { //gooo! or stop
+            if (event.key === "Enter") { //gooo! or stop
                 play_or_stop();
             }
         }
