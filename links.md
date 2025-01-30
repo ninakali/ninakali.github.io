@@ -92,6 +92,7 @@ home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
 tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
 
 ### Are simple things as simple as they seem?
+* [DIY carbon paper copier](https://tech.lgbt/@nina_kali_nina/113917161757151681)
 * [Fire pit fried pottery at home](https://tech.lgbt/@nina_kali_nina/111043005991579076)
 * [Raw carrot sugar](https://tech.lgbt/@nina_kali_nina/110712420175596774)
 * [Glass from sand? Semi-fail](https://tech.lgbt/@nina_kali_nina/110695516411078133)
