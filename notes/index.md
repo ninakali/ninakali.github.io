@@ -1,4 +1,5 @@
 # Originals
+* [I see, I can draw!](./iseeidraw/)
 * [Windows 2 notes](./win2/)
 * [Empathy and efficiency in hard conversations](./conv.md)
 * [Emergency Kit Mk3](./kit3/)
