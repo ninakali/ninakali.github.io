@@ -298,7 +298,7 @@ You can imagine that I was pumped up when I finally got back home. Even a fever 
 
 </div>
 
-Remember the "Drawing on the Right Side" mentioned the system of symbols humans use in their drawings? There is a counterpart of this related to the phenomenon of "canonical perspective": we draw what we *think*. It is counter-intuitive to draw the flat bottom of a cup being curved because we *know* it is flat; it is frustratingly weird to draw only two or three sides of a cube standing on the table when we *can easily see four sides* by looking at the cube from different angles.
+Remember the "Drawing on the Right Side" mentioned the system of symbols humans use in their drawings? There is a counterpart of this related to the phenomenon of "canonical perspective": we draw what we *think*. It is counter-intuitive to draw the flat bottom of a cup being curved because we *know* it is flat; it is frustratingly weird to draw only two or three sides of a cube standing on the table when we *can easily see four sides* by looking at the cube from different angles (sometimes it can be as simple as seeing the cube with *both* eyes, if the cube is close enough to the face).
 
 So, a big part of the practice was learning how the illusion of volumetric objects works in drawing. Another part of the practice was to sight some objects from the world and draw them with the correct Western-style 3-point perspective.
 
