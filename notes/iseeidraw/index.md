@@ -397,7 +397,7 @@ So, it is what it is.
 
 ![](115_surreal.jpeg)
 
-I had left the room after cleaning up some lines on an easel under a regular light. On my way to the kitchen, I glanced back and was startled. The situation and the drawing looked absolutely surreal. Did I just... draw this?
+I decided to call the project complete after cleaning up some lines and shapes using an easel under a regular light. I had left the room, and on my way to the kitchen, I glanced back. I was startled. The situation and the drawing looked downright surreal. Did I just... draw this?
 
 Yes, I did.
 
