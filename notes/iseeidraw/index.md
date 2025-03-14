@@ -96,7 +96,7 @@ The second major challenge from the book is drawing a hand. The book uses a "che
 
 Drawing a hand as it can be seen directly through the plastic of the viewfinder feels like cheating. "Will it really make me better at drawing?", I wondered. Spoiler: yes, it did.
 
-The book makes a point: adding pizzazz and polish to the drawing will make it look more skilled. Moreover, completing a drawing brings a sense of satisfaction (unless you are traumatised and hate yourself for even attempting to draw). So, the book asks to copy the drawing to a piece of toned paper.
+The book makes a point: adding <ruby>pizzazz <rt>/pĭ-zăz′/</rt></ruby> and polish to the drawing will make it look more skilled. Moreover, completing a drawing brings a sense of satisfaction (unless you are traumatised and hate yourself for even attempting to draw). So, the book asks to copy the drawing to a piece of toned paper.
 
 <div class="imgfix">
 
