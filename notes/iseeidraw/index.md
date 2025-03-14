@@ -1,7 +1,7 @@
 <div class="post">
 
 <h1>I see, I can draw!</h1>
-<p class="by">A brief reflection on learning drawing skills as an adult by Nina Kalinina, March 13th, 2025</p>
+<p class="by">A brief reflection on learning drawing skills as an adult by Nina Kalinina, March 14th, 2025</p>
 
 I've wanted to draw for over a decade, but couldn't. And then I started practising, about a month and a half ago, and went from child-like scribbles to being able to complete a self-portrait with considerable likeness - after merely 40 hours of practice. 
 
@@ -9,12 +9,12 @@ I've wanted to draw for over a decade, but couldn't. And then I started practisi
 
 I am not a genius, nor have I invented my unique way of practising; I merely followed a few art manuals. This note is to document my progress. People who wanted to draw for a long time but never figured out how to do it may find my observations interesting. However, I have to say that this note is not a substitute for drawing lessons, nor a guarantee that your experience will be similar to mine.
 
-Please direct your comments to this [Mastodon thread](https://tech.lgbt/).
+Please direct your comments to this [Mastodon thread](https://tech.lgbt/@nina_kali_nina/114162962108293528).
 <hr/>
 
 ## The shoemaker's children go barefoot
 
-As some of you know, I do all sorts of art. I even run a couple of webcomics! And precisely because of that, my friends sometimes ask me:
+As some of you know, I do all sorts of art, from pushing pixels to collages. I even run a couple of webcomics! And precisely because of that, my friends sometimes ask me:
 
 "Aren't you the artist? 😅"
 
