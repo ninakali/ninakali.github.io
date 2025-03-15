@@ -74,6 +74,12 @@ Despite the appearances, this is actually a very useful exercise. Drawing is a w
 
 The book seems to set its goal to teach how to break free of these symbols and draw things as we really see them.
 
+### Side note: do you feel sad, depressed, or hopeless after drawing?
+
+Being able to draw despite seeing critical flaws in your drawing, enjoying the process, and being proud of your work or progress... Those are all essential for drawing. I am blessed that I can enjoy the sense of the flow. I am blessed that *now* I can continue to draw even when I bin most of my sketches immediately after completion. It wasn't always like this for me, and I recognise that for many, none of this holds true.
+
+I suspect the reasons for feeling sad, depressed and hopeless after and during drawing are all psychological. After all, those are all emotions evoked by our actions, so they must be linked to our past feelings, experiences and sometimes traumas. I was able to resolve similar feelings through therapy, meditation, journaling, reading and being inspired. If you want to draw but feel like you lack some important insight, or maybe even a part of yourself, or were born without talent, or maybe your wings were clipped off, please do explore those feelings in a safe environment.
+
 ## Cheap tricks, cheap trills
 
 The first real exercise the book gives its readers is "upside-down drawing". The idea is to copy a line art drawing while the original drawing is turned upside down. Apparently, most people are able to improve their copying skills instantly this way because their brain stops seeing familiar symbols, and only sees lines and shapes.
