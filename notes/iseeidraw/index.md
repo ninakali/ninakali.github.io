@@ -78,6 +78,8 @@ The book seems to set its goal to teach how to break free of these symbols and d
 
 The first real exercise the book gives its readers is "upside-down drawing". The idea is to copy a line art drawing while the original drawing is turned upside down. Apparently, most people are able to improve their copying skills instantly this way because their brain stops seeing familiar symbols, and only sees lines and shapes.
 
+> Note: the book makes a point that drawing from the real world and even from imagination is not that different from copying other drawings. However, drawing from the imagination means one has to be able to imagine with great details objects, shapes, lights and shadows - which is a system of symbols in itself - this is something one has to learn from different sources.
+
 <div class="imgfix">
 
 ![](020_upside_down_1.jpeg) ![](021_upside_down_2.jpeg)
@@ -87,6 +89,8 @@ The first real exercise the book gives its readers is "upside-down drawing". The
 To me, this has been a half-truth and a minor disappointment. It is true that my upside-down copies ended up looking better than I could've managed a regular copy. It is also true that the proportions of the drawings were very off!
 
 Turns out that drawing on a horizontal surface does weird things to our perception of sizes and proportions! The far side of the image ends up being far further from our eyes than we expect, and the image we copy ends up stretched. I got myself a tilted plywood **easel**, and that countered this "stretching" considerably.
+
+> Note: it doesn't have to be an easel, a chopping board or a large book would do if you only use standard printer paper.
 
 ## The image plane
 
@@ -111,6 +115,8 @@ Toning paper is fun and a bit meditative. The black charcoal powder becomes a pr
 ![](034_viewfinder2.jpeg) ![](036_render.jpeg)
 
 </div>
+
+> Note: if you want to draw on white paper, you will need to find other ways of making the mistakes less noticeable and less important. It took me only about an hour of practising to learn how to leave pencil marks that cannot be seen from 2 meters (6 feet) away.
 
 Here is what I had to say about this exercise to my friend:
 
