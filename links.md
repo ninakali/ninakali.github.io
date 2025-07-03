@@ -46,6 +46,8 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [NEC Versa - media and creativity](https://tech.lgbt/@nina_kali_nina/114790967650274786)
+* [NEC Versa - Windows 95 install](https://tech.lgbt/@nina_kali_nina/114785654321038333)
 * [Windows 2.x history - comments thread](https://tech.lgbt/@nina_kali_nina/113749698753812898)
 * [Importing colourful images to stock Windows 1.x/2.x](https://tech.lgbt/@nina_kali_nina/113710309662427644)
 * [Slackware 3.0 from 1995, XFree86, Andrew ATK and ez word processor](https://tech.lgbt/@nina_kali_nina/113645099116366832)
