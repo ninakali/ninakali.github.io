@@ -46,6 +46,7 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [NEC Versa - music making on i486](https://tech.lgbt/@nina_kali_nina/114797223310067861)
 * [NEC Versa - media and creativity](https://tech.lgbt/@nina_kali_nina/114790967650274786)
 * [NEC Versa - Windows 95 install](https://tech.lgbt/@nina_kali_nina/114785654321038333)
 * [Windows 2.x history - comments thread](https://tech.lgbt/@nina_kali_nina/113749698753812898)
