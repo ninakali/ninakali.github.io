@@ -46,6 +46,7 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [Olympia SM4 typewriter - overview](https://tech.lgbt/@nina_kali_nina/114818925992650383)
 * [NEC Versa - music making on i486](https://tech.lgbt/@nina_kali_nina/114797223310067861)
 * [NEC Versa - media and creativity](https://tech.lgbt/@nina_kali_nina/114790967650274786)
 * [NEC Versa - Windows 95 install](https://tech.lgbt/@nina_kali_nina/114785654321038333)
