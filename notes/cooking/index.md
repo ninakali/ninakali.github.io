@@ -1,2 +1,2 @@
-* [Let's begin](note01.html)
-* [Intentionality](note02.html)
+* [Let's begin](note01.htm)
+* [Intentionality](note02.htm)

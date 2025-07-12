@@ -1,4 +1,5 @@
 # Originals
+* [Cooking of a cooking game](./cooking/)
 * [That's a Tabi, too](./tabi/)
 * [I see, I can draw!](./iseeidraw/)
 * [Windows 2 notes](./win2/)
