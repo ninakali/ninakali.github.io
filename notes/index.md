@@ -1,4 +1,5 @@
 # Originals
+* [I see, I can improve my drawings!](./iseeidraw2/)
 * [Cooking of a cooking game](./cooking/)
 * [That's a Tabi, too](./tabi/)
 * [I see, I can draw!](./iseeidraw/)
