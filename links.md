@@ -46,6 +46,7 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [Installing Plamo/98 3.3 Linux/98 on PC-9821 Nw150 laptop](https://tech.lgbt/@nina_kali_nina/115265997421404000) 
 * [Installing FreeBSD 8 on PC-9821 Nw150 laptop](https://tech.lgbt/@nina_kali_nina/115260727003021554)
 * [Dragon 32 - Welsh home computer from 1982. Booting up](https://tech.lgbt/@nina_kali_nina/114926918712422056)
 * [Olympia SM4 typewriter - overview](https://tech.lgbt/@nina_kali_nina/114818925992650383)
