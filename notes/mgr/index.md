@@ -154,6 +154,12 @@ You can find [my hard disk image with the installed MGR](https://archive.org/det
 * [The Linux Documentation Project's How To MGR](https://tldp.org/HOWTO/archived/MGR-HOWTO/MGR-HOWTO-1.html) - put together by Vincent Broman
 * [$HOME MOVIE – Tools for Building Demos on a Sparcstation](https://sau.homeip.net/papers/movie-reprint.pdf) - a paper by S. Uhler
 
+## Some notable forks
+* [Mgr port to Raspberry Pi project](https://github.com/thinkingcow/mgr)
+* [SDL + CMake port](https://github.com/ProgrammerArchaeology/bellcore-mgr)
+* [X11 port](https://github.com/hyc/mgr/tree/master/src/libbitblit/x11)
+* [Some more improvements for the X11 port](https://github.com/alex-arknetworx/mgr)
+* [Fixes to make Mgr work in X11 again, plus LinuxFB project](https://github.com/erysdren/mgr)
 
 ## Thanks
 * I am endlessly grateful to Stephen Uhler for creating such a wonderful windowing system and for uploading the documentation about it on his website;
