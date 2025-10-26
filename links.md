@@ -32,6 +32,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [VisiCorp VisiOn (1983) - videos of the user interface](https://tech.lgbt/@nina_kali_nina/115441268919687952)
 * [Philips Ease Desktop for MSX, 1988](https://tech.lgbt/@nina_kali_nina/114032280121985576)
 * [BK-0010, soviet desktop PDP-11 clone, running all sorts of soft](https://tech.lgbt/@nina_kali_nina/113676143680346758)
 * [Windows 95 running on a monochrome 386SX VGA laptop](https://tech.lgbt/@nina_kali_nina/112713789591261897)
