@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2 for the Apricot PC/Xi
-<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 1.00 2025-12-27)</p>
+<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 1.01 2025-12-27)</p>
 
 I bought my first Apricot PC about three years ago, when I realised I wanted an 8086-based computer. At the time, I knew nothing about it and simply bought it because it looked rad and the price was low. I had no idea that it was not IBM PC-compatible, and that there were very few programs available for it. 
 
@@ -41,12 +41,12 @@ Apricot PC is a delightful computer with a great design. Its heart is Intel 8086
 
 The computer is simple enough to be understood by one person in its entirety (over the course of many months of studying). There are schematics, technical manuals, BIOS reference manuals, and example code available for it, too. Its CPU is supported by Microsoft C, Turbo Pascal, and Open Watcom. It even runs MS-DOS (2.0 to 3.20), though, of course, it cannot run any IBM PC programs.
 
-The lack of IBM PC-compatibility proved to be fatal for the Apricot. The entirety of its software catalogue is less than 300 megabytes. There is only one [graphical game with a soundtrack](74ls373.itch.io/where-is-owl) for it, and it was made in 2025.
+The lack of IBM PC-compatibility proved to be fatal for the Apricot. The entirety of its software catalogue is less than 300 megabytes. There is only one [graphical game with a soundtrack](https://74ls373.itch.io/where-is-owl) for it, and it was made in 2025.
 
 There were, of course, productivity applications for the Apricot, including Microsoft Word for DOS. But among those, only two word processors had a graphical interface: GEM Write and Microsoft Write for Windows 1.
 
 [![0001b.jpg](0001b.jpg)](0001b.jpg)
-<p class="imgdesc">A screenshot of Windows 1 Notepad.</p>
+<p class="imgdesc">A screenshot of Windows 1 Notepad. I didn't have a Windows 1 Write screenshot at hand, but trust me, it looks almost the same.</p>
 
 Hypothetically, it should be possible to port Windows 3 to this computer. It would require creating Windows 3-compatible `SYSTEM.DRV`, `DISPLAY.DRV`, `KEYBOARD.DRV`, `MOUSE.DRV`, and ideally `COMM.DRV` drivers. But that would be a lot of work.
 
