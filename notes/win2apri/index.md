@@ -14,7 +14,7 @@ As a side-quest, I also wrote an [article explaining why Windows 2 is kind of aw
 
 Please note that most of the images in this post were taken from a real green CRT, and thus their quality might vary. You can click the image to load it in full size.
 
-<div class="cut">If you have comments or feedback, please leave them in <a href="https://tech.lgbt/@nina_kali_nina/">the Mastodon thread</a>.
+<div class="cut">If you have comments or feedback, please leave them in <a href="https://tech.lgbt/@nina_kali_nina/115792788459542758">the Mastodon thread</a>.
 
 If you own an Apricot PC, or want to try the port in an emulator, check out [the project on sr.ht](https://git.sr.ht/~nkali/win2-apricot). You need an Apricot PC, PC/Xi or Xen with at least 512 kB of RAM.
 </div>
@@ -199,7 +199,7 @@ Welcome, welcome, let me show you around!
 <div class="post">
 
 ## Acknowledgments
-* Thank you for reading! If you have any questions or comments, please let me know. You can leave a comment in [Mastodon](https://tech.lgbt/@nina_kali_nina/).
+* Thank you for reading! If you have any questions or comments, please let me know. You can leave a comment in the [Mastodon thread about this article](https://tech.lgbt/@nina_kali_nina/115792788459542758).
 * My fiancée not only helped with beta-testing, she even designed a RAM expansion board for the Apricot PC/Xi that was necessary to run Windows on it. Love~
 * This project could not exist without advice from Michal Necasek of [os2museum](https://www.os2museum.com/wp/author/michaln/) and David Simunič of [krnl386](https://win1.krnl386.com/about.php) regarding drivers for ancient Windows version.
 
