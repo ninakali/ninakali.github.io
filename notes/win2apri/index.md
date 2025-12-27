@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2 for the Apricot PC/Xi
-<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 1.01 2025-12-27)</p>
+<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 1.02 2025-12-27)</p>
 
 I bought my first Apricot PC about three years ago, when I realised I wanted an 8086-based computer. At the time, I knew nothing about it and simply bought it because it looked rad and the price was low. I had no idea that it was not IBM PC-compatible, and that there were very few programs available for it. 
 
@@ -96,9 +96,11 @@ Writing a driver for such a video card is significantly more painful than design
 
 ### Lose the battle, win the war: re-linking
 
-I decided to abandon the video driver writing when I discovered that video drivers from Windows 1 work correctly in Windows 2 _if the system has a font from Windows 1, too_. This means if I could somehow extract a video driver from the WIN100.BIN/OVL, I would not need to reverse-engineer it to patch in the font support; it could work out of the box. But how?
+Originally, I entertained the idea of unlinking the drivers from the WIN100.BIN/OVL files and reusing them, but rejected it. Not only is it difficult to do, but it is also useless, because the Windows 1 video driver would not display the fonts on the screen under Windows 2.
 
-The driver files in WIN100 are not "simply concatenated together": some parts from DISPLAY.DRV ends up in WIN100.BIN, and some in WIN100.OVL. Looking closely at those parts, I realised that the part in WIN100.OVL is identical to the Hercules driver. This gave me an idea: I can get a Hercules video driver; then I could extract CODE and DATA segments along with the Entry Table from the WIN100.BIN, and patch them into the Hercules driver. Unfortunately, not a single NE file format tool supported this use-case. I ended up writing [my own tool NExus-relink](https://git.sr.ht/~nkali/nexus-relink) to assist in this process; the tool is still incomplete, but it gave me enough leverage to finish the job manually.
+But when I hit the roadblock with writing the driver from scratch, I got an idea: what if I use a driver from Windows 1 _with fonts from Windows 1_? Apparently, this trick works!  And so, I decided to abandon the video driver writing if I could somehow extract a video driver from the WIN100.BIN/OVL, because I would not need to reverse-engineer it to patch in the font support; it could work out of the box. But how?
+
+The driver files in WIN100 are not "simply concatenated together": some parts from DISPLAY.DRV ends up in WIN100.BIN, and some in WIN100.OVL. Looking closely at those parts, I realised that the part in WIN100.OVL is identical to the Hercules driver. This gave me an idea: I could get a Hercules video driver; then I could extract CODE and DATA segments along with the Entry Table from the WIN100.BIN, and patch them into the Hercules driver. Unfortunately, not a single NE file format tool supported this use-case. I ended up writing [my own tool NExus-relink](https://git.sr.ht/~nkali/nexus-relink) to assist in this process; the tool is still incomplete, but it gave me enough leverage to finish the job manually.
 
 For the video driver, I used a "combine" tool I made for NExus, and then manually patched in the offsets and lengths in the NE header (one for the entry table, two for the segments). Incredibly, this was enough to make Windows 2 happy about the display: 
 
@@ -138,7 +140,7 @@ Welcome, welcome, let me show you around!
 <p class="imgdesc">Welcome to Windows 2. I have GW Basic, Turbo Pascal, Windows 1, Windows 2, Word and Excel installed on the hard drive, and I still have almost 2 megabytes free.</p>
 
 [![0201.jpg](0201.jpg)](0201.jpg)
-<p class="imgdesc">PC Paintbrush is one of the few programs that work on both Windows 1 and Windows 2. But it is more stable when running on top of Windows 2. Note that this is not Microsoft Paint (yet).</p>
+<p class="imgdesc">PC Paintbrush is one of the few programs that work on both Windows 1 and Windows 2. But it is more stable when running on top of Windows 2. Note that this is not Microsoft Paint **yet**: Microsoft would license this product only for its Windows 3.0 release.</p>
 
 [![0202.jpg](0202.jpg)](0202.jpg)
 <p class="imgdesc">I have to remind you that the screen is <em>monochrome</em>. Pixel dithering works really well on a 100 PPI 800x400 display, creating shades of grey from pixel patterns.</p>
@@ -168,7 +170,7 @@ Welcome, welcome, let me show you around!
 <p class="imgdesc">Word for Windows is surprisingly powerful for a brand-new product. There is a spellchecker, a page layout editor, and even support for macros. I have deleted the macros to save space on the hard drive, so the README file shows "Error!" where the macros were. The files created by Word for Windows 1.0 can be opened by modern office suites if you save as RTF.</p>
 
 [![0610.jpg](0610.jpg)](0610.jpg)
-<p class="imgdesc">Microsoft Excel is a real deal-breaker. There is no other spreadsheet as powerful as Excel on the Apricot.</p>
+<p class="imgdesc">Microsoft Excel is a real must-have. There is no other spreadsheet as powerful as Excel on the Apricot.</p>
 
 [![0620.jpg](0620.jpg)](0620.jpg)
 <p class="imgdesc">Excel for Windows from 1988 looks almost exactly like Excel for Windows from 2018.</p>
