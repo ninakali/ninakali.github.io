@@ -43,14 +43,14 @@ The computer is simple enough to be understood by one person in its entirety (ov
 
 The lack of IBM PC-compatibility proved to be fatal for the Apricot. The entirety of its software catalogue is less than 300 megabytes. There is only one [graphical game with a soundtrack](https://74ls373.itch.io/where-is-owl) for it, and it was made in 2025.
 
-There were, of course, productivity applications for the Apricot, including Microsoft Word for DOS. But among those, only two word processors had a graphical interface: GEM Write and Microsoft Write for Windows 1.
+There were, of course, productivity applications for the Apricot, including Microsoft Word for DOS. But among those, only two word processors had a graphical interface: GEM Write and Microsoft Write for Windows 1. Neither were popular; [GEM drivers were lost and re-created by John Elliot in 2012 or so](https://www.seasip.info/Gem/drivers3.html). Windows 1 was thought to be lost.
+
+Hypothetically, it should be possible to port a 16-bit Windows to this computer. It would require creating `SYSTEM.DRV`, `DISPLAY.DRV`, `KEYBOARD.DRV`, `MOUSE.DRV`, and ideally `COMM.DRV` drivers. But that would be a lot of work.
 
 [![0001b.jpg](0001b.jpg)](0001b.jpg)
 <p class="imgdesc">A screenshot of Windows 1 Notepad. I didn't have a Windows 1 Write screenshot at hand, but trust me, it looks almost the same.</p>
 
-Hypothetically, it should be possible to port Windows 3 to this computer. It would require creating Windows 3-compatible `SYSTEM.DRV`, `DISPLAY.DRV`, `KEYBOARD.DRV`, `MOUSE.DRV`, and ideally `COMM.DRV` drivers. But that would be a lot of work.
-
-This is where things get interesting. A port of Windows 1 for the Apricot PC (released by ACT in 1987, a year before Windows 2) was miraculously preserved and surfaced online. By itself, Windows 1 is unremarkable, as it does not have much useful software. But its driver architecture is not too different from Windows 2, so I thought it might be just about possible to make Windows 2 for the Apricot. And if I could somehow boot Windows 2, I'd be able to run Word, Excel, and Adobe Illustrator on my Apricot.
+This is where things get interesting. A port of Windows 1 for the Apricot PC (released by ACT in 1987, a year before Windows 2) was miraculously preserved and surfaced online not that long ago. By itself, Windows 1 is unremarkable, as it does not have much useful software. But its driver architecture is not too different from Windows 2, so I thought it might be just about possible to make Windows 2 for the Apricot. And if I could somehow boot Windows 2, I'd be able to run Word, Excel, and Adobe Illustrator on my Apricot.
 
 Well, it only took two and a half years to pull it off!
 
