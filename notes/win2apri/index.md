@@ -1,7 +1,7 @@
 <div class="post">
 
 # Windows 2 for the Apricot PC/Xi
-<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 1.02 2025-12-27)</p>
+<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 2.03 2025-12-30)</p>
 
 I bought my first Apricot PC about three years ago, when I realised I wanted an 8086-based computer. At the time, I knew nothing about it and simply bought it because it looked rad and the price was low. I had no idea that it was not IBM PC-compatible, and that there were very few programs available for it. 
 
@@ -195,6 +195,27 @@ Welcome, welcome, let me show you around!
 
 </div>
 
+<div class="post">
+
+# Windows 3 on the Apricot PC?!
+
+Lots of people have asked me whether it's possible to run Windows 3 on the Apricot. I used to think that it is technically possible, but would require too much work. However, I recently learned that Windows 2 display drivers work in Windows 3.0 Real Mode. And they really do!
+
+Now the question: would drivers from Windows 1 work in Windows 3.0 RM? The answer is "kind of". The system crashes if we use the `{CGA,EGA,VGA}SYS.FON` from Windows 2 or 3, but it actually boots with `FONTS.FON` from Windows 1.
+
+[![9000.jpg](9000.png)](9000.png)
+<p class="imgdesc">Apricot PC emulatd by MAME. The screen shows Windows 3.0 Calculator with its "About" Window in front of the MS-DOS Executive window. The buttons in the upper right corner of windows are glitching.</p>
+
+The rendering of the window elements is badly broken. I suspect this can be fixed, but I don't have time for that. The `MOUSE.DRV` from the Apricot's Windows 1 works just fine, and `SYSTEM.DRV` I provided works well, too. The `KEYBOARD.DRV` from Windows 1 doesn't work at all and needs to be rewritten.
+
+## Windows 3 TODO
+
+1. Video driver glitching
+2. Keyboard driver from scratch
+3. ???
+4. Profit!
+
+</div>
 
 <hr/><hr/><hr/>
 
