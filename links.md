@@ -1,4 +1,19 @@
-# Some of my mastodon threads of interest
+# Some of my articles and mastodon threads of interest
+
+# Long reads
+* [Windows 2 for the Apricot PC/Xi](./notes/win2apri/)
+* [On recreating the lost SDK for a 42-year-old operating system: VisiCorp Visi On](https://git.sr.ht/~nkali/vision-sdk/tree/main/item/note/index.md)
+* [I'd like to speak to the Bellcore ManaGeR](./notes/mgr/)
+* [I see, I can improve my drawings!](./notes/iseeidraw2/)
+* [Cooking of a cooking game](./notes/cooking/)
+* [That's a Tabi, too](./notes/tabi/)
+* [I see, I can draw!](./notes/iseeidraw/)
+* [Windows 2 notes](./notes/win2/)
+* [Empathy and efficiency in hard conversations](./notes/conv.md)
+* [Emergency Kit Mk3](./notes/kit3/)
+* [Emergency Kit Mk2](./notes/kit2/)
+
+# Mastodon threads
 
 ## Notes/rants
 * [Reminiscing about my bands and songs](https://tech.lgbt/@nina_kali_nina/113696895224129150)
@@ -7,6 +22,25 @@ papermakers](https://tech.lgbt/@nina_kali_nina/111953604072020696)
 * [Distraction-free work in attention-seeking world: phone hacks, typewriters, and old computers](https://tech.lgbt/@nina_kali_nina/111879129075499415)
 * [Glitching the images with processing them as audio](https://tech.lgbt/@nina_kali_nina/111755539584965220)
 * [Wrong VGA palette in all emulators?!](https://tech.lgbt/@nina_kali_nina/109948884515882130)
+
+## RAM
+* [Let's make RAM at home, part 1](https://tech.lgbt/@nina_kali_nina/112620174104886147)
+* [Let's make RAM at home, part 2](https://tech.lgbt/@nina_kali_nina/112662504475703389)
+
+## DIY tapes and floppies
+* [Video of DIY magnetic tape heads and demo](https://tech.lgbt/@nina_kali_nina/112753345910479381)
+* [DIY magnetic tape head Mk 1.999 - demo](https://tech.lgbt/@nina_kali_nina/112744313352787455)
+* [DIY magnetic tape head Mk 1 - what went wrong](https://tech.lgbt/@nina_kali_nina/112735560937595812)
+* [DIY magnetic tape head Mk 1](https://tech.lgbt/@nina_kali_nina/112730256439175081)
+* [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
+home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
+* [DIY magnetic tape heads - discussion thread](https://tech.lgbt/@nina_kali_nina/111313893415437578)
+* [DIY 5.25" floppy - proto 2&3, better results](https://tech.lgbt/@nina_kali_nina/111319320784850635)
+* [DIY 5.25" floppy - failed prototype](https://tech.lgbt/@nina_kali_nina/111290481112640064)
+* [QA on DIY magnetic tape](https://tech.lgbt/@nina_kali_nina/111308288210934398)
+* [DIY tape - demo](https://tech.lgbt/@nina_kali_nina/111286617790635607)
+* [DIY magnetic 
+tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
 
 ## Pixel?art
 ### Orihime Project
@@ -32,6 +66,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [Windows 1/2/3 display driver backwards compatibility](https://tech.lgbt/@nina_kali_nina/115819701067801587)
 * [VisiCorp VisiOn (1983) - videos of the user interface](https://tech.lgbt/@nina_kali_nina/115441268919687952)
 * [Philips Ease Desktop for MSX, 1988](https://tech.lgbt/@nina_kali_nina/114032280121985576)
 * [BK-0010, soviet desktop PDP-11 clone, running all sorts of soft](https://tech.lgbt/@nina_kali_nina/113676143680346758)
@@ -84,24 +119,6 @@ IceWM, FVWM95
 * [Exploring the Dora - from Twi](https://github.com/ninakali/ninakali.github.io/tree/main/notes/dora)
 
 ## Primitive? tech
-### RAM
-* [Let's make RAM at home, part 1](https://tech.lgbt/@nina_kali_nina/112620174104886147)
-* [Let's make RAM at home, part 2](https://tech.lgbt/@nina_kali_nina/112662504475703389)
-
-### DIY tapes and floppies
-* [Video of DIY magnetic tape heads and demo](https://tech.lgbt/@nina_kali_nina/112753345910479381)
-* [DIY magnetic tape head Mk 1.999 - demo](https://tech.lgbt/@nina_kali_nina/112744313352787455)
-* [DIY magnetic tape head Mk 1 - what went wrong](https://tech.lgbt/@nina_kali_nina/112735560937595812)
-* [DIY magnetic tape head Mk 1](https://tech.lgbt/@nina_kali_nina/112730256439175081)
-* [DIY floppy - proto 4&5, synthesis of gamma-Fe2O3 at 
-home](https://tech.lgbt/@nina_kali_nina/111326176936683351)
-* [DIY magnetic tape heads - discussion thread](https://tech.lgbt/@nina_kali_nina/111313893415437578)
-* [DIY 5.25" floppy - proto 2&3, better results](https://tech.lgbt/@nina_kali_nina/111319320784850635)
-* [DIY 5.25" floppy - failed prototype](https://tech.lgbt/@nina_kali_nina/111290481112640064)
-* [QA on DIY magnetic tape](https://tech.lgbt/@nina_kali_nina/111308288210934398)
-* [DIY tape - demo](https://tech.lgbt/@nina_kali_nina/111286617790635607)
-* [DIY magnetic 
-tape](https://tech.lgbt/@nina_kali_nina/111275088385639559)
 
 ### Are simple things as simple as they seem?
 * [DIY carbon paper copier](https://tech.lgbt/@nina_kali_nina/113917161757151681)
