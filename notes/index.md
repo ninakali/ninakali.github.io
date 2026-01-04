@@ -1,5 +1,5 @@
 # Originals
-* [Windows 2 for the Apricot PC/Xi](./win2apri/)
+* [Windows 2 and 3 for the Apricot PC/Xi](./win2apri/)
 * [On recreating the lost SDK for a 42-year-old operating system: VisiCorp Visi On](https://git.sr.ht/~nkali/vision-sdk/tree/main/item/note/index.md)
 * [I'd like to speak to the Bellcore ManaGeR](./mgr/)
 * [I see, I can improve my drawings!](./iseeidraw2/)

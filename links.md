@@ -1,7 +1,7 @@
 # Some of my articles and mastodon threads of interest
 
 # Long reads
-* [Windows 2 for the Apricot PC/Xi](./notes/win2apri/)
+* [Windows 2 and 3 for the Apricot PC/Xi](./notes/win2apri/)
 * [On recreating the lost SDK for a 42-year-old operating system: VisiCorp Visi On](https://git.sr.ht/~nkali/vision-sdk/tree/main/item/note/index.md)
 * [I'd like to speak to the Bellcore ManaGeR](./notes/mgr/)
 * [I see, I can improve my drawings!](./notes/iseeidraw2/)

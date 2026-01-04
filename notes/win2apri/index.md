@@ -1,7 +1,7 @@
 <div class="post">
 
-# Windows 2 for the Apricot PC/Xi
-<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 2.03 2025-12-30)</p>
+# Windows 2 & Windows 3 for the Apricot PC/Xi
+<p class="by">(and Word, and Excel, and so much more) by Nina Kalinina, December 27th, 2025 (rev. 3.00 2026-01-04)</p>
 
 I bought my first Apricot PC about three years ago, when I realised I wanted an 8086-based computer. At the time, I knew nothing about it and simply bought it because it looked rad and the price was low. I had no idea that it was not IBM PC-compatible, and that there were very few programs available for it. 
 
@@ -11,6 +11,11 @@ As a side-quest, I also wrote an [article explaining why Windows 2 is kind of aw
 
 [![0000.jpg](0000.jpg)](0000.jpg)
 <p class="imgdesc">A photograph of a dark grey computer with a CRT monitor - an Apricot PC - running Windows 2</p>
+
+**Edit (January 4th, 2026):** A common feedback for the post was "Can you do Windows 3?" It took one more week to have a Windows 3.0 port working. The article has been expanded accordingly.
+
+[![](w300000.jpg)](w300000.jpg)
+<p class="imgdesc">A screenshot of Windows 3.0 running on the Apricot PC/Xi</p>
 
 Please note that most of the images in this post were taken from a real green CRT, and thus their quality might vary. You can click the image to load it in full size.
 
@@ -206,14 +211,44 @@ Now the question: would drivers from Windows 1 work in Windows 3.0 RM? The answe
 [![9000.jpg](9000.png)](9000.png)
 <p class="imgdesc">Apricot PC emulatd by MAME. The screen shows Windows 3.0 Calculator with its "About" Window in front of the MS-DOS Executive window. The buttons in the upper right corner of windows are glitching.</p>
 
-The rendering of the window elements is badly broken. I suspect this can be fixed, but I don't have time for that. The `MOUSE.DRV` from the Apricot's Windows 1 works just fine, and `SYSTEM.DRV` I provided works well, too. The `KEYBOARD.DRV` from Windows 1 doesn't work at all and needs to be rewritten.
+As you can see, the video driver is missing resources for the window decorations. And you cannot see, but the keyboard driver is completely broken. As it happens, Windows 2.0 keyboard drivers are not compatible with Windows 3.0, and so we had to write one from scratch, using Windows 3.0 DDK. Patching the display driver to add the missing UI elements was a piece of cake compared to it.
 
-## Windows 3 TODO
+## Screenshots
 
-1. Video driver glitching
-2. Keyboard driver from scratch
-3. ???
-4. Profit!
+[![](w300000.jpg)](w300000.jpg)
+<p class="imgdesc">Windows 3 looks surprisingly friendly on the Apricot's monochrome display.</p>
+
+[![](w300001.jpg)](w300001.jpg)
+<p class="imgdesc">The new control panel is mostly working without issues. I also figured out how to fix the scalable fonts.</p>
+
+[![](w300002.jpg)](w300002.jpg)
+<p class="imgdesc">File Manager for Windows 3 is one of the best additions brought by the upgrade. It even supports drag and drop for files.</p>
+
+[![](w300003.jpg)](w300003.jpg)
+<p class="imgdesc">Windows 3 doesn't have COMMCTRL.DLL with "Open" and "Save" dialogs yet, but some programs bring their own, and some try to replicate it.</p>
+
+[![](w300004.jpg)](w300004.jpg)
+<p class="imgdesc">There is a lot of hype around Windows 3, but there aren't that many new programs that Real Mode Windows 3 can run and Windows 2 can not. Pascal for Windows is one of such programs.</p>
+
+[![](w300005.jpg)](w300005.jpg)
+<p class="imgdesc">Excel for Windows still works, but Word for Windows crashes (it doesn't like something about the display driver). It can use fonts now.</p>
+
+[![](w300006.jpg)](w300006.jpg)
+<p class="imgdesc">Microsoft Windows Solitaire looks much nicer than WinSolitaire for Windows 2.</p>
+
+[![](w300007.jpg)](w300007.jpg)
+<p class="imgdesc">Internet Explorer, Windows Media Player, NCSA Mosaic... All of them require a processor that supports protected mode. And in the time of need, only WinZip has your back.</p>
+
+## Windows 3.1?!
+
+As you might know, Windows 3.1 dropped support for Intel 8086 and 8088. An early beta, Windows 3.1.034e (!), can run in the Real Mode using Windows 1.0 video drivers, but it is really unstable. It looks "funny" with the Windows 1 UI elements, though.
+
+[![](w31b.png)](w31b.png))
+<p class="imgdesc">This is Windows 3.1, but it looks a lot like Windows 1.0 because a large part of the interface comes from the resources in the display driver.</p>
+
+So, this is as far as we get, in case of the Apricot PC/Xi. 
+
+But a friend of mine has an Apricot Xen, which is a very similar machine with an Intel 286 processor, and it should be able to run Windows 3.1 in the "Standard" (protected) mode. Maybe I'll be able to get the Internet Explorer running on it.
 
 </div>
 
@@ -223,7 +258,7 @@ The rendering of the window elements is badly broken. I suspect this can be fixe
 
 ## Acknowledgments
 * Thank you for reading! If you have any questions or comments, please let me know. You can leave a comment in the [Mastodon thread about this article](https://tech.lgbt/@nina_kali_nina/115792788459542758).
-* My fiancée not only helped with beta-testing, she even designed a RAM expansion board for the Apricot PC/Xi that was necessary to run Windows on it. Love~
+* My fiancée not only helped with beta-testing, she even designed a RAM expansion board for the Apricot PC/Xi that was necessary to run Windows on it. And then wrote the keyboard driver for Windows 3. Love~
 * This project could not exist without advice from Michal Necasek of [os2museum](https://www.os2museum.com/wp/author/michaln/) and David Simunič of [krnl386](https://win1.krnl386.com/about.php) regarding drivers for ancient Windows version.
 
 </div>
