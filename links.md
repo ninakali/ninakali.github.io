@@ -111,6 +111,7 @@ IceWM, FVWM95
 * [Windows NT 3.51 screenshots](https://tech.lgbt/@nina_kali_nina/109774684769104178)
 
 ## Tech teardown and repair
+* [Casio BN-20 / PV simulator](https://tech.lgbt/@nina_kali_nina/115985762348700453)
 * [Casio BN-20 rom dump - screenshots](https://tech.lgbt/@nina_kali_nina/115980561063187536)
 * [Casio BN-20 teardown and keyboard repair](https://tech.lgbt/@nina_kali_nina/115975136914932791)
 * [Amstrad ALT 386SX repair](https://tech.lgbt/@nina_kali_nina/112702553682807069)
