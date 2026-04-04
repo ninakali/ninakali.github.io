@@ -66,6 +66,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [Hacking around FiwixOS, a hobbyist Linux clone](https://tech.lgbt/@nina_kali_nina/116346858998394780)
 * [Windows 95 with EGA _and_ CGA - including Quake running on CGA](https://tech.lgbt/@nina_kali_nina/115877729006151160)
 * [Converting Windows 95 MINI.CAB pre-install environment into a full desktop without using Windows distributions](https://tech.lgbt/@nina_kali_nina/115871854239918291)
 * [Windows 1/2/3 display driver backwards compatibility](https://tech.lgbt/@nina_kali_nina/115819701067801587)
