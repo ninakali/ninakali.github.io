@@ -86,6 +86,7 @@ Android](https://tech.lgbt/@nina_kali_nina/111494036176509830)
 * [GEM/3 on Apricot](https://tech.lgbt/@nina_kali_nina/110865351518696686)
 
 ### Old stuff
+* [Music making on Pentium 2 / Windows 98: Guitar Pro, microLogic, Fruity Loops](https://tech.lgbt/@nina_kali_nina/116510926497660317)
 * [Ubuntu 4.10 is a Knoppix derivative?! Plus Morphix and rare Knoppix 2.0 and 3.2 screenshots](https://tech.lgbt/@nina_kali_nina/116030913391998818)
 * [Visual Basic 1.0 tour + Turbo Pascal for Windows](https://tech.lgbt/@nina_kali_nina/115950871154466290)
 * [Windows 3.1 with true color VESA driver, Calmira XP shell and unusual apps](https://tech.lgbt/@nina_kali_nina/115391324352122500)
