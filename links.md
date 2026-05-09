@@ -66,6 +66,7 @@ format](https://tech.lgbt/@nina_kali_nina/111615129288085026)
 ## Screenshots and hacks
 
 ### Rare/unusual stuff
+* [Pocket Computer SHARP PC-1246, and a Hamurabi game for it](https://tech.lgbt/@nina_kali_nina/116545821964715227)
 * [Pocket computer SHARP PC-1248 with a printer CE-126P](https://tech.lgbt/@nina_kali_nina/116386433286218775)
 * [Hacking around FiwixOS, a hobbyist Linux clone](https://tech.lgbt/@nina_kali_nina/116346858998394780)
 * [Windows 95 with EGA _and_ CGA - including Quake running on CGA](https://tech.lgbt/@nina_kali_nina/115877729006151160)
