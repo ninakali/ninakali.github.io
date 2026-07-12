@@ -7,7 +7,7 @@ I’ve wanted to draw for over a decade, but couldn’t. In early 2025, after me
 
 And then... And then life happened. I basically stopped drawing between August 2025 and May 2026. Not that I didn't want to pursue my goals of improving my skills, making art for games, or drawing comics; I just couldn’t stick with them. In the meantime, my awkward attempts at drawing felt like I was repeating myself and not learning anything. Were my skills plateauing? So early in my artistic journey? *Cries.*
 
-A famous illustrator I follow on YouTube mentioned in one of his videos that filling out a sketchbook can help to unblock one’s growth. I had a sketchbook lying around that seemed oddly appropriate for such a task, so I started drawing in it with the intention of filling it out one day. Such a day came after roughly 60 hours of drawing, and in those 60 hours, I’ve learned a lot. Now I can draw something things like that based on photographs:
+A famous illustrator I follow on YouTube mentioned in one of his videos that filling out a sketchbook can help to unblock one’s growth. I had a sketchbook lying around that seemed oddly appropriate for such a task, so I started drawing in it with the intention of filling it out one day. Such a day came after roughly 60 hours of drawing, and in those 60 hours, I’ve learned a lot. Now I can draw sketches like this one based on photographs:
 
 ![](img/skebu00030.jpg)
 
