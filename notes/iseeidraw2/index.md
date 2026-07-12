@@ -143,6 +143,8 @@ I started with a hopeless sketch, and in the next 50 minutes, iterated on it so 
 
 I hope now you believe that (at least sometimes) drawing is not about having talent, but about being able to draw and redraw and redraw some more? It isn't always fun, especially when, despite many redraws, you still cannot draw the things you wanted to draw. If you can find satisfaction in seeing progress when you compare your old and your new drawings, you'll be fine. 
 
+*Afterthought: I showed this post to an artist friend; she said that while the corrections look better, the sadness they express is significantly less noticeable. It was an honest mistake caused by always only looking at the previous iteration and never comparing it with the original one in the process.*
+
 ## Point of view
 
 Ah, yes, this was supposed to be a story about The Girl's illustration.
@@ -261,4 +263,4 @@ The illustration took over 22 hours of work. If you'd focus on a goal for over 2
 
 I think I will revise this illustration one day, when I learn more about drawing. But for now, it is "done". 
 
-_**To be continued...**_
+**Continued in [This is not my last sketchbook](../iseeidraw3/)**
