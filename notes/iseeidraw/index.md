@@ -419,4 +419,4 @@ The cruelty and the beauty of studying drawing is that it never ends.
 
 There are so many topics I have to learn if I want to draw better: the volumetric drawing, the theory of light, the theory of colour, and, most dearly to me, the symbolism of anime illustration. Perhaps, one day I will share with you my thoughts on some of these topics. But I'm pretty sure that I am at the point where it doesn't make sense to record every 30 minutes I have used practising drawing. Because I can just draw instead, and then draw some more.
 
-_**To be continued...**_
+**Continued in [I see, I can improve my drawings!](../iseeidraw2/)**
